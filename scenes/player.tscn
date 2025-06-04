@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dewwokd62pf8t"]
+
+[ext_resource type="Script" uid="uid://dyh8qctya6qm2" path="res://LiminalGameJam/scenes/player.gd" id="1_jn8f0"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_53hpm"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jn8f0"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_jn8f0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_53hpm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_jn8f0")
+
+[node name="Neck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.481212, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Neck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.305233, 0)

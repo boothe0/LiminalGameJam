@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7gxb8s3kfgwh"]
+
+[ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://LiminalGameJam/scenes/player.tscn" id="1_o00rs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kw0jy"]
+size = Vector3(1.90073, 0.0747528, 1.96655)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_o00rs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o00rs"]
+albedo_color = Color(0.225207, 0.395142, 0.865675, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o00rs"]
+material = SubResource("StandardMaterial3D_o00rs")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5myc"]
+albedo_color = Color(0.265314, 0.634456, 0.469927, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f5myc"]
+material = SubResource("StandardMaterial3D_f5myc")
+
+[node name="Main" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(42.733, 0, 0, 0, 1.037, 0, 0, 0, 40, -0.236549, -0.0266037, 0.0700045)
+shape = SubResource("BoxShape3D_kw0jy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(41.1837, 0, 0, 0, 1, 0, 0, 0, 38.5501, 0.225334, 0, -0.0664645)
+mesh = SubResource("PlaneMesh_o00rs")
+
+[node name="Player" parent="." instance=ExtResource("1_o00rs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00597167, 1.03125, -0.00133562)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.890144, -0.105624, 0.44327, -0.455451, -0.17534, 0.872823, -0.0144683, -0.978826, -0.204184, 8.25553, 11.3527, -2.95758)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.4492, 0, 0, 0, 2.24951, 0, 0, 0, 2.37297, 10.7657, 1.14095, 0)
+mesh = SubResource("BoxMesh_o00rs")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.56788, 0.502295, 4.84454)
+mesh = SubResource("BoxMesh_f5myc")
+skeleton = NodePath("../MeshInstance3D")
