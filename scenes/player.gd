@@ -6,6 +6,8 @@ const SPRINT_SPEED = 8.0
 const WALK_SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+var motion_sickness_flag = Globals.motion_sickness_flag
+
 # fov change based on speed
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
@@ -54,7 +56,8 @@ func _physics_process(delta: float) -> void:
 	# this is multiplied by is_on_floor because we do not want head bob in the air lol
 	sin_bob += delta * velocity.length() * float(is_on_floor())
 	# call the headbob function to handle the camera going vertical and horizonal using sin and cos wave functions.
-	camera.transform.origin = _headbob(sin_bob) 
+	if motion_sickness_flag == false:
+		camera.transform.origin = _headbob(sin_bob) 
 	
 	# FOV
 	# need to clamp the fov so it does not zoom in too much

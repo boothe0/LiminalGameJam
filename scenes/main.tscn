@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b7gxb8s3kfgwh"]
 
-[ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://LiminalGameJam/scenes/player.tscn" id="1_o00rs"]
+[ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/player.tscn" id="1_o00rs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kw0jy"]
 size = Vector3(1.90073, 0.0747528, 1.96655)

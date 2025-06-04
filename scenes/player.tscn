@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dewwokd62pf8t"]
 
-[ext_resource type="Script" uid="uid://dyh8qctya6qm2" path="res://LiminalGameJam/scenes/player.gd" id="1_jn8f0"]
+[ext_resource type="Script" uid="uid://dyh8qctya6qm2" path="res://scenes/player.gd" id="1_jn8f0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_53hpm"]
 
