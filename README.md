@@ -18,6 +18,7 @@ These instructions will get you a local copy of the game on your local machine.
 
 #### Step 2: Create Local Branch
 `cd LiminalGameProject`
+
 `git checkout -b your-branch-name`
 
 #### Step 3: Open in Godot
