@@ -1,0 +1,19 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1749429108
+icon.svg::CompressedTexture2D/CompressedTexture2D::3803705575170224692::1749420077::1749420513::1::::<><><>0<>0<>3a30221590cee000b014c16b8f54243e<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://audio/::1749429114
+Liminal Jam - Night Shift Concept Music.ogg::AudioStreamOggVorbis::2162502085252575914::1749429114::1749429114::1::::<><><>0<>0<>8536857e88a752d4173aa6d2f48aeed2<>res://.godot/imported/Liminal Jam - Night Shift Concept Music.ogg-7cba76f9ed3fa9a841d201764a31e369.oggvorbisstr::
+::res://scenes/::1749428989
+door.tscn::PackedScene::4705477628738796534::1749428989::0::1::::<><><>0<>0<><>::uid://b4wbasjxbmtiw::::res://scripts/door.gd
+main.tscn::PackedScene::4646249985624823251::1749428989::0::1::::<><><>0<>0<><>::uid://dewwokd62pf8t::::res://scenes/player.tscn<>uid://nhd3heorschy::::res://scripts/main.gd<>uid://b8bmr8uose6du::::res://scenes/door.tscn
+placeholder_asset.tscn::PackedScene::5244012403685563172::1749428989::0::1::::<><><>0<>0<><>::uid://bg47861wufoby::::res://scripts/placeholder_asset.gd
+player.tscn::PackedScene::7486795042489368913::1749428989::0::1::::<><><>0<>0<><>::uid://dyh8qctya6qm2::::res://scripts/player.gd
+ui.tscn::PackedScene::3509064663872231520::1749428989::0::1::::<><><>0<>0<><>::uid://bffmic6k50g8i::::res://scripts/ui.gd
+::res://scripts/::1749428931
+door.gd::GDScript::4467375137148509058::1749428691::0::1::::<>StaticBody3D<><>0<>0<><>::
+emitter.gd::GDScript::8339256528263803144::1749423982::0::1::::<>Node<><>0<>0<><>::
+globals.gd::GDScript::4169966318154605087::1749428767::0::1::::<>Node<><>0<>0<><>::
+main.gd::GDScript::927138139282668270::1749428931::0::1::::<>Node3D<><>0<>0<><>::
+placeholder_asset.gd::GDScript::2869424244771705370::1749428188::0::1::::<>StaticBody3D<><>0<>0<><>::
+player.gd::GDScript/GDScript::8860277311623942187::1749420077::0::1::::<>CharacterBody3D<><>0<>0<><>::
+ui.gd::GDScript/GDScript::2748429834349070762::1749420077::0::1::::<>CanvasLayer<><>0<>0<><>::

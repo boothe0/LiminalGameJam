@@ -1,0 +1,13 @@
+res://scenes/ui.tscn
+res://node_3d.tscn
+res://door.tscn
+res://scenes/door.tscn
+res://scenes/main.tscn
+res://scenes/player.tscn
+res://scripts/door.gd
+res://scripts/globals.gd
+res://scenes/placeholder_asset.tscn
+res://scripts/emitter.gd
+res://scenes/main.gd
+res://scenes/placeholder_asset.gd
+res://scripts/main.gd

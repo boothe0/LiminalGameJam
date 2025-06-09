@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8bmr8uose6du"]
+
+[ext_resource type="Script" uid="uid://b4wbasjxbmtiw" path="res://scripts/door.gd" id="1_hpvv5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4xowi"]
+size = Vector3(0.656, 1.594, 0.106)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a202f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hpvv5"]
+size = Vector3(0.8, 0.4, 0.9)
+
+[node name="Door" type="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("1_hpvv5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.809525, 0)
+shape = SubResource("BoxShape3D_4xowi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.655736, 0, 0, 0, 1.59426, 0, 0, 0, 0.106472, 0, 0.809525, 0)
+mesh = SubResource("BoxMesh_a202f")
+
+[node name="Detection" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.235012, 0.460594)
+shape = SubResource("BoxShape3D_hpvv5")
+
+[node name="ContinueMessage" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860045, 0.0826165)
+visible = false
+text = "Continue?"
+
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
+[connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]
