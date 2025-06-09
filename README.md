@@ -14,7 +14,7 @@ These instructions will get you a local copy of the game on your local machine.
 ### Installing
 
 #### Step 1: Clone the Repository
-`git clone git@github.com:boothe0/Tiny-Rougelite.git`
+`git clone git@github.com:boothe0/LiminalGameJam.git`
 
 #### Step 2: Create Local Branch
 `cd LiminalGameProject`
