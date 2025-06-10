@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwfggoyiiffyy"]
+
+[ext_resource type="Script" uid="uid://cdrouxqwjqog" path="res://scenes/intro.gd" id="1_ioskq"]
+
+[node name="Intro" type="CanvasLayer"]
+script = ExtResource("1_ioskq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.226707, 0.226707, 0.226707, 1)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -303.5
+offset_top = -76.5
+offset_right = 303.5
+offset_bottom = 76.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "The Lemon Orchard is one of several biome modules aboard the space station.
+Until the planet is put back together, the station needs be kept in order. 
+That's your job.
+After hours, your tasks are simply putting things back in order. 
+It's not hard work, but you never get to meet the dayshift.
+ However, you can still make a positive impact on their lives."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -39.5
+offset_top = -148.0
+offset_right = 39.5
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Continue"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
