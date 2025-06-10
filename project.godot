@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Globals="*res://scripts/globals.gd"
 Emitter="*res://scripts/emitter.gd"
+FadeEffectTransition="*res://scenes/fade_effect_transition.tscn"
 
 [input]
 
