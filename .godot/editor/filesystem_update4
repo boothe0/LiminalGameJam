@@ -1,0 +1,11 @@
+res://scenes/fade_effect_transition.tscn
+res://scripts/transition_screen.gd
+res://scripts/emitter.gd
+res://scenes/ui.tscn
+res://scenes/main.tscn
+res://scenes/player.tscn
+res://scenes/door.tscn
+res://scenes/placeholder_asset.tscn
+res://scripts/main.gd
+res://scripts/door.gd
+res://scripts/player.gd
