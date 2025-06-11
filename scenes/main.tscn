@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=16 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b8bmr8uose6du" path="res://scenes/door.tscn" id="2_0wfyh"]
 [ext_resource type="AudioStream" uid="uid://52sdf766bulm" path="res://audio/Liminal Jam - Night Shift Concept Music.ogg" id="4_jyhfs"]
+[ext_resource type="Environment" uid="uid://bhrb4ick732vx" path="res://skybox_setup/sky_enviro.tres" id="6_tefeu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kw0jy"]
 size = Vector3(42.733, 1.037, 40)
@@ -22,14 +23,16 @@ albedo_color = Color(0.265314, 0.634456, 0.469927, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_f5myc"]
 material = SubResource("StandardMaterial3D_f5myc")
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_jyhfs"]
+size = Vector2(120, 120)
 
-[sub_resource type="Sky" id="Sky_sugp2"]
-sky_material = SubResource("ProceduralSkyMaterial_0wfyh")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tefeu"]
+transparency = 1
+albedo_color = Color(0.446777, 0.446777, 0.446777, 1)
 
-[sub_resource type="Environment" id="Environment_jyhfs"]
-background_mode = 2
-sky = SubResource("Sky_sugp2")
+[sub_resource type="BoxMesh" id="BoxMesh_tbgi4"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tbgi4"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_sugp2")
@@ -58,9 +61,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.56788, 0.502295, 4.84454)
 mesh = SubResource("BoxMesh_f5myc")
 skeleton = NodePath("../MeshInstance3D")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_jyhfs")
-
 [node name="Door" parent="." instance=ExtResource("2_0wfyh")]
 transform = Transform3D(-1.99733, 0, -0.103313, 0, 2, 0, 0.103313, 0, -1.99733, 0, 0, 7.48641)
 
@@ -68,3 +68,218 @@ transform = Transform3D(-1.99733, 0, -0.103313, 0, 2, 0, 0.103313, 0, -1.99733, 
 stream = ExtResource("4_jyhfs")
 autoplay = true
 parameters/looping = true
+
+[node name="LevelFloor" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_jyhfs")
+surface_material_override/0 = SubResource("StandardMaterial3D_tefeu")
+
+[node name="workstation dinner" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(6.4527, -0.0994294, 1.8859, 0.426116, 3.2367, -0.0475394, -5.12346, 0.14397, 2.37122, 10.4773, 1.28837, 19.2003)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="workstation wall" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(2.90039, -0.106588, -2.83495, 0.426116, 3.2367, -0.0475394, 7.712, -0.138753, 1.06881, 44.3808, 1.28837, -17.0535)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="cafe bar" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(12.1867, -0.354857, 0.919056, 0.655633, 7.81952, -0.0521939, -3.49277, 0.229681, 3.19689, -12.2738, 3.47898, -45.6491)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="cafe table1" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(2.74984, -0.119784, -0.587825, 0.145799, 2.22182, -0.0420037, 0.621285, 0.00877326, 2.6116, -11.0405, 0.949336, -39.868)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="cafe table2" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(2.81846, -0.114101, 0.061626, 0.145799, 2.22182, -0.0420037, -0.0626134, 0.0374991, 2.67623, -3.83342, 0.949336, -40.5232)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="cafe table3" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(0.174038, 0.0277953, 2.67197, 0.145799, 2.22182, -0.0420037, -2.81378, 0.116845, 0.163091, 1.331, 0.949336, -44.2231)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="lockers" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(-1.61469, 0.0499251, -2.70715, 0.206058, 7.5923, -0.0464476, 3.64249, -0.407371, -1.19743, -17.4025, 3.57602, 43.6163)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="lockers2" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(-1.39185, 0.0252415, -2.7745, 0.206058, 7.5923, -0.0464476, 3.73332, -0.409642, -1.03182, -14.3527, 3.57602, 44.9154)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="lockers3" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(-0.848878, -0.0330507, -2.8927, 0.206058, 7.5923, -0.0464476, 3.89286, -0.409086, -0.628325, -11.1334, 3.57602, 45.932)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="lockers4" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(-0.473651, -0.0719243, -2.93945, 0.206059, 7.5923, -0.0464477, 3.95609, -0.404067, -0.349513, -7.74459, 3.57602, 46.4968)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="lockers5" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(-0.256658, -0.0939077, -2.95416, 0.206058, 7.59231, -0.0464476, 3.97606, -0.399531, -0.188287, -4.41232, 3.57602, 46.8357)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="lockers6" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(-0.0624001, -0.113285, -2.95983, 0.206059, 7.5923, -0.0464477, 3.98385, -0.394474, -0.0439582, -1.13652, 3.57602, 47.0616)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="lockers7" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(0.159665, -0.135088, -2.95768, 0.206059, 7.59231, -0.0464477, 3.98114, -0.38755, 0.121023, 2.19576, 3.57602, 47.0051)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="airlock right" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(-3.78448, 0.195488, -3.20298, 0.273803, 7.52834, -0.0718094, 3.70224, -0.356933, -3.26882, 33.7308, 3.57602, 32.1944)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="airlock left" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(-2.12939, 0.0481577, -4.19149, 0.273803, 7.52834, -0.0718094, 4.84713, -0.404101, -1.83731, 43.5491, 3.57602, 17.1341)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="tree1" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -5.23629, 0, 3.23418)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree2" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -5.94169, 0, -5.80965)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree3" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 1.45242, 0, -7.65818)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree4" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -3.03686, 0, -9.37467)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree5" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 18.0891, 0, -3.82909)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree6" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 17.9571, 0, 5.01743)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree7" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -8.84651, 0, 9.24263)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree8" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -25.4832, 0, 0.132038)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree9" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -23.8988, 0, -13.3358)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree10" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -11.7513, 0, -16.7688)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree11" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -22.8425, 0, -22.5784)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree12" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 1.71649, 0, -21.126)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree13" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 12.0154, 0, -17.561)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree14" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 23.8988, 0, -10.695)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree15" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 32.6133, 0, -8.05429)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree16" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 38.0268, 0, -6.99799)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree17" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 33.5375, 0, 4.35724)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree18" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 27.992, 0, 13.3358)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree19" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 22.7105, 0, 16.6367)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree20" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -25.8794, 0, 16.1086)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree21" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -13.8667, 0, 22.885)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree22" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -16.4848, 0, 15.0305)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree23" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -8.78441, 0, -0.832361)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree24" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -11.4026, 0, -3.29649)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree25" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -43.5904, 0, 9.0242)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree26" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -43.8984, 0, 0.091692)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree27" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -32.5017, 0, -10.0729)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree28" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -30.8076, 0, -23.3176)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree29" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -10.6325, 0, -27.6299)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree30" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -5.70424, 0, -21.4695)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree31" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 9.08059, 0, -29.3239)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree32" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 17.8591, 0, -29.478)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree33" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 15.857, 0, 32.2795)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree34" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 4.61434, 0, 36.7457)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree35" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -5.38566, 0, 37.7457)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree36" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -11.854, 0, 30.3533)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="tree37" type="MeshInstance3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -11.854, 0, 30.3533)
+mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="space_sky_sketch" type="WorldEnvironment" parent="."]
+environment = ExtResource("6_tefeu")
