@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlkfjmx1sgepn"]
+
+[ext_resource type="Script" uid="uid://ct0bsu1m4yotf" path="res://scenes/intro.gd" id="1_ioskq"]
+
+[node name="Intro" type="CanvasLayer"]
+script = ExtResource("1_ioskq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.314316, 0.314316, 0.314316, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Continue"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -691.0
+offset_top = -160.0
+offset_right = 707.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "The Lemon Orchard is one of several biome modules aboard the space station.
+Until the planet is put back together, the station needs be kept in order.
+ That's your job.
+After hours, your tasks are simply putting things back in order. It's not hard work, but you never get to meet the dayshift.
+ However, you can still make a positive impact on their lives."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
