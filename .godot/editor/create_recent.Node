@@ -1,13 +1,14 @@
+Button
+Label
+CanvasLayer
 WorldEnvironment
 MeshInstance3D
 AnimationPlayer
 ColorRect
-CanvasLayer
 AudioStreamPlayer
 AudioStreamPlayer3D
 Label3D
 CollisionShape3D
 Area3D
 StaticBody3D
-Label
 Node3D
