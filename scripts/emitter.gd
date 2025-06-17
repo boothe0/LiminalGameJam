@@ -4,3 +4,5 @@ extends Node
 
 # fade transition signal
 signal on_transition_finished
+
+signal first_item_pickup

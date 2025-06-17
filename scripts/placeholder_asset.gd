@@ -1,7 +1,7 @@
 extends StaticBody3D
 @onready var label_3d: Label3D = $Label3D
 
-	
+
 func _process(delta: float) -> void:
 	# making sure the player is near the interactable by checking the label
 	if Input.is_action_just_pressed("interact") and label_3d.visible == true:
@@ -9,6 +9,9 @@ func _process(delta: float) -> void:
 		print("Picked up object")
 		# free the object
 		self.queue_free()
+		if Globals.number_items == 0:
+			Emitter.emit_signal("first_item_pickup")
+		Globals.number_items += 1
 		# call the regex function
 		key_retrieval()
 
