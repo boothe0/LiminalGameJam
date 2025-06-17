@@ -1,10 +1,15 @@
 extends CharacterBody3D
 @onready var neck: Node3D = $Neck
 @onready var camera: Camera3D = $Neck/Camera3D
+var message = preload("res://scenes/messages.tscn")
+@onready var camera_3d: Camera3D = $Neck/Camera3D
+
 var speed
 const SPRINT_SPEED = 8.0
 const WALK_SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+
+var number_items = Globals.number_items
 
 var motion_sickness_flag = Globals.motion_sickness_flag
 
@@ -17,6 +22,9 @@ const BOB_FREQ = 2.0
 const BOB_AMP = 0.08
 # how far along sin wave player is 
 var sin_bob = 0.0
+
+func _ready():
+	Emitter.first_item.connect(display_message)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -93,6 +101,6 @@ func _headbob(time) -> Vector3:
 	return pos
 	
 	
-	
-	
-	
+func display_message():
+	var message = message.instantiate()
+	camera_3d.add_child(message)

@@ -1,0 +1,14 @@
+Button
+ColorRect
+Label
+CanvasLayer
+Node3D
+VBoxContainer
+AnimationPlayer
+AudioStreamPlayer
+AudioStreamPlayer3D
+Label3D
+MeshInstance3D
+CollisionShape3D
+Area3D
+StaticBody3D

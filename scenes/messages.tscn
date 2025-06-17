@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu2ope0qkyyan"]
+
+[ext_resource type="Script" uid="uid://dnkkwy4rplui6" path="res://scenes/messages.gd" id="1_jpdl2"]
+
+[node name="Messages" type="CanvasLayer"]
+script = ExtResource("1_jpdl2")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 289.0
+offset_top = 99.0
+offset_right = 849.0
+offset_bottom = 174.0
+scale = Vector2(1.01104, 1.02992)
+text = "Items you pick up will remain in your inventory until you end the shift.
+ Each shift will begin with an empty inventory.
+ Make sure you handled the items how you wanted before you clock out!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 528.0
+offset_top = 189.0
+offset_right = 578.0
+offset_bottom = 220.0
+text = "Close
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
