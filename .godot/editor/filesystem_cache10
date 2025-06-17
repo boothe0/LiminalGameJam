@@ -1,21 +1,27 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1749577373
-icon.svg::CompressedTexture2D/CompressedTexture2D::3803705575170224692::1749420077::1749420513::1::::<><><>0<>0<>3a30221590cee000b014c16b8f54243e<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://audio/::1749429114
-Liminal Jam - Night Shift Concept Music.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::2162502085252575914::1749429114::1749429114::1::::<><><>0<>0<>8536857e88a752d4173aa6d2f48aeed2<>res://.godot/imported/Liminal Jam - Night Shift Concept Music.ogg-7cba76f9ed3fa9a841d201764a31e369.oggvorbisstr::
-::res://scenes/::1749577689
-door.tscn::PackedScene/PackedScene::4705477628738796534::1749430050::0::1::::<><><>0<>0<><>::uid://b4wbasjxbmtiw::::res://scripts/door.gd
-main.tscn::PackedScene/PackedScene::4646249985624823251::1749430050::0::1::::<><><>0<>0<><>::uid://dewwokd62pf8t::::res://scenes/player.tscn<>uid://nhd3heorschy::::res://scripts/main.gd<>uid://b8bmr8uose6du::::res://scenes/door.tscn<>uid://52sdf766bulm::::res://audio/Liminal Jam - Night Shift Concept Music.ogg
-placeholder_asset.tscn::PackedScene/PackedScene::5244012403685563172::1749430050::0::1::::<><><>0<>0<><>::uid://bg47861wufoby::::res://scripts/placeholder_asset.gd
-player.tscn::PackedScene/PackedScene::7486795042489368913::1749430050::0::1::::<><><>0<>0<><>::uid://dyh8qctya6qm2::::res://scripts/player.gd
-fade_effect_transition.tscn::PackedScene::2314766505131493186::1749577689::0::1::::<><><>0<>0<><>::
-transition_screen.gd::GDScript::6271127683770299302::1749577966::0::1::::<>CanvasLayer<><>0<>0<><>::
-ui.tscn::PackedScene/PackedScene::3509064663872231520::1749430049::0::1::::<><><>0<>0<><>::uid://bffmic6k50g8i::::res://scripts/ui.gd
-::res://scripts/::1749428931
-door.gd::GDScript/GDScript::4467375137148509058::1749428691::0::1::::<>StaticBody3D<><>0<>0<><>::
-emitter.gd::GDScript/GDScript::8339256528263803144::1749423982::0::1::::<>Node<><>0<>0<><>::
-globals.gd::GDScript/GDScript::4169966318154605087::1749428767::0::1::::<>Node<><>0<>0<><>::
-main.gd::GDScript/GDScript::927138139282668270::1749428931::0::1::::<>Node3D<><>0<>0<><>::
-placeholder_asset.gd::GDScript/GDScript::2869424244771705370::1749428188::0::1::::<>StaticBody3D<><>0<>0<><>::
-player.gd::GDScript/GDScript::8860277311623942187::1749420077::0::1::::<>CharacterBody3D<><>0<>0<><>::
-ui.gd::GDScript/GDScript::2748429834349070762::1749420077::0::1::::<>CanvasLayer<><>0<>0<><>::
+::res://::1749609014
+icon.svg::CompressedTexture2D/CompressedTexture2D::3803705575170224692::1749433314::1749606310::1::::<><><>0<>0<>3a30221590cee000b014c16b8f54243e<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+LO_level_001_items.png::CompressedTexture2D/CompressedTexture2D::3969374066768400843::1749606942::1749606942::1::::<><><>0<>0<>a28f9f59e423c80e5bf4049b5f9db57c<>res://.godot/imported/LO_level_001_items.png-21a00c1eac8a14df882237534804cc49.s3tc.ctex::
+README.md::TextFile/TextFile::-1::1749433314::0::1::::<><><>0<>0<><>::
+::res://audio/::1749608723
+Liminal Jam - Night Shift Concept Music.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::2162502085252575914::1749606231::1749606310::1::::<><><>0<>0<>8536857e88a752d4173aa6d2f48aeed2<>res://.godot/imported/Liminal Jam - Night Shift Concept Music.ogg-7cba76f9ed3fa9a841d201764a31e369.oggvorbisstr::
+::res://scenes/::1749609014
+door.tscn::PackedScene::4705477628738796534::1749608908::0::1::::<><><>0<>0<><>::uid://b4wbasjxbmtiw::::res://scripts/door.gd
+fade_effect_transition.tscn::PackedScene::2314766505131493186::1749608908::0::1::::<><><>0<>0<><>::uid://cvl1s6twkl07k::::res://scripts/transition_screen.gd
+main.tscn::PackedScene::4646249985624823251::1749609014::0::1::::<><><>0<>0<><>::uid://dewwokd62pf8t::::res://scenes/player.tscn<>uid://nhd3heorschy::::res://scripts/main.gd<>uid://b8bmr8uose6du::::res://scenes/door.tscn<>uid://52sdf766bulm::::res://audio/Liminal Jam - Night Shift Concept Music.ogg<>uid://bhrb4ick732vx::::res://skybox_setup/sky_enviro.tres
+placeholder_asset.tscn::PackedScene::5244012403685563172::1749608908::0::1::::<><><>0<>0<><>::uid://bg47861wufoby::::res://scripts/placeholder_asset.gd
+player.tscn::PackedScene::7486795042489368913::1749608908::0::1::::<><><>0<>0<><>::uid://dyh8qctya6qm2::::res://scripts/player.gd
+ui.tscn::PackedScene::3509064663872231520::1749608908::0::1::::<><><>0<>0<><>::uid://bffmic6k50g8i::::res://scripts/ui.gd
+::res://scripts/::1749606231
+door.gd::GDScript/GDScript::4467375137148509058::1749606231::0::1::::<>StaticBody3D<><>0<>0<><>::
+emitter.gd::GDScript/GDScript::8339256528263803144::1749606231::0::1::::<>Node<><>0<>0<><>::
+globals.gd::GDScript/GDScript::4169966318154605087::1749606231::0::1::::<>Node<><>0<>0<><>::
+main.gd::GDScript/GDScript::927138139282668270::1749606231::0::1::::<>Node3D<><>0<>0<><>::
+placeholder_asset.gd::GDScript/GDScript::2869424244771705370::1749606231::0::1::::<>StaticBody3D<><>0<>0<><>::
+player.gd::GDScript/GDScript::8860277311623942187::1749606231::0::1::::<>CharacterBody3D<><>0<>0<><>::
+transition_screen.gd::GDScript/GDScript::6271127683770299302::1749606231::0::1::::<>CanvasLayer<><>0<>0<><>::
+ui.gd::GDScript/GDScript::2748429834349070762::1749606231::0::1::::<>CanvasLayer<><>0<>0<><>::
+::res://skybox_setup/::1749609014
+sky.tres::Sky::903738846099173153::1749609014::0::1::::<><><>0<>0<><>::uid://o15fyx458fog::::res://skybox_setup/skybox_test1j.hdr
+skybox_test1j.hdr::CompressedTexture2D::1038149368740451646::1749608744::1749609014::1::::<><><>0<>0<>70edaf10c33d4e9ef4f1f5f157edb2a9<>res://.godot/imported/skybox_test1j.hdr-ce4235a01fe98aa6a35546770e99f6c4.bptc.ctex::
+sky_enviro.tres::Environment::2912949939769011821::1749609014::0::1::::<><><>0<>0<><>::uid://m41pgpl64w7r::::res://skybox_setup/sky.tres
