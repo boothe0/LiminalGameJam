@@ -70,6 +70,7 @@ autoplay = true
 parameters/looping = true
 
 [node name="LevelFloor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.264481, 0)
 mesh = SubResource("PlaneMesh_jyhfs")
 surface_material_override/0 = SubResource("StandardMaterial3D_tefeu")
 
