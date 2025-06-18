@@ -1,11 +1,2 @@
-res://skybox_setup/sky.tres
-res://scenes/ui.tscn
 res://scenes/main.tscn
-res://scenes/player.tscn
-res://scenes/door.tscn
-res://scenes/placeholder_asset.tscn
-res://scenes/fade_effect_transition.tscn
-res://scenes/message.tscn
-res://scenes/intro.tscn
-res://scenes/intro.gd
-res://scripts/ui.gd
+res://skybox_setup/sky.tres
