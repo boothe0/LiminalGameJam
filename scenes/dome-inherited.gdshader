@@ -9,7 +9,7 @@ render_mode blend_mix, depth_prepass_alpha, cull_disabled, diffuse_burley, specu
 uniform bool shatter = true; //activate shatter
 uniform float fracture_scale = .5; // Controls cell size
 uniform float roughness : hint_range(0.0, 1.0) = 0.675;
-uniform float transparency : hint_range(0.0, 1.0) = 0.275;
+uniform float transparency : hint_range(0.0, 1.0) = 0.175;
 uniform float normal_offset_multiplier : hint_range(0.0, 1.0) = 0.375; // Multiplier to control normal intensity and angle
 uniform float glass_tint : hint_range(0.0,1.0) = 0.375;
 
