@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://52sdf766bulm" path="res://audio/Liminal Jam - Night Shift Concept Music.ogg" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://drcr87ep8fct3" path="res://skybox_setup/LO_dome_sketch.glb" id="6_o6xl0"]
 [ext_resource type="Environment" uid="uid://bhrb4ick732vx" path="res://skybox_setup/sky_enviro.tres" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://bj06pdg883khk" path="res://skybox_setup/LO_terrain_sketch.glb" id="7_tipki"]
+[ext_resource type="PackedScene" uid="uid://bj06pdg883khk" path="res://terrain/LO_terrain_sketch.glb" id="7_tipki"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kw0jy"]
 size = Vector3(42.733, 1.037, 40)

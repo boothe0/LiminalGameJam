@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bj06pdg883khk"
-path="res://.godot/imported/LO_terrain_sketch.glb-5c1c5b73fb766aca28d38c166ed954c1.scn"
+uid="uid://gd51ocwf01jf"
+path="res://.godot/imported/LO_path_rock1.glb-8ce4f1faf7530506821363a2012c9b09.scn"
 
 [deps]
 
-source_file="res://skybox_setup/LO_terrain_sketch.glb"
-dest_files=["res://.godot/imported/LO_terrain_sketch.glb-5c1c5b73fb766aca28d38c166ed954c1.scn"]
+source_file="res://terrain/LO_path_rock1.glb"
+dest_files=["res://.godot/imported/LO_path_rock1.glb-8ce4f1faf7530506821363a2012c9b09.scn"]
 
 [params]
 
