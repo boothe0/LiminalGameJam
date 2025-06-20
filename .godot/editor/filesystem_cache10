@@ -1,17 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1750351412
+::res://::1750379015
 icon.svg::CompressedTexture2D/CompressedTexture2D::3803705575170224692::1749433314::1749606310::1::::<><><>0<>0<>3a30221590cee000b014c16b8f54243e<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 LO_level_001_items.png::CompressedTexture2D/CompressedTexture2D::3969374066768400843::1749606942::1749606942::1::::<><><>0<>0<>a28f9f59e423c80e5bf4049b5f9db57c<>res://.godot/imported/LO_level_001_items.png-21a00c1eac8a14df882237534804cc49.s3tc.ctex::
 README.md::TextFile/TextFile::-1::1749433314::0::1::::<><><>0<>0<><>::
 ::res://audio/::1749608723
 Liminal Jam - Night Shift Concept Music.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::2162502085252575914::1749606231::1749606310::1::::<><><>0<>0<>8536857e88a752d4173aa6d2f48aeed2<>res://.godot/imported/Liminal Jam - Night Shift Concept Music.ogg-7cba76f9ed3fa9a841d201764a31e369.oggvorbisstr::
-::res://scenes/::1750351424
+::res://scenes/::1750368024
 door.tscn::PackedScene/PackedScene::4705477628738796534::1749609157::0::1::::<><><>0<>0<><>::uid://b4wbasjxbmtiw::::res://scripts/door.gd
 fade_effect_transition.tscn::PackedScene/PackedScene::2314766505131493186::1749609157::0::1::::<><><>0<>0<><>::uid://cvl1s6twkl07k::::res://scripts/transition_screen.gd
 intro.gd::GDScript/GDScript::6158132792860223059::1750278031::0::1::::<>CanvasLayer<><>0<>0<><>::
 intro.tscn::PackedScene/PackedScene::7952303432763552875::1750278031::0::1::::<><><>0<>0<><>::uid://ct0bsu1m4yotf::::res://scenes/intro.gd
-main.tscn::PackedScene::4646249985624823251::1750351424::0::1::::<><><>0<>0<><>::uid://dewwokd62pf8t::::res://scenes/player.tscn<>uid://nhd3heorschy::::res://scripts/main.gd<>uid://b8bmr8uose6du::::res://scenes/door.tscn<>uid://52sdf766bulm::::res://audio/Liminal Jam - Night Shift Concept Music.ogg<>uid://drcr87ep8fct3::::res://skybox_setup/LO_dome_sketch.glb<>uid://bhrb4ick732vx::::res://skybox_setup/sky_enviro.tres<>uid://bj06pdg883khk::::res://terrain/LO_terrain_sketch.glb
+main.tscn::PackedScene/PackedScene::4646249985624823251::1750366552::0::1::::<><><>0<>0<><>::uid://dewwokd62pf8t::::res://scenes/player.tscn<>uid://nhd3heorschy::::res://scripts/main.gd<>uid://b8bmr8uose6du::::res://scenes/door.tscn<>uid://52sdf766bulm::::res://audio/Liminal Jam - Night Shift Concept Music.ogg<>uid://drcr87ep8fct3::::res://skybox_setup/LO_dome_sketch.glb<>uid://bhrb4ick732vx::::res://skybox_setup/sky_enviro.tres<>uid://bj06pdg883khk::::res://terrain/LO_terrain_sketch.glb
 message.tscn::PackedScene/PackedScene::8110392672792345658::1750278031::0::1::::<><><>0<>0<><>::uid://ce7ujat82xhj::::res://scripts/message.gd
+node.gd::GDScript::6189272353275221824::1750368024::0::1::::<>Node<><>0<>0<><>::
 placeholder_asset.tscn::PackedScene/PackedScene::5244012403685563172::1749609157::0::1::::<><><>0<>0<><>::uid://bg47861wufoby::::res://scripts/placeholder_asset.gd
 player.tscn::PackedScene/PackedScene::7486795042489368913::1749609157::0::1::::<><><>0<>0<><>::uid://dyh8qctya6qm2::::res://scripts/player.gd
 ui.tscn::PackedScene/PackedScene::3509064663872231520::1749609157::0::1::::<><><>0<>0<><>::uid://bffmic6k50g8i::::res://scripts/ui.gd
@@ -26,18 +27,22 @@ placeholder_asset.gd::GDScript/GDScript::2869424244771705370::1750278031::0::1::
 player.gd::GDScript/GDScript::8860277311623942187::1750278031::0::1::::<>CharacterBody3D<><>0<>0<><>::
 transition_screen.gd::GDScript/GDScript::6271127683770299302::1749606231::0::1::::<>CanvasLayer<><>0<>0<><>::
 ui.gd::GDScript/GDScript::2748429834349070762::1750278031::0::1::::<>CanvasLayer<><>0<>0<><>::
-::res://skybox_setup/::1750351424
-LO_dome_sketch.glb::PackedScene/PackedScene::8357693956162116930::1750351321::1750351373::1::::<><><>0<>0<>d22984eefa71a66a7dfae698fb4fe08c<>res://.godot/imported/LO_dome_sketch.glb-2c05c534405b73b7c5e1fb85391babc0.scn::
-sky.tres::Sky::903738846099173153::1750351424::0::1::::<><><>0<>0<><>::uid://o15fyx458fog::::res://skybox_setup/skybox_test1j.hdr
+::res://skybox_setup/::1750379015
+LO_dome_sketch.glb::PackedScene/PackedScene::8357693956162116930::1750366552::1750366568::1::::<><><>0<>0<>d22984eefa71a66a7dfae698fb4fe08c<>res://.godot/imported/LO_dome_sketch.glb-2c05c534405b73b7c5e1fb85391babc0.scn::
+LO_Tree_Lemon.glb::PackedScene::6659346763961461125::1750367400::1750379016::1::::<><><>0<>0<>b76d52211d9814a1efbf8e3322f87452<>res://.godot/imported/LO_Tree_Lemon.glb-fb0646ce9c70424342548e9392cc4e4d.scn::uid://b2suck6klen7j::::res://skybox_setup/LO_Tree_Lemon_tree_leaves_texture2a.png<>uid://dfkuyj6hj4apv::::res://skybox_setup/LO_Tree_Lemon_tree_trunk_texture2.png
+LO_Tree_Try3_tree_leaves_texture2a.png::CompressedTexture2D/CompressedTexture2D::3483879878760872766::1750367401::1750379016::1::::<><><>0<>0<>4d5772ddb1d9b273438569822cf25250<>res://.godot/imported/LO_Tree_Try3_tree_leaves_texture2a.png-4d1adf0207191eeeac956dc72bf8755d.s3tc.ctex::
+LO_Tree_Try3_tree_trunk_texture2.png::CompressedTexture2D/CompressedTexture2D::7511131100261356368::1750367401::1750379016::1::::<><><>0<>0<>a99e9a8f36a033b8bb280f832f1f6a82<>res://.godot/imported/LO_Tree_Try3_tree_trunk_texture2.png-35cd275962a5ad2904585270b96f7f00.s3tc.ctex::
+LO_Tree_Lemon_tree_leaves_texture2a.png::CompressedTexture2D::4319896746527856077::1750379016::1750379017::1::::<><><>0<>0<>9a8681c4389ef1c88f413b7360b99bdc<>res://.godot/imported/LO_Tree_Lemon_tree_leaves_texture2a.png-1c59a5c07a4502a7edf031e85b52a2e2.s3tc.ctex::
+LO_Tree_Lemon_tree_trunk_texture2.png::CompressedTexture2D::7532107766649413163::1750379016::1750379016::1::::<><><>0<>0<>39270d77db933eb057dd3ee57f017a43<>res://.godot/imported/LO_Tree_Lemon_tree_trunk_texture2.png-a61c5ff9b755dc69e70731a03e37a74c.s3tc.ctex::
+sky.tres::Sky/Sky::903738846099173153::1750351424::0::1::::<><><>0<>0<><>::uid://o15fyx458fog::::res://skybox_setup/skybox_test1j.hdr
 skybox_test1j.hdr::CompressedTexture2D/CompressedTexture2D::1038149368740451646::1749608744::1749609014::1::::<><><>0<>0<>70edaf10c33d4e9ef4f1f5f157edb2a9<>res://.godot/imported/skybox_test1j.hdr-ce4235a01fe98aa6a35546770e99f6c4.bptc.ctex::
 sky_enviro.tres::Environment/Environment::2912949939769011821::1749609014::0::1::::<><><>0<>0<><>::uid://m41pgpl64w7r::::res://skybox_setup/sky.tres
-::res://terrain/::1750354992
-Grass_Blades (1).png::CompressedTexture2D::5034132663050108181::1750351422::1750351422::1::::<><><>0<>0<>8b9072e38e02f867ea1fb2721f070ed4<>res://.godot/imported/Grass_Blades (1).png-0909ae1e7703d4bcf06465e88b85978d.ctex::
-Grass_Blades (2).png::CompressedTexture2D::3839856779806738756::1750351422::1750351422::1::::<><><>0<>0<>6e62f6fa1f5ea89844ec0b810dfa3bbc<>res://.godot/imported/Grass_Blades (2).png-b2331def13c5ae8481814d82a2376764.ctex::
-Grass_Blades (3).png::CompressedTexture2D::8951544555341161188::1750351422::1750351422::1::::<><><>0<>0<>f30043f3f57298bb324c0993c84edab3<>res://.godot/imported/Grass_Blades (3).png-b827c1fac1b685f86bbc5b2fe9b453b0.ctex::
-Grass_Blades (4).png::CompressedTexture2D::6801485935583450431::1750351422::1750351422::1::::<><><>0<>0<>d428c2c8dfe9cc8dc1a69f31c8102dba<>res://.godot/imported/Grass_Blades (4).png-f65042445acb47e80427fc59d2353bee.ctex::
-Grass_Blades (5).png::CompressedTexture2D::3091752674015355671::1750351422::1750351422::1::::<><><>0<>0<>61e6c8ef578440ffe1fd431a3f5a28d7<>res://.godot/imported/Grass_Blades (5).png-4a9f128f5d98be7bde5a35e48911c810.ctex::
-LO_path_rock1.glb::PackedScene::429194874938679671::1750354984::1750354986::1::::<><><>0<>0<>52a92bfefcd4c388bb866c22ac749a5f<>res://.godot/imported/LO_path_rock1.glb-8ce4f1faf7530506821363a2012c9b09.scn::uid://meg4sgwix514::::res://terrain/LO_path_rock1_rock_path_texture.png
-LO_terrain_sketch.glb::PackedScene::3071638902354678064::1750351321::1750351413::1::::<><><>0<>0<>e9f23e5a421fa57f99cad4fa10e1e17a<>res://.godot/imported/LO_terrain_sketch.glb-dc2d5a6ccca6b7849be2b032755cc8df.scn::
-LO_path_rock1_rock_path_texture.png::CompressedTexture2D::850940680352807169::1750354984::1750354987::1::::<><><>0<>0<>b45f5169f3b5578190241af164e79fab<>res://.godot/imported/LO_path_rock1_rock_path_texture.png-834f04da11e9c57d73fe5816fb6a5ad9.s3tc.ctex::
-rock_path_texture.png::CompressedTexture2D::1264867490799548351::1750354992::1750354993::1::::<><><>0<>0<>d471d4ac22d1d5868927a975fa220f5e<>res://.godot/imported/rock_path_texture.png-4ef1355ebdc85dc67a35aaba8b44b762.ctex::
+::res://terrain/::1750366568
+Grass_Blades (1).png::CompressedTexture2D/CompressedTexture2D::5034132663050108181::1750366552::1750366567::1::::<><><>0<>0<>8b9072e38e02f867ea1fb2721f070ed4<>res://.godot/imported/Grass_Blades (1).png-0909ae1e7703d4bcf06465e88b85978d.ctex::
+Grass_Blades (2).png::CompressedTexture2D/CompressedTexture2D::3839856779806738756::1750366552::1750366567::1::::<><><>0<>0<>6e62f6fa1f5ea89844ec0b810dfa3bbc<>res://.godot/imported/Grass_Blades (2).png-b2331def13c5ae8481814d82a2376764.ctex::
+Grass_Blades (3).png::CompressedTexture2D/CompressedTexture2D::8951544555341161188::1750366552::1750366567::1::::<><><>0<>0<>f30043f3f57298bb324c0993c84edab3<>res://.godot/imported/Grass_Blades (3).png-b827c1fac1b685f86bbc5b2fe9b453b0.ctex::
+Grass_Blades (4).png::CompressedTexture2D/CompressedTexture2D::6801485935583450431::1750366552::1750366567::1::::<><><>0<>0<>d428c2c8dfe9cc8dc1a69f31c8102dba<>res://.godot/imported/Grass_Blades (4).png-f65042445acb47e80427fc59d2353bee.ctex::
+Grass_Blades (5).png::CompressedTexture2D/CompressedTexture2D::3091752674015355671::1750366552::1750366567::1::::<><><>0<>0<>61e6c8ef578440ffe1fd431a3f5a28d7<>res://.godot/imported/Grass_Blades (5).png-4a9f128f5d98be7bde5a35e48911c810.ctex::
+LO_path_rock1.glb::PackedScene/PackedScene::429194874938679671::1750366552::1750366568::1::::<><><>0<>0<>52a92bfefcd4c388bb866c22ac749a5f<>res://.godot/imported/LO_path_rock1.glb-8ce4f1faf7530506821363a2012c9b09.scn::uid://meg4sgwix514::::res://terrain/LO_path_rock1_rock_path_texture.png
+LO_path_rock1_rock_path_texture.png::CompressedTexture2D/CompressedTexture2D::850940680352807169::1750366552::1750366568::1::::<><><>0<>0<>b45f5169f3b5578190241af164e79fab<>res://.godot/imported/LO_path_rock1_rock_path_texture.png-834f04da11e9c57d73fe5816fb6a5ad9.s3tc.ctex::
+LO_terrain_sketch.glb::PackedScene/PackedScene::3071638902354678064::1750366553::1750366568::1::::<><><>0<>0<>e9f23e5a421fa57f99cad4fa10e1e17a<>res://.godot/imported/LO_terrain_sketch.glb-dc2d5a6ccca6b7849be2b032755cc8df.scn::
