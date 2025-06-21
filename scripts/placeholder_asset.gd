@@ -1,10 +1,10 @@
 extends StaticBody3D
-@onready var label_3d: Label3D = $Label3D
 
+@onready var label_3d_2: Label3D = $MeshInstance3D/Label3D2
 
 func _process(delta: float) -> void:
 	# making sure the player is near the interactable by checking the label
-	if Input.is_action_just_pressed("interact") and label_3d.visible == true:
+	if Input.is_action_just_pressed("interact") and label_3d_2.visible == true:
 		# debug statement
 		print("Picked up object")
 		# free the object
@@ -25,7 +25,9 @@ func key_retrieval():
 	var regex = RegEx.new()
 	regex.compile("res://scenes/([A-Za-z]+)_([A-Za-z]+)\\.tscn")
 	var scene = self.get_scene_file_path()
+	print(scene)
 	var word = regex.search(scene)
+	print(word)
 	# combine the two words to get the key to add to the global dictionary
 	key += word.get_string(1) + "" + word.get_string(2)
 	# set the item dictionary
@@ -34,7 +36,7 @@ func key_retrieval():
 # handles label visibility
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
-		label_3d.visible = true
+		label_3d_2.visible = true
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.name == "Player":
-		label_3d.visible = false
+		label_3d_2.visible = false

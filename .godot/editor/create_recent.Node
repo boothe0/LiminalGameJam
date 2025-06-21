@@ -1,3 +1,6 @@
+Label3D
+StaticBody3D
+Area3D
 MeshInstance3D
 MultiMeshInstance3D
 CollisionShape3D
@@ -9,6 +12,3 @@ CanvasLayer
 WorldEnvironment
 AnimationPlayer
 AudioStreamPlayer
-AudioStreamPlayer3D
-Label3D
-Area3D

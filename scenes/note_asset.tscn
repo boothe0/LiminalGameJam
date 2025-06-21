@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://drow2luecl41x"]
+
+[ext_resource type="Script" uid="uid://bg47861wufoby" path="res://scripts/placeholder_asset.gd" id="1_doocs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wn01w"]
+albedo_color = Color(1, 1, 0.203922, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rf3o7"]
+material = SubResource("StandardMaterial3D_wn01w")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lyp5m"]
+size = Vector3(0.639343, 0.640022, 0.0583191)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eo7dk"]
+size = Vector3(1.3, 0.648169, 0.928064)
+
+[node name="Note" type="StaticBody3D"]
+script = ExtResource("1_doocs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.607134, 0, 0, 0, 0.619053, 0, 0, 0, 0.0183676, 0, 0.304579, 0)
+mesh = SubResource("BoxMesh_rf3o7")
+
+[node name="Label3D" type="Label3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.187514, 0.530916)
+text = "Note"
+
+[node name="Label3D2" type="Label3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.169491, 0, 0, 0.684716)
+visible = false
+text = "Pickup?"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000335693, 0.305187, -0.00682068)
+shape = SubResource("BoxShape3D_lyp5m")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.325916, 0.37597)
+shape = SubResource("BoxShape3D_eo7dk")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

@@ -1,3 +1,4 @@
+res://meshes/grass.res
 res://scenes/ui.tscn
 res://skybox_setup/sky.tres
 res://skybox_setup/sky_enviro.tres
@@ -11,4 +12,8 @@ res://scenes/message.tscn
 res://scenes/intro.tscn
 res://scenes/lo_dome_sketch.tscn
 res://scenes/lo_terrain_sketch.tscn
-res://meshes/grass.res
+res://note.tscn
+res://scripts/placeholder_asset.gd
+res://note_asset.tscn
+res://scenes/note_asset.tscn
+res://scripts/main.gd
