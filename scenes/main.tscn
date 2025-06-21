@@ -1,12 +1,19 @@
-[gd_scene load_steps=18 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=19 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b8bmr8uose6du" path="res://scenes/door.tscn" id="2_0wfyh"]
 [ext_resource type="AudioStream" uid="uid://52sdf766bulm" path="res://audio/Liminal Jam - Night Shift Concept Music.ogg" id="4_jyhfs"]
+<<<<<<< HEAD
+[ext_resource type="PackedScene" uid="uid://c143p6kqkkxur" path="res://skybox_setup/LO_Tree_Lemon.glb" id="5_tipki"]
+[ext_resource type="PackedScene" uid="uid://drcr87ep8fct3" path="res://skybox_setup/LO_dome_sketch.glb" id="6_o6xl0"]
+[ext_resource type="Environment" uid="uid://bhrb4ick732vx" path="res://skybox_setup/sky_enviro.tres" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://bj06pdg883khk" path="res://terrain/LO_terrain_sketch.glb" id="7_tipki"]
+=======
 [ext_resource type="Environment" uid="uid://bhrb4ick732vx" path="res://skybox_setup/sky_enviro.tres" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://d30prnhd3bss8" path="res://scenes/lo_dome_sketch.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://bj06pdg883khk" path="res://skybox_setup/LO_terrain_sketch.glb" id="7_tipki"]
+>>>>>>> main
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kw0jy"]
 size = Vector3(42.733, 1.037, 40)
@@ -76,6 +83,111 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.264481, 0)
 mesh = SubResource("PlaneMesh_jyhfs")
 surface_material_override/0 = SubResource("StandardMaterial3D_tefeu")
 
+[node name="forest" type="Node3D" parent="LevelFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.24994, 0)
+
+[node name="LO_Tree_Lemon" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -25.7473, 7.81022, 16.1746)
+
+[node name="LO_Tree_Lemon3" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -15.7368, 7.81022, 15.0965)
+
+[node name="LO_Tree_Lemon4" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -6.91066, 8.42834, 9.71351)
+
+[node name="LO_Tree_Lemon34" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(-1.96494, 0, -2.26694, 0, 3, 0, 2.26694, 0, -1.96494, 8.34498, 8.42834, 20.7661)
+
+[node name="LO_Tree_Lemon5" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -43.3043, 6.71853, 8.62817)
+
+[node name="LO_Tree_Lemon6" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -43.3043, 6.63929, 0.311707)
+
+[node name="LO_Tree_Lemon7" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(1.49914, 0, 2.59857, 0, 3, 0, -2.59857, 0, 1.49914, -32.2157, 6.63929, -10.4689)
+
+[node name="LO_Tree_Lemon8" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -24.9773, 6.60065, 0.311707)
+
+[node name="LO_Tree_Lemon9" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -30.6756, 5.99599, -23.0976)
+
+[node name="LO_Tree_Lemon10" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -22.2051, 8.80569, -23.4056)
+
+[node name="LO_Tree_Lemon11" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -23.2051, 6.88412, -12.4056)
+
+[node name="LO_Tree_Lemon12" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -10.2684, 8.80569, -2.54906)
+
+[node name="LO_Tree_Lemon13" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5.95616, 7.42686, -5.0132)
+
+[node name="LO_Tree_Lemon14" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(1.36085, 0, -2.67359, 0, 3, 0, 2.67359, 0, 1.36085, -3.95616, 7.71364, -10.0132)
+
+[node name="LO_Tree_Lemon15" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.51221, 8.80569, -6.93303)
+
+[node name="LO_Tree_Lemon16" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -11.8106, 8.80569, 30.3371)
+
+[node name="LO_Tree_Lemon17" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.95616, 7.6362, 38.4995)
+
+[node name="LO_Tree_Lemon18" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(1.69391, 0, 2.47602, 0, 3, 0, -2.47602, 0, 1.69391, 5.28436, 8.43799, 36.8054)
+
+[node name="LO_Tree_Lemon19" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 18.2844, 8.34643, 30.8054)
+
+[node name="LO_Tree_Lemon20" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(0.456525, 0, 2.96506, 0, 3, 0, -2.96506, 0, 0.456525, 23.2126, 8.87773, 16.7906)
+
+[node name="LO_Tree_Lemon21" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 28.1409, 8.56472, 13.5564)
+
+[node name="LO_Tree_Lemon22" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(1.48497, -1.13942e-07, -2.6067, 1.13942e-07, 3, -6.62242e-08, 2.6067, -6.62242e-08, 1.48497, 18.1303, 8.80569, 4.31593)
+
+[node name="LO_Tree_Lemon23" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(0.542433, 0, -2.95055, 0, 3, 0, 2.95055, 0, 0.542433, 35.3793, 7.06558, 4.31593)
+
+[node name="LO_Tree_Lemon24" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 33.2232, 7.97707, 10.3223)
+
+[node name="LO_Tree_Lemon25" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 17.9763, 7.4754, -4.30854)
+
+[node name="LO_Tree_Lemon26" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 33.2232, 8.80569, -9.54484)
+
+[node name="LO_Tree_Lemon27" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(1.31648, 0, -2.69572, 0, 3, 0, 2.69572, 0, 1.31648, 39.2295, 8.80569, -7.54273)
+
+[node name="LO_Tree_Lemon28" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.7295, 8.80569, -21.7115)
+
+[node name="LO_Tree_Lemon29" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.43085, 8.80569, -20.3254)
+
+[node name="LO_Tree_Lemon30" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(1.65004, 0, -2.50547, 0, 3, 0, 2.50547, 0, 1.65004, -9.12917, 8.80569, -28.1799)
+
+[node name="LO_Tree_Lemon31" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 9.04384, 8.80569, -29.72)
+
+[node name="LO_Tree_Lemon32" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(1.61658, 0, -2.52719, 0, 3, 0, 2.52719, 0, 1.61658, 19.6704, 8.80569, -29.4119)
+
+[node name="LO_Tree_Lemon33" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 17.5143, 8.80569, -18.9394)
+
+[node name="LO_Tree_Lemon2" parent="LevelFloor/forest" instance=ExtResource("5_tipki")]
+transform = Transform3D(2.1566, 0, 2.08544, 0, 3, 0, -2.08544, 0, 2.1566, -13.7098, 8.57128, 22.7308)
+
 [node name="workstation dinner" type="MeshInstance3D" parent="LevelFloor"]
 transform = Transform3D(6.4527, -0.0994294, 1.8859, 0.426116, 3.2367, -0.0475394, -5.12346, 0.14397, 2.37122, 10.4773, 1.28837, 19.2003)
 mesh = SubResource("BoxMesh_tbgi4")
@@ -136,157 +248,204 @@ mesh = SubResource("BoxMesh_tbgi4")
 transform = Transform3D(-2.12939, 0.0481577, -4.19149, 0.273803, 7.52834, -0.0718094, 4.84713, -0.404101, -1.83731, 43.5491, 3.57602, 17.1341)
 mesh = SubResource("BoxMesh_tbgi4")
 
-[node name="tree1" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -5.23629, 0, 3.23418)
-mesh = SubResource("CylinderMesh_tbgi4")
+[node name="tree_placeholders" type="Node3D" parent="LevelFloor"]
+visible = false
 
-[node name="tree2" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -5.94169, 0, -5.80965)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree3" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 1.45242, 0, -7.65818)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree4" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -3.03686, 0, -9.37467)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree5" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 18.0891, 0, -3.82909)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree6" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 17.9571, 0, 5.01743)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree7" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -8.84651, 0, 9.24263)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree8" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -25.4832, 0, 0.132038)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree9" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -23.8988, 0, -13.3358)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree10" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -11.7513, 0, -16.7688)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree11" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -22.8425, 0, -22.5784)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree12" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 1.71649, 0, -21.126)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree13" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 12.0154, 0, -17.561)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree14" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 23.8988, 0, -10.695)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree15" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 32.6133, 0, -8.05429)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree16" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 38.0268, 0, -6.99799)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree17" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 33.5375, 0, 4.35724)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree18" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 27.992, 0, 13.3358)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree19" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 22.7105, 0, 16.6367)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree20" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -25.8794, 0, 16.1086)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree21" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -13.8667, 0, 22.885)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree22" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -16.4848, 0, 15.0305)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree23" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -8.78441, 0, -0.832361)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree24" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -11.4026, 0, -3.29649)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree25" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -43.5904, 0, 9.0242)
-mesh = SubResource("CylinderMesh_tbgi4")
-
-[node name="tree26" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree26" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -43.8984, 0, 0.091692)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
-[node name="tree27" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree27" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -32.5017, 0, -10.0729)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
-[node name="tree28" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree28" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -30.8076, 0, -23.3176)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
-[node name="tree29" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree29" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -10.6325, 0, -27.6299)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
-[node name="tree30" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree30" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -5.70424, 0, -21.4695)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
-[node name="tree31" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree31" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 9.08059, 0, -29.3239)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
-[node name="tree32" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree32" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 17.8591, 0, -29.478)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
-[node name="tree33" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree33" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 15.857, 0, 32.2795)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
-[node name="tree34" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree34" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 4.61434, 0, 36.7457)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
-[node name="tree35" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree35" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -5.38566, 0, 37.7457)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
-[node name="tree36" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree36" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -11.854, 0, 30.3533)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
-[node name="tree37" type="MeshInstance3D" parent="LevelFloor"]
+[node name="tree37" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -11.854, 0, 30.3533)
 mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree17" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 33.5375, 0, 4.35724)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree18" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 27.992, 0, 13.3358)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree19" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 22.7105, 0, 16.6367)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree20" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -25.8794, 0, 16.1086)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree21" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -13.8667, 0, 22.885)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree22" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -16.4848, 0, 15.0305)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree23" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -8.78441, 0, -0.832361)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree24" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -11.4026, 0, -3.29649)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree25" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -43.5904, 0, 9.0242)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree7" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -8.84651, 0, 9.24263)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree8" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -25.4832, 0, 0.132038)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree9" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -23.8988, 0, -13.3358)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree10" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -11.7513, 0, -16.7688)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree11" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -22.8425, 0, -22.5784)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree12" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 1.71649, 0, -21.126)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree13" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 12.0154, 0, -17.561)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree14" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 23.8988, 0, -10.695)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree15" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 32.6133, 0, -8.05429)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree16" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 38.0268, 0, -6.99799)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree1" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -5.23629, 0, 3.23418)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree2" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -5.94169, 0, -5.80965)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree3" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 1.45242, 0, -7.65818)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree4" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -3.03686, 0, -9.37467)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree5" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 18.0891, 0, -3.82909)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
+
+[node name="tree6" type="MeshInstance3D" parent="LevelFloor/tree_placeholders"]
+transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, 17.9571, 0, 5.01743)
+mesh = SubResource("CylinderMesh_tbgi4")
+skeleton = NodePath("../..")
 
 [node name="space_sky_sketch" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_tefeu")
 
+<<<<<<< HEAD
+[node name="LO_dome_sketch" parent="." instance=ExtResource("6_o6xl0")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -1.0301, 0.740018, 1.91782)
+visible = false
+
+=======
+>>>>>>> main
 [node name="LO_terrain_sketch" parent="." instance=ExtResource("7_tipki")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -1.0301, 0.740018, 1.91782)
 

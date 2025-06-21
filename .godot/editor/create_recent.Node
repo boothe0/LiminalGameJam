@@ -1,3 +1,5 @@
+Node3D
+Node
 CollisionShape3D
 Label
 Button
@@ -10,5 +12,3 @@ AnimationPlayer
 AudioStreamPlayer
 AudioStreamPlayer3D
 Label3D
-Area3D
-StaticBody3D
