@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://3nefe3lq1hqx"]
+
+[ext_resource type="PackedScene" uid="uid://36ggs3jar12" path="res://assets/3d-model.fbx" id="1_vikin"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="3d-model" parent="." instance=ExtResource("1_vikin")]
