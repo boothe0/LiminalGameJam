@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://drcr87ep8fct3" path="res://skybox_setup/LO_dome_sketch.glb" id="1_os5br"]
 [ext_resource type="Shader" uid="uid://ndvy8n4sh753" path="res://scenes/dome-inherited.gdshader" id="2_wdslb"]
-[ext_resource type="PackedScene" uid="uid://bj06pdg883khk" path="res://skybox_setup/LO_terrain_sketch.glb" id="3_xi8qf"]
+[ext_resource type="PackedScene" uid="uid://bj28kncam2bly" path="res://scenes/lo_terrain_sketch.tscn" id="4_uy8we"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xi8qf"]
 render_priority = 0
@@ -56,5 +56,5 @@ transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 [node name="dome_sketch" parent="." index="0"]
 mesh = SubResource("ArrayMesh_h7h16")
 
-[node name="LO_terrain_sketch" parent="." index="1" instance=ExtResource("3_xi8qf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0365448, 0, -0.127911)
+[node name="LO_terrain_sketch2" parent="." index="1" instance=ExtResource("4_uy8we")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.145368, 0)

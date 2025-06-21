@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=15 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -6,12 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://52sdf766bulm" path="res://audio/Liminal Jam - Night Shift Concept Music.ogg" id="4_jyhfs"]
 [ext_resource type="Environment" uid="uid://bhrb4ick732vx" path="res://skybox_setup/sky_enviro.tres" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://d30prnhd3bss8" path="res://scenes/lo_dome_sketch.tscn" id="7_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://bj06pdg883khk" path="res://skybox_setup/LO_terrain_sketch.glb" id="7_tipki"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_kw0jy"]
-size = Vector3(42.733, 1.037, 40)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_o00rs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o00rs"]
 albedo_color = Color(0.225207, 0.395142, 0.865675, 1)
@@ -39,17 +33,8 @@ albedo_color = Color(0.446777, 0.446777, 0.446777, 1)
 [node name="Main" type="Node3D"]
 script = ExtResource("1_sugp2")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_kw0jy")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(58.8729, 0, 0, 0, 1, 0, 0, 0, 59.6163, 0.225334, 0, -0.0664645)
-mesh = SubResource("PlaneMesh_o00rs")
-
 [node name="Player" parent="." instance=ExtResource("1_o00rs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00597167, 1.03125, -0.00133562)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00597167, 2.86206, -0.00133562)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.873753, 0.0998857, 0.476002, -0.387512, -0.448463, 0.805428, 0.29392, -0.888202, -0.353139, 8.25553, 11.3527, -3.52287)
@@ -287,7 +272,5 @@ mesh = SubResource("CylinderMesh_tbgi4")
 [node name="space_sky_sketch" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_tefeu")
 
-[node name="LO_terrain_sketch" parent="." instance=ExtResource("7_tipki")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -1.0301, 0.740018, 1.91782)
-
 [node name="LO_dome_sketch" parent="." instance=ExtResource("7_o6xl0")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0.569664, 0)

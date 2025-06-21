@@ -1,4 +1,14 @@
-res://scenes/lo_dome_sketch.tscn
+res://scenes/ui.tscn
 res://skybox_setup/sky.tres
 res://skybox_setup/sky_enviro.tres
 res://scenes/dome-inherited.gdshader
+res://scenes/main.tscn
+res://scenes/player.tscn
+res://scenes/door.tscn
+res://scenes/placeholder_asset.tscn
+res://scenes/fade_effect_transition.tscn
+res://scenes/message.tscn
+res://scenes/intro.tscn
+res://scenes/lo_dome_sketch.tscn
+res://scenes/lo_terrain_sketch.tscn
+res://meshes/grass.res
