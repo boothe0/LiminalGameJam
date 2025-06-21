@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bwrws0b0epeoy"
-path="res://.godot/imported/LO_locker_tall.glb-120088e0f33e6d11dd8fc91c2cfaabe6.scn"
+uid="uid://bj06pdg883khk"
+path="res://.godot/imported/LO_terrain_sketch.glb-5c1c5b73fb766aca28d38c166ed954c1.scn"
 
 [deps]
 
-source_file="res://furniture + walls/LO_locker_tall.glb"
-dest_files=["res://.godot/imported/LO_locker_tall.glb-120088e0f33e6d11dd8fc91c2cfaabe6.scn"]
+source_file="res://skybox_setup/LO_terrain_sketch.glb"
+dest_files=["res://.godot/imported/LO_terrain_sketch.glb-5c1c5b73fb766aca28d38c166ed954c1.scn"]
 
 [params]
 
