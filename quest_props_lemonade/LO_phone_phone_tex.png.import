@@ -2,14 +2,14 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n1qmb4u5pr1q"
+uid="uid://dtrnx7qxhxyyq"
 path.s3tc="res://.godot/imported/LO_phone_phone_tex.png-58cba4000c5be849ae2e5c68ecb515a7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "40ccd36e3b47027b6d4f41fef27acc49"
+"md5": "573971fdcfd97007f56f4c2e2f6caeda"
 }
 
 [deps]
