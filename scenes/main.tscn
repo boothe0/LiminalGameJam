@@ -63,8 +63,11 @@ mesh = SubResource("PlaneMesh_jyhfs")
 surface_material_override/0 = SubResource("StandardMaterial3D_tefeu")
 
 [node name="workstation dinner" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(6.4527, -0.0994294, 1.8859, 0.426116, 3.2367, -0.0475394, -5.12346, 0.14397, 2.37122, 10.4773, 1.28837, 19.2003)
+transform = Transform3D(6.4527, -0.0994294, 1.8859, 0.426116, 3.2367, -0.0475394, -5.12346, 0.14397, 2.37122, 10.4773, 4.66181, 19.2003)
 mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="WorkNote" parent="LevelFloor/workstation dinner" instance=ExtResource("5_o6xl0")]
+transform = Transform3D(-0.0141421, 0.00346589, -0.303553, 0.00133152, 0.201664, 0.00515966, 0.285598, -0.000768613, -0.0150557, -0.448418, 0.485787, 0.25689)
 
 [node name="workstation wall" type="MeshInstance3D" parent="LevelFloor"]
 transform = Transform3D(2.90039, -0.106588, -2.83495, 0.426116, 3.2367, -0.0475394, 7.712, -0.138753, 1.06881, 44.3808, 1.28837, -17.0535)
@@ -73,6 +76,9 @@ mesh = SubResource("BoxMesh_tbgi4")
 [node name="cafe bar" type="MeshInstance3D" parent="LevelFloor"]
 transform = Transform3D(12.1867, -0.354857, 0.919056, 0.655633, 7.81952, -0.0521939, -3.49277, 0.229681, 3.19689, -12.2738, 3.47898, -45.6491)
 mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="LemonNote" parent="LevelFloor/cafe bar" instance=ExtResource("5_o6xl0")]
+transform = Transform3D(0.273443, 0.0142188, -0.086298, -0.0104349, 0.20002, 0.0374897, 0.0829944, -0.0216982, 0.289041, -0.183924, -0.190705, 0.555085)
 
 [node name="cafe table1" type="MeshInstance3D" parent="LevelFloor"]
 transform = Transform3D(2.74984, -0.119784, -0.587825, 0.145799, 2.22182, -0.0420037, 0.621285, 0.00877326, 2.6116, -11.0405, 0.949336, -39.868)
@@ -90,7 +96,7 @@ mesh = SubResource("BoxMesh_tbgi4")
 transform = Transform3D(-1.61469, 0.0499251, -2.70715, 0.206058, 7.5923, -0.0464476, 3.64249, -0.407371, -1.19743, -17.4025, 3.57602, 43.6163)
 mesh = SubResource("BoxMesh_tbgi4")
 
-[node name="Note" parent="LevelFloor/locker" instance=ExtResource("5_o6xl0")]
+[node name="DateNote" parent="LevelFloor/locker" instance=ExtResource("5_o6xl0")]
 transform = Transform3D(-0.0141421, 0.00346589, -0.303553, 0.00133152, 0.201664, 0.00515964, 0.285598, -0.000768611, -0.0150554, -0.522445, -0.0361401, 0.284863)
 
 [node name="lockers2" type="MeshInstance3D" parent="LevelFloor"]
@@ -272,6 +278,9 @@ mesh = SubResource("CylinderMesh_tbgi4")
 [node name="tree37" type="MeshInstance3D" parent="LevelFloor"]
 transform = Transform3D(1, 0, 0, 0, 17.9533, 0, 0, 0, 1, -11.854, 0, 30.3533)
 mesh = SubResource("CylinderMesh_tbgi4")
+
+[node name="PicnicNote" parent="LevelFloor" instance=ExtResource("5_o6xl0")]
+transform = Transform3D(0.882793, 0.0189118, -1.81529, -0.0152936, 0.654238, -0.111932, 0.383949, 0.0162676, 1.66723, -6.18139, 3.90024, -5.36039)
 
 [node name="space_sky_sketch" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_tefeu")

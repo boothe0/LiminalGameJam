@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy0opw5l8se03"]
+
+[ext_resource type="Script" uid="uid://rxwceslksu6g" path="res://scenes/player_ui.gd" id="1_48xfa"]
+[ext_resource type="Texture2D" uid="uid://dqdupgnbpvt01" path="res://quest_props_tools/LO_tether_hook_tex.png" id="1_sk4pr"]
+
+[node name="playerUI" type="CanvasLayer"]
+script = ExtResource("1_48xfa")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = -52.0
+offset_right = 97.0
+offset_bottom = -12.0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_sk4pr")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_sk4pr")
+expand_mode = 2
