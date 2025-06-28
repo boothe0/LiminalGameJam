@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=17 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://drow2luecl41x" path="res://scenes/note_asset.tscn" id="5_o6xl0"]
 [ext_resource type="Environment" uid="uid://bhrb4ick732vx" path="res://skybox_setup/sky_enviro.tres" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://d30prnhd3bss8" path="res://scenes/lo_dome_sketch.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://dedn6m75bj4xh" path="res://set_dressing_props/LO_dome_struts.glb" id="8_tipki"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o00rs"]
 albedo_color = Color(0.225207, 0.395142, 0.865675, 1)
@@ -287,3 +288,6 @@ environment = ExtResource("6_tefeu")
 
 [node name="LO_dome_sketch" parent="." instance=ExtResource("7_o6xl0")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0.569664, 0)
+
+[node name="LO_dome_struts" parent="LO_dome_sketch" instance=ExtResource("8_tipki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.32545, 0)
