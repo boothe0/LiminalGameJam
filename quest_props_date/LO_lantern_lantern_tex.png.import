@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bc01jvin3p077"
+path.s3tc="res://.godot/imported/LO_lantern_lantern_tex.png-efcb649e4d3b38b0148a870e03614436.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "62732d4da498f8d0bbbe7bdcc0366494"
+}
+
+[deps]
+
+source_file="res://quest_props_date/LO_lantern_lantern_tex.png"
+dest_files=["res://.godot/imported/LO_lantern_lantern_tex.png-efcb649e4d3b38b0148a870e03614436.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
