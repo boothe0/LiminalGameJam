@@ -12,4 +12,3 @@ StaticBody3D
 Area3D
 MeshInstance3D
 MultiMeshInstance3D
-CollisionShape3D
