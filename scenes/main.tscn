@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=18 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b8bmr8uose6du" path="res://scenes/door.tscn" id="2_0wfyh"]
 [ext_resource type="AudioStream" uid="uid://52sdf766bulm" path="res://audio/Liminal Jam - Night Shift Concept Music.ogg" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://drow2luecl41x" path="res://scenes/note_asset.tscn" id="5_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://n3a27p6ob2dp" path="res://set_dressing_props/LO_cafe_main.glb" id="6_85g3d"]
 [ext_resource type="Environment" uid="uid://bhrb4ick732vx" path="res://skybox_setup/sky_enviro.tres" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://d30prnhd3bss8" path="res://scenes/lo_dome_sketch.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://dedn6m75bj4xh" path="res://set_dressing_props/LO_dome_struts.glb" id="8_tipki"]
@@ -74,12 +75,13 @@ transform = Transform3D(-0.0141421, 0.00346589, -0.303553, 0.00133152, 0.201664,
 transform = Transform3D(2.90039, -0.106588, -2.83495, 0.426116, 3.2367, -0.0475394, 7.712, -0.138753, 1.06881, 44.3808, 1.28837, -17.0535)
 mesh = SubResource("BoxMesh_tbgi4")
 
-[node name="cafe bar" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(12.1867, -0.354857, 0.919056, 0.655633, 7.81952, -0.0521939, -3.49277, 0.229681, 3.19689, -12.2738, 3.47898, -45.6491)
-mesh = SubResource("BoxMesh_tbgi4")
+[node name="cafe bar" type="Node3D" parent="LevelFloor"]
+transform = Transform3D(-0.127372, 0.0221682, 0.991607, 0.0516479, 0.998542, -0.015689, -0.99051, 0.0492161, -0.128331, -12.2738, 3.47898, -45.6491)
 
 [node name="LemonNote" parent="LevelFloor/cafe bar" instance=ExtResource("5_o6xl0")]
 transform = Transform3D(0.273443, 0.0142188, -0.086298, -0.0104349, 0.20002, 0.0374897, 0.0829944, -0.0216982, 0.289041, -0.183924, -0.190705, 0.555085)
+
+[node name="LO_cafe_main" parent="LevelFloor/cafe bar" instance=ExtResource("6_85g3d")]
 
 [node name="cafe table1" type="MeshInstance3D" parent="LevelFloor"]
 transform = Transform3D(2.74984, -0.119784, -0.587825, 0.145799, 2.22182, -0.0420037, 0.621285, 0.00877326, 2.6116, -11.0405, 0.949336, -39.868)
