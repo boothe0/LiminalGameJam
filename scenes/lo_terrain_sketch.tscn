@@ -61,5 +61,5 @@ mesh = SubResource("ArrayMesh_tchl3")
 shape = SubResource("ConcavePolygonShape3D_o8214")
 
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." index="1"]
-transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0.920829, 0)
+transform = Transform3D(1, 0, 0, 0, -1, -1.50996e-07, 0, 1.50996e-07, -1, 0, 0.920829, 0)
 multimesh = SubResource("MultiMesh_o8214")

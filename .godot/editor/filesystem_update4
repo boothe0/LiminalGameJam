@@ -2,3 +2,7 @@ res://scenes/main.tscn
 res://skybox_setup/sky.tres
 res://skybox_setup/sky_enviro.tres
 res://scenes/dome-inherited.gdshader
+res://scenes/lo_terrain_sketch.tscn
+res://meshes/grass.res
+res://meshes/grass_small.tres
+res://meshes/grass_small.res
