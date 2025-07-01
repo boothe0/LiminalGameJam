@@ -1,13 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=21 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b8bmr8uose6du" path="res://scenes/door.tscn" id="2_0wfyh"]
 [ext_resource type="AudioStream" uid="uid://52sdf766bulm" path="res://audio/Liminal Jam - Night Shift Concept Music.ogg" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://drow2luecl41x" path="res://scenes/note_asset.tscn" id="5_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://n3a27p6ob2dp" path="res://set_dressing_props/LO_cafe_main.glb" id="6_85g3d"]
 [ext_resource type="Environment" uid="uid://bhrb4ick732vx" path="res://skybox_setup/sky_enviro.tres" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://b0n1wom0m40ep" path="res://set_dressing_props/LO_cafe_cubes.glb" id="7_choun"]
 [ext_resource type="PackedScene" uid="uid://d30prnhd3bss8" path="res://scenes/lo_dome_sketch.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://dedn6m75bj4xh" path="res://set_dressing_props/LO_dome_struts.glb" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://d3dqe7qfdoqmb" path="res://furniture/LO_cafe_table.glb" id="8_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://c46rpf0uicpt6" path="res://furniture/LO_cafe_chair.glb" id="9_eb6dy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o00rs"]
 albedo_color = Color(0.225207, 0.395142, 0.865675, 1)
@@ -72,25 +76,6 @@ transform = Transform3D(-0.0141421, 0.00346589, -0.303553, 0.00133152, 0.201664,
 
 [node name="workstation wall" type="MeshInstance3D" parent="LevelFloor"]
 transform = Transform3D(2.90039, -0.106588, -2.83495, 0.426116, 3.2367, -0.0475394, 7.712, -0.138753, 1.06881, 44.3808, 1.28837, -17.0535)
-mesh = SubResource("BoxMesh_tbgi4")
-
-[node name="cafe bar" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(12.1867, -0.354857, 0.919056, 0.655633, 7.81952, -0.0521939, -3.49277, 0.229681, 3.19689, -12.2738, 3.47898, -45.6491)
-mesh = SubResource("BoxMesh_tbgi4")
-
-[node name="LemonNote" parent="LevelFloor/cafe bar" instance=ExtResource("5_o6xl0")]
-transform = Transform3D(0.273443, 0.0142188, -0.086298, -0.0104349, 0.20002, 0.0374897, 0.0829944, -0.0216982, 0.289041, -0.183924, -0.190705, 0.555085)
-
-[node name="cafe table1" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(2.74984, -0.119784, -0.587825, 0.145799, 2.22182, -0.0420037, 0.621285, 0.00877326, 2.6116, -11.0405, 0.949336, -39.868)
-mesh = SubResource("BoxMesh_tbgi4")
-
-[node name="cafe table2" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(2.81846, -0.114101, 0.061626, 0.145799, 2.22182, -0.0420037, -0.0626134, 0.0374991, 2.67623, -3.83342, 0.949336, -40.5232)
-mesh = SubResource("BoxMesh_tbgi4")
-
-[node name="cafe table3" type="MeshInstance3D" parent="LevelFloor"]
-transform = Transform3D(0.174038, 0.0277953, 2.67197, 0.145799, 2.22182, -0.0420037, -2.81378, 0.116845, 0.163091, 1.331, 0.949336, -44.2231)
 mesh = SubResource("BoxMesh_tbgi4")
 
 [node name="locker" type="MeshInstance3D" parent="LevelFloor"]
@@ -282,6 +267,33 @@ mesh = SubResource("CylinderMesh_tbgi4")
 
 [node name="PicnicNote" parent="LevelFloor" instance=ExtResource("5_o6xl0")]
 transform = Transform3D(0.882793, 0.0189118, -1.81529, -0.0152936, 0.654238, -0.111932, 0.383949, 0.0162676, 1.66723, -6.18139, 3.90024, -5.36039)
+
+[node name="cafe" type="MeshInstance3D" parent="LevelFloor"]
+
+[node name="LemonNote" parent="LevelFloor/cafe" instance=ExtResource("5_o6xl0")]
+transform = Transform3D(0.0124067, -0.0219448, 0.301877, 0.0038903, 0.20049, 0.0329218, -0.285655, 0.00177729, 0.0135596, -11.6932, -0.20007, -45.6187)
+
+[node name="LO_cafe_main" parent="LevelFloor/cafe" instance=ExtResource("6_85g3d")]
+transform = Transform3D(0.0594632, 0, 0.998231, 0, 1, 0, -0.998231, 0, 0.0594632, -5.65099, 0, -44.5801)
+
+[node name="LO_cafe_cubes" parent="LevelFloor/cafe/LO_cafe_main" instance=ExtResource("7_choun")]
+
+[node name="cafe seatings" type="Node3D" parent="LevelFloor/cafe"]
+
+[node name="LO_cafe_table" parent="LevelFloor/cafe/cafe seatings" instance=ExtResource("8_ya4ey")]
+transform = Transform3D(0.995107, 0, 0.0987987, 0, 1, 0, -0.0987987, 0, 0.995107, -4.48593, 0, -40.3735)
+
+[node name="LO_cafe_table2" parent="LevelFloor/cafe/cafe seatings" instance=ExtResource("8_ya4ey")]
+transform = Transform3D(0.918073, 0, 0.396411, 0, 1, 0, -0.396411, 0, 0.918073, -1.64234, 0, -39.2116)
+
+[node name="LO_cafe_table3" parent="LevelFloor/cafe/cafe seatings" instance=ExtResource("8_ya4ey")]
+transform = Transform3D(0.885345, 0, -0.464935, 0, 1, 0, 0.464935, 0, 0.885345, -7.75759, 0, -38.9517)
+
+[node name="LO_cafe_chair" parent="LevelFloor/cafe/cafe seatings" instance=ExtResource("9_eb6dy")]
+transform = Transform3D(0.989364, 0, 0.145461, 0, 1, 0, -0.145461, 0, 0.989364, -4.48794, 0, -40.9472)
+
+[node name="LO_cafe_chair2" parent="LevelFloor/cafe/cafe seatings" instance=ExtResource("9_eb6dy")]
+transform = Transform3D(0.321357, 0, -0.946958, 0, 1, 0, 0.946958, 0, 0.321357, -3.89659, 0, -40.3618)
 
 [node name="space_sky_sketch" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_tefeu")

@@ -1,3 +1,5 @@
+Node3D
+MeshInstance3D
 VBoxContainer
 Label
 TextureRect
@@ -9,6 +11,4 @@ CanvasLayer
 Label3D
 StaticBody3D
 Area3D
-MeshInstance3D
 MultiMeshInstance3D
-CollisionShape3D
