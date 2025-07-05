@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfxdt0phqorrp"]
+
+[ext_resource type="Script" uid="uid://bp74tdijobib0" path="res://scenes/notes_inventory.gd" id="1_7j60y"]
+[ext_resource type="Texture2D" uid="uid://eu2o5fawdjq6" path="res://set_dressing_props/LO_workbench_quest_welding_tex.png" id="2_twwjo"]
+
+[node name="Inventory" type="CanvasLayer"]
+script = ExtResource("1_7j60y")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.057
+anchor_right = 0.386
+anchor_bottom = 0.693
+grow_vertical = 2
+texture = ExtResource("2_twwjo")
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 4
+
+[node name="TextureRect" type="TextureRect" parent="Background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="Background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="Background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 4
+
+[node name="TextureRect4" type="TextureRect" parent="Background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 4
+
+[node name="TextureRect5" type="TextureRect" parent="Background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 4
+
+[node name="TextureRect6" type="TextureRect" parent="Background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 4
+
+[node name="TextureRect7" type="TextureRect" parent="Background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 4
+
+[node name="TextureRect8" type="TextureRect" parent="Background/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 4
