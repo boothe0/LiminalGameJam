@@ -115,7 +115,7 @@ transform = Transform3D(-0.274877, 0.0508553, -0.960134, 0.0809939, 0.996275, 0.
 [node name="lockers" type="Node3D" parent="LevelFloor"]
 
 [node name="DateNote" parent="LevelFloor/lockers" instance=ExtResource("5_o6xl0")]
-transform = Transform3D(-0.291081, 0.0509406, 1.12552, -0.00607013, 1.53184, -0.0226767, -0.795877, -0.0464213, -0.450472, -17.7124, 0.741035, 42.1873)
+transform = Transform3D(-0.291081, 0.0509406, 1.12552, -0.00607013, 1.53184, -0.0226767, -0.795877, -0.0464213, -0.450472, -17.7124, 3.51863, 42.1873)
 
 [node name="LO_locker_tall1" parent="LevelFloor/lockers" instance=ExtResource("10_trceg")]
 transform = Transform3D(0.94532, 0, 0.326146, 0, 1, 0, -0.326146, 0, 0.94532, -17.789, 0, 42.128)
@@ -141,7 +141,7 @@ transform = Transform3D(0.274882, 0, -0.961478, 0, 1, 0, 0.961478, 0, 0.274882, 
 [node name="workbench tools" type="Node3D" parent="LevelFloor"]
 
 [node name="WorkNote" parent="LevelFloor/workbench tools" instance=ExtResource("5_o6xl0")]
-transform = Transform3D(0.447222, 0.000863491, -1.98764, -0.0152936, 0.654239, -0.111933, 0.749864, 0.00945367, 1.52028, 10.2217, 1.73939, 18.9354)
+transform = Transform3D(0.447222, 0.000863491, -1.98764, -0.0152936, 0.654239, -0.111933, 0.749864, 0.00945367, 1.52028, 10.2217, 5.79746, 18.9354)
 
 [node name="LO_workbench_quest" parent="LevelFloor/workbench tools" instance=ExtResource("12_jkv2x")]
 transform = Transform3D(-0.878092, 0, -0.478493, 0, 1, 0, 0.478493, 0, -0.878092, 10.3014, 0, 19.3575)
