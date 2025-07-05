@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dy0opw5l8se03"]
+[gd_scene load_steps=4 format=3 uid="uid://dy0opw5l8se03"]
 
 [ext_resource type="Script" uid="uid://rxwceslksu6g" path="res://scripts/player_ui.gd" id="1_48xfa"]
+[ext_resource type="Script" uid="uid://w377iah1yuu" path="res://scenes/label_inv.gd" id="2_sk4pr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48xfa"]
 
 [node name="playerUI" type="CanvasLayer"]
 script = ExtResource("1_48xfa")
@@ -17,6 +20,29 @@ offset_bottom = -12.0
 grow_vertical = 0
 metadata/_edit_use_anchors_ = true
 
+[node name="Area2D" type="Area2D" parent="Inventory"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/Area2D"]
+position = Vector2(50, 50)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_48xfa")
+
+[node name="Area2D2" type="Area2D" parent="Inventory"]
+position = Vector2(105, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/Area2D2"]
+position = Vector2(50, 50)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_48xfa")
+
+[node name="Area2D3" type="Area2D" parent="Inventory"]
+position = Vector2(210, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/Area2D3"]
+position = Vector2(50, 50)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_48xfa")
+
 [node name="Quests" type="VBoxContainer" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
@@ -28,3 +54,17 @@ offset_bottom = 51.0
 grow_horizontal = 0
 theme_override_constants/separation = 50
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "hello"
+script = ExtResource("2_sk4pr")
+
+[connection signal="mouse_entered" from="Inventory/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Inventory/Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Inventory/Area2D2" to="." method="_on_area_2d_2_mouse_entered"]
+[connection signal="mouse_exited" from="Inventory/Area2D2" to="." method="_on_area_2d_2_mouse_exited"]
+[connection signal="mouse_entered" from="Inventory/Area2D3" to="." method="_on_area_2d_3_mouse_entered"]
+[connection signal="mouse_exited" from="Inventory/Area2D3" to="." method="_on_area_2d_3_mouse_exited"]
