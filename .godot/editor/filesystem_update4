@@ -1,6 +1,5 @@
-res://scenes/main.tscn
+res://lo_dome.tscn
 res://skybox_setup/sky.tres
 res://skybox_setup/sky_enviro.tres
 res://scenes/dome-inherited.gdshader
-res://scenes/lo_dome_sketch.tscn
-res://lo_dome.tscn
+res://scenes/main.tscn

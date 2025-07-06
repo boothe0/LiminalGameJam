@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwso4cpojbbtj"
+uid="uid://t2isf1xhpnaj"
 path.s3tc="res://.godot/imported/LO_dome_struts_strut_tex.png-5debd8575be5383df62abf77dcb62a6f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "1be3ec884e94a1426fd2c4bf29d23c61"
 }
 
 [deps]
