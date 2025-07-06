@@ -266,8 +266,6 @@ environment = ExtResource("6_tefeu")
 
 [node name="Dome" type="Node3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Dome"]
-
 [node name="LO_dome" parent="Dome" instance=ExtResource("15_jkv2x")]
 
 [node name="LO_dome_struts" parent="Dome" instance=ExtResource("16_muem4")]
