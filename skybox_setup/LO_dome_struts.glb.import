@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dedn6m75bj4xh"
-path="res://.godot/imported/LO_dome_struts.glb-fa099eef25b6ec0ce51569e2e996191e.scn"
+path="res://.godot/imported/LO_dome_struts.glb-6f45b449f46678074c2afe4ac0df2d2e.scn"
 
 [deps]
 
-source_file="res://set_dressing_props/LO_dome_struts.glb"
-dest_files=["res://.godot/imported/LO_dome_struts.glb-fa099eef25b6ec0ce51569e2e996191e.scn"]
+source_file="res://skybox_setup/LO_dome_struts.glb"
+dest_files=["res://.godot/imported/LO_dome_struts.glb-6f45b449f46678074c2afe4ac0df2d2e.scn"]
 
 [params]
 

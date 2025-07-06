@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cfxi6le81dcxj"
-path="res://.godot/imported/LO_dome_cut.glb-d4b31e5736ba972181cc082a407f2310.scn"
+path="res://.godot/imported/LO_dome_cut.glb-810707bdcb79ef71f1269479c6a665e5.scn"
 
 [deps]
 
-source_file="res://set_dressing_props/LO_dome_cut.glb"
-dest_files=["res://.godot/imported/LO_dome_cut.glb-d4b31e5736ba972181cc082a407f2310.scn"]
+source_file="res://skybox_setup/LO_dome_cut.glb"
+dest_files=["res://.godot/imported/LO_dome_cut.glb-810707bdcb79ef71f1269479c6a665e5.scn"]
 
 [params]
 
