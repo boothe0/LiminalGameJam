@@ -5,4 +5,5 @@
 [resource]
 background_mode = 2
 sky = ExtResource("1_rmc6k")
+sky_rotation = Vector3(3.46622, 0, 0)
 tonemap_exposure = 1.64
