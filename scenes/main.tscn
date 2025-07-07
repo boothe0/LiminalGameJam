@@ -15,11 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://ckec5ggrqdptn" path="res://quest_props_cake/LO_pie_slice.glb" id="11_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://dbi8k8cv8rt2y" path="res://set_dressing_props/LO_workbench1.glb" id="11_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://bjveiw46aoj4j" path="res://set_dressing_props/LO_workbench_quest.glb" id="12_jkv2x"]
-[ext_resource type="PackedScene" uid="uid://drnadxrfew5p7" path="res://lo_dome.tscn" id="15_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://drnadxrfew5p7" path="res://scenes/lo_dome.tscn" id="15_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://d041wgdttbrjj" path="res://quest_props_lemonade/LO_mag.glb" id="15_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://mgif50hgfn44" path="res://plants/LO_Tree_Try3.glb" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://dedn6m75bj4xh" path="res://skybox_setup/LO_dome_struts.glb" id="16_muem4"]
-[ext_resource type="PackedScene" uid="uid://bwopemupmyxvd" path="res://skybox_setup/LO_terrain.glb" id="17_muem4"]
 [ext_resource type="PackedScene" uid="uid://befa0eh1j0fas" path="res://set_dressing_props/LO_path_rock1.glb" id="18_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://b067nxqc4wy2j" path="res://set_dressing_props/LO_level_door.glb" id="19_0ld40"]
 [ext_resource type="PackedScene" uid="uid://sqjduohsf2h0" path="res://set_dressing_props/LO_airlock.glb" id="20_gqmmt"]
@@ -27,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://ghlye1xi6414" path="res://furniture/LO_bench.glb" id="21_jscy8"]
 [ext_resource type="PackedScene" uid="uid://p724aii50oa4" path="res://quest_props_lemonade/LO_basket.glb" id="25_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://cccl3tkur786t" path="res://set_dressing_props/LO_suit.glb" id="25_vxglm"]
+[ext_resource type="PackedScene" uid="uid://1ds5bs6v1vqa" path="res://scenes/lo_terrain_w_collision.tscn" id="26_vxglm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o00rs"]
 albedo_color = Color(0.225207, 0.395142, 0.865675, 1)
@@ -80,7 +80,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.962, 1.67462, 48.2736)
 light_energy = 0.5
 
 [node name="Player" parent="." instance=ExtResource("1_o00rs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.2151, 1.37848, -5.99354)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.9945, 1.37848, -5.99354)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.4492, 0, 0, 0, 2.24951, 0, 0, 0, 2.37297, 10.7657, 1.14095, 0)
@@ -378,8 +378,6 @@ visible = false
 
 [node name="LO_dome_struts" parent="Dome" instance=ExtResource("16_muem4")]
 
-[node name="LO_terrain" parent="Dome" instance=ExtResource("17_muem4")]
-
 [node name="paths" type="Node3D" parent="Dome"]
 
 [node name="LO_path_rock1" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
@@ -444,6 +442,8 @@ transform = Transform3D(-0.599317, 0, -0.0286195, 0, 0.6, 0, 0.0286195, 0, -0.59
 
 [node name="LO_suit4" parent="Dome/airlock" instance=ExtResource("25_vxglm")]
 transform = Transform3D(-0.599317, 0, -0.0286195, 0, 0.6, 0, 0.0286195, 0, -0.599317, 3.2426, 0.711964, 48.8295)
+
+[node name="LO_terrain" parent="Dome" instance=ExtResource("26_vxglm")]
 
 [node name="LO_airlock" parent="." instance=ExtResource("20_gqmmt")]
 transform = Transform3D(-0.961344, 0, -0.275352, 0, 1, 0, 0.275352, 0, -0.961344, 12.3364, 0.653622, 49.0338)
