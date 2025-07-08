@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb2ou6nkrcqy8"
-path.s3tc="res://.godot/imported/LO_star_star_tex.png-acb657e8802eac83f546e7056e36129e.s3tc.ctex"
+uid="uid://bn68i4bhghiwi"
+path.s3tc="res://.godot/imported/LO_basket_filled_star_lemon_tex.png-3d178a0b86e590b3a7cf925ddb28ad6f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "c4e518ef19a11b2f2da0a0c8dd97b0ed"
+"md5": "161d00fdd6f9ce5e929fffd829e5bd1d"
 }
 
 [deps]
 
-source_file="res://quest_props_lemonade/LO_star_star_tex.png"
-dest_files=["res://.godot/imported/LO_star_star_tex.png-acb657e8802eac83f546e7056e36129e.s3tc.ctex"]
+source_file="res://quest_props_lemonade/LO_basket_filled_star_lemon_tex.png"
+dest_files=["res://.godot/imported/LO_basket_filled_star_lemon_tex.png-3d178a0b86e590b3a7cf925ddb28ad6f.s3tc.ctex"]
 
 [params]
 
