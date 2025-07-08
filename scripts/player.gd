@@ -7,6 +7,11 @@ const WALK_SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 @onready var camera_3d: Camera3D = $Neck/Camera3D
 
+@onready var lemon_note: StaticBody3D = $"../LevelFloor/cafe bar/LemonNote"
+@onready var date_note: StaticBody3D = $"../LevelFloor/lockers/DateNote"
+@onready var work_note: StaticBody3D = $"../LevelFloor/workbench tools/WorkNote"
+@onready var picnic_note: StaticBody3D = $"../LevelFloor/PicnicNote"
+
 var message = preload("res://scenes/message.tscn")
 var motion_sickness_flag = Globals.motion_sickness_flag
 
@@ -22,6 +27,28 @@ var sin_bob = 0.0
 
 func _ready():
 	Emitter.first_item_pickup.connect(dislay_message)
+	Emitter.note_picked_up.connect(handle_note_despawn)
+	match Globals.note_picked_up:
+		"lemon_note":
+			lemon_note.visible = false
+			date_note.visible = true
+			work_note.visible = true
+			picnic_note.visible = true
+		"date_note":
+			date_note.visible = false
+			work_note.visible = true
+			picnic_note.visible = true
+			lemon_note.visible = true
+		"picnic_note":
+			date_note.visible = false
+			work_note.visible = true
+			picnic_note.visible = true
+			lemon_note.visible = true
+		"work_note":
+			work_note.visible = false
+			date_note.visible = true
+			picnic_note.visible = true
+			lemon_note.visible = true
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -71,6 +98,8 @@ func _physics_process(delta: float) -> void:
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 	move_and_slide()
+	
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	# attaches mouse 
@@ -100,4 +129,27 @@ func _headbob(time) -> Vector3:
 func dislay_message():
 	var message = message.instantiate()
 	camera_3d.add_child(message)
-	
+
+func handle_note_despawn():
+	var item = Globals.most_recent_node
+	match item:
+		"LemonNote":
+			Globals.note_picked_up = "lemon_note"
+			picnic_note.visible = false
+			work_note.visible = false
+			date_note.visible = false
+		"WorkNote":
+			Globals.note_picked_up = "work_note"
+			picnic_note.visible = false
+			date_note.visible = false
+			lemon_note.visible = false
+		"PicnicNote":
+			Globals.note_picked_up = "picknic_note"
+			date_note.visible = false
+			work_note.visible = false
+			lemon_note.visible = false
+		"DateNote":
+			Globals.note_picked_up = "date_note"
+			picnic_note.visible = false
+			work_note.visible = false
+			lemon_note.visible = false

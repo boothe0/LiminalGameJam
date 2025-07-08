@@ -1,6 +1,13 @@
+res://scenes/main_menu.tscn
 res://skybox_setup/sky.tres
 res://skybox_setup/sky_enviro.tres
 res://scenes/dome-inherited.gdshader
+res://scripts/globals.gd
 res://scenes/main.tscn
+res://scripts/player.gd
 res://scenes/lo_terrain_w_collision.tscn
-res://scenes/main_menu.tscn
+res://scripts/item_handling.gd
+res://scripts/emitter.gd
+res://scripts/door.gd
+res://scripts/player_ui.gd
+res://scripts/main.gd
