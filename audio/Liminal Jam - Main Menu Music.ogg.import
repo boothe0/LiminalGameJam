@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://uvm57arsw1uw"
+path="res://.godot/imported/Liminal Jam - Main Menu Music.ogg-3bd3264860cc53c6544d8bba178340b1.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Liminal Jam - Main Menu Music.ogg"
+dest_files=["res://.godot/imported/Liminal Jam - Main Menu Music.ogg-3bd3264860cc53c6544d8bba178340b1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
