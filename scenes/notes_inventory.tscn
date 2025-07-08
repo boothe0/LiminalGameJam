@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://cfxdt0phqorrp"]
 
-[ext_resource type="Script" uid="uid://bp74tdijobib0" path="res://scenes/notes_inventory.gd" id="1_7j60y"]
+[ext_resource type="Script" uid="uid://bp74tdijobib0" path="res://scripts/notes_inventory.gd" id="1_7j60y"]
 [ext_resource type="Texture2D" uid="uid://eu2o5fawdjq6" path="res://set_dressing_props/LO_workbench_quest_welding_tex.png" id="2_twwjo"]
+
 
 [node name="Inventory" type="CanvasLayer"]
 script = ExtResource("1_7j60y")

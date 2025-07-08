@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cscr8fv8ahndl"
+path="res://.godot/imported/Liminal Jam - Last Night Shift.ogg-e346b063e4d591884d0ed7b45a84b71b.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Liminal Jam - Last Night Shift.ogg"
+dest_files=["res://.godot/imported/Liminal Jam - Last Night Shift.ogg-e346b063e4d591884d0ed7b45a84b71b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

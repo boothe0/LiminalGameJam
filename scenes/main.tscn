@@ -96,7 +96,6 @@ transform = Transform3D(0.255237, 0, 1.98365, 0, 2, 0, -1.98365, 0, 0.255237, -4
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_jyhfs")
-autoplay = true
 parameters/looping = true
 
 [node name="LevelFloor" type="MeshInstance3D" parent="."]
@@ -106,7 +105,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.264481, 0)
 transform = Transform3D(-0.127372, 0.0221682, 0.991607, 0.0516479, 0.998542, -0.015689, -0.99051, 0.0492161, -0.128331, -12.2738, 0.801501, -45.6491)
 
 [node name="LemonNote" parent="LevelFloor/cafe bar" instance=ExtResource("5_o6xl0")]
-transform = Transform3D(0.0778596, 0.0280496, -0.289414, 0.00270019, 0.19949, 0.0447341, 0.275134, -0.00989547, 0.0814617, -2.34911, -0.263208, 0.445769)
+transform = Transform3D(0.0778596, 0.0280496, -0.289414, 0.00270019, 0.19949, 0.0447341, 0.275134, -0.00989547, 0.0814617, -2.84958, -0.238341, 0.380929)
 
 [node name="LO_cafe_main" parent="LevelFloor/cafe bar" instance=ExtResource("6_85g3d")]
 transform = Transform3D(0.989823, 0.00276177, 0.142275, -0.00170931, 0.99997, -0.00751921, -0.142291, 0.00719949, 0.989799, -1.4173, -1.56723, -2.04945)
@@ -177,7 +176,7 @@ transform = Transform3D(-0.0331377, 0, 0.99945, 0, 1, 0, -0.99945, 0, -0.0331377
 transform = Transform3D(-0.154245, 0, 0.988033, 0, 1, 0, -0.988033, 0, -0.154245, -13.4405, 0.608148, 43.3078)
 
 [node name="PicnicNote" parent="LevelFloor" instance=ExtResource("5_o6xl0")]
-transform = Transform3D(0.882793, 0.0189118, -1.81529, -0.0152936, 0.654238, -0.111932, 0.383949, 0.0162676, 1.66723, -6.18139, 3.90024, -5.36039)
+transform = Transform3D(0.882793, 0.0189118, -1.81529, -0.0152936, 0.654238, -0.111932, 0.383949, 0.0162676, 1.66723, -6.18139, 1.71907, -5.36039)
 
 [node name="LO_workbench1" parent="LevelFloor" instance=ExtResource("11_a8y0u")]
 transform = Transform3D(0.274882, 0, -0.961478, 0, 1, 0, 0.961478, 0, 0.274882, 46.3297, 0.667262, -10.675)

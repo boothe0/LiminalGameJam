@@ -117,21 +117,7 @@ func _on_area_2d_mouse_entered() -> void:
 	for child in inventory.get_children():
 		if child is TextureRect:
 			node_name = child.name
-	print(node_name)
-	match node_name:
-		"PicnicNote":
-			label.text = "Between the trees there is a picknick basket. \n Clearly the meal is over. There are small times \n that indicate several persons"
-			label.visible = true
-		"WorkNote":
-			label.text = "You can collect four tools all \n over and bring them back here \n to result in ever more friendly behaviour \n between the foreman and the workers!"
-			label.visible = true
-		"LemonNote":
-			label.text = "A will probably not pick a lot, and \n  when you find their almost empty basket you can fill \n it for them to improve their standing."
-			label.visible = true
-
-		"DateNote":
-			label.text = "Surprise! Be at the three trees by 22:00 Dress up! :)"
-			label.visible = true
+	handle_label_inv(node_name)
 
 	# otherwise it is an actual item
 	
@@ -144,20 +130,8 @@ func _on_area_2d_2_mouse_entered() -> void:
 			count += 1
 		if child is TextureRect and count == 1:
 			node_name = child.name
-	print(node_name)
-	match node_name:
-		"PicnicNote":
-			label.text = "Between the trees there is a picknick basket. \n Clearly the meal is over. There are small times \n that indicate several persons"
-			label.visible = true
-		"WorkNote":
-			label.text = "You can collect four tools all \n over and bring them back here \n to result in ever more friendly behaviour \n between the foreman and the workers!"
-			label.visible = true
-		"LemonNote":
-			label.text = "A will probably not pick a lot, and \n  when you find their almost empty basket you can fill \n it for them to improve their standing."
-			label.visible = true
-		"DateNote":
-			label.text = "Surprise! Be at the three trees by 22:00 Dress up! :)"
-			label.visible = true
+	handle_label_inv(node_name)
+
 	# otherwise it is an actual item	
 func _on_area_2d_3_mouse_entered() -> void:
 	# get the name of the texture rectangle to get corresponding text
@@ -168,6 +142,17 @@ func _on_area_2d_3_mouse_entered() -> void:
 			count += 1
 		if child is TextureRect and count == 2:
 			node_name = child.name
+	handle_label_inv(node_name)
+	# otherwise it is an actual item
+
+func _on_area_2d_mouse_exited() -> void:
+	label.visible = false
+func _on_area_2d_2_mouse_exited() -> void:
+	label.visible = false
+func _on_area_2d_3_mouse_exited() -> void:
+	label.visible = false
+
+func handle_label_inv(node_name):
 	match node_name:
 		"PicnicNote":
 			label.text = "Between the trees there is a picknick basket. \n Clearly the meal is over. There are small times \n that indicate several persons"
@@ -181,11 +166,3 @@ func _on_area_2d_3_mouse_entered() -> void:
 		"DateNote":
 			label.text = "Surprise! Be at the three trees by 22:00 Dress up! :)"
 			label.visible = true
-	# otherwise it is an actual item
-
-func _on_area_2d_mouse_exited() -> void:
-	label.visible = false
-func _on_area_2d_2_mouse_exited() -> void:
-	label.visible = false
-func _on_area_2d_3_mouse_exited() -> void:
-	label.visible = false
