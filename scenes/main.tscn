@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=33 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://c46rpf0uicpt6" path="res://furniture/LO_cafe_chair.glb" id="9_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://8xnrb3ofrvra" path="res://furniture/LO_trolley.glb" id="10_og1vs"]
 [ext_resource type="PackedScene" uid="uid://c446gbo450fv3" path="res://furniture/LO_locker_tall.glb" id="10_trceg"]
-[ext_resource type="PackedScene" uid="uid://ckec5ggrqdptn" path="res://quest_props_cake/LO_pie_slice.glb" id="11_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://dbi8k8cv8rt2y" path="res://set_dressing_props/LO_workbench1.glb" id="11_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://bjveiw46aoj4j" path="res://set_dressing_props/LO_workbench_quest.glb" id="12_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://drnadxrfew5p7" path="res://scenes/lo_dome.tscn" id="15_jkv2x"]
@@ -21,12 +20,14 @@
 [ext_resource type="PackedScene" uid="uid://dedn6m75bj4xh" path="res://skybox_setup/LO_dome_struts.glb" id="16_muem4"]
 [ext_resource type="PackedScene" uid="uid://befa0eh1j0fas" path="res://set_dressing_props/LO_path_rock1.glb" id="18_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://b067nxqc4wy2j" path="res://set_dressing_props/LO_level_door.glb" id="19_0ld40"]
+[ext_resource type="PackedScene" uid="uid://cbpm5wqs2sqkq" path="res://quest_props_lemonade/LO_basket_filled_star.glb" id="19_yq6so"]
 [ext_resource type="PackedScene" uid="uid://sqjduohsf2h0" path="res://set_dressing_props/LO_airlock.glb" id="20_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://b7miiwgkmgaqq" path="res://set_dressing_props/LO_wall1.glb" id="20_yc10j"]
 [ext_resource type="PackedScene" uid="uid://ghlye1xi6414" path="res://furniture/LO_bench.glb" id="21_jscy8"]
 [ext_resource type="PackedScene" uid="uid://p724aii50oa4" path="res://quest_props_lemonade/LO_basket.glb" id="25_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://cccl3tkur786t" path="res://set_dressing_props/LO_suit.glb" id="25_vxglm"]
 [ext_resource type="PackedScene" uid="uid://1ds5bs6v1vqa" path="res://scenes/lo_terrain_w_collision.tscn" id="26_vxglm"]
+[ext_resource type="PackedScene" uid="uid://dib8g7jl1tgdv" path="res://quest_props_lemonade/LO_basket_filled.glb" id="28_2f3dj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o00rs"]
 albedo_color = Color(0.225207, 0.395142, 0.865675, 1)
@@ -53,31 +54,6 @@ shadow_bias = 0.5
 shadow_normal_bias = 0.8
 shadow_opacity = 0.8
 shadow_blur = 8.0
-
-[node name="OmniLight3D" type="OmniLight3D" parent="lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.69715, 1.57692, -43.3996)
-light_color = Color(0.698039, 0.760784, 0.662745, 1)
-omni_range = 5.858
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1647, 2.96475, -41.889)
-light_color = Color(0.698039, 0.760784, 0.662745, 1)
-omni_range = 5.858
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2133, 1.66018, -44.0903)
-light_color = Color(0.698039, 0.760784, 0.662745, 1)
-omni_range = 5.858
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="lights"]
-transform = Transform3D(0.458184, 0, 0.888857, 0, 1, 0, -0.888857, 0, 0.458184, 14.8604, 2.11871, 45.3318)
-light_color = Color(0.698039, 0.760784, 0.662745, 1)
-light_energy = 0.3
-shadow_enabled = true
-
-[node name="OmniLight3D5" type="OmniLight3D" parent="lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.962, 1.67462, 48.2736)
-light_energy = 0.5
 
 [node name="Player" parent="." instance=ExtResource("1_o00rs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.9945, 1.37848, -5.99354)
@@ -113,46 +89,59 @@ transform = Transform3D(0.989823, 0.00276177, 0.142275, -0.00170931, 0.99997, -0
 [node name="LO_cafe_cubes" parent="LevelFloor/cafe bar/LO_cafe_main" instance=ExtResource("7_choun")]
 transform = Transform3D(1, -7.45058e-09, -5.96046e-08, 0, 1, -9.31323e-10, -1.49012e-08, 4.65661e-10, 1, -0.0188866, -0.36516, 0.0057373)
 
-[node name="cafe seating" type="Node3D" parent="LevelFloor/cafe bar"]
+[node name="cafe seating" type="Node3D" parent="LevelFloor/cafe bar/LO_cafe_main"]
+transform = Transform3D(0.989824, -0.00170929, -0.142292, 0.00276179, 0.999971, 0.0071995, 0.142274, -0.0075192, 0.989798, 1.10858, 1.58585, 2.2184)
 
-[node name="LO_cafe_table" parent="LevelFloor/cafe bar/cafe seating" instance=ExtResource("8_ya4ey")]
+[node name="LO_cafe_table" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating" instance=ExtResource("8_ya4ey")]
 transform = Transform3D(0.986322, -0.00188215, -0.164818, 0.0032967, 0.99996, 0.0083095, 0.164796, -0.00873921, 0.986289, -4.99339, -1.37724, 1.17535)
 
-[node name="LO_cafe_chair" parent="LevelFloor/cafe bar/cafe seating/LO_cafe_table" instance=ExtResource("9_eb6dy")]
+[node name="LO_cafe_chair" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table" instance=ExtResource("9_eb6dy")]
 transform = Transform3D(1, -3.72529e-09, 0, 0, 1, 1.62981e-09, 3.72529e-09, 1.28057e-09, 1, -0.00722504, -0.0619931, -0.58846)
 
-[node name="LO_cafe_chair2" parent="LevelFloor/cafe bar/cafe seating/LO_cafe_table" instance=ExtResource("9_eb6dy")]
+[node name="LO_cafe_chair2" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table" instance=ExtResource("9_eb6dy")]
 transform = Transform3D(0.112265, 0.0303113, -0.993216, 0.0614993, 0.997406, 0.0373905, 0.991773, -0.0652797, 0.11011, 0.627583, -0.031143, 0.0838461)
 
-[node name="LO_cafe_table2" parent="LevelFloor/cafe bar/cafe seating" instance=ExtResource("8_ya4ey")]
+[node name="LO_cafe_table2" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating" instance=ExtResource("8_ya4ey")]
 transform = Transform3D(0.997436, 0.00125672, 0.0715472, -0.000991624, 0.999992, -0.00374106, -0.0715517, 0.00366052, 0.99743, -4.9637, -1.36942, 5.28733)
 
-[node name="LO_cafe_chair" parent="LevelFloor/cafe bar/cafe seating/LO_cafe_table2" instance=ExtResource("9_eb6dy")]
+[node name="LO_cafe_chair" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table2" instance=ExtResource("9_eb6dy")]
 transform = Transform3D(0.0437361, 0.0651248, 0.996919, 0.0337732, 0.997208, -0.0666251, -0.998473, 0.0365831, 0.0414138, -0.543465, 0.0284207, 0.0197096)
 
-[node name="LO_cafe_chair2" parent="LevelFloor/cafe bar/cafe seating/LO_cafe_table2" instance=ExtResource("9_eb6dy")]
+[node name="LO_cafe_chair2" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table2" instance=ExtResource("9_eb6dy")]
 transform = Transform3D(0.121655, 0.0298428, -0.992125, 0.0609968, 0.997434, 0.037482, 0.990697, -0.0650761, 0.119522, 0.596928, -0.0300727, 0.0509877)
 
-[node name="LO_cafe_table3" parent="LevelFloor/cafe bar/cafe seating" instance=ExtResource("8_ya4ey")]
+[node name="LO_cafe_table3" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating" instance=ExtResource("8_ya4ey")]
 transform = Transform3D(0.890355, 0.0128215, 0.455086, -0.00148188, 0.99968, -0.0252655, -0.455265, 0.0218209, 0.890089, -6.16046, -1.32517, 3.18044)
 
-[node name="LO_cafe_chair3" parent="LevelFloor/cafe bar/cafe seating/LO_cafe_table3" instance=ExtResource("9_eb6dy")]
+[node name="LO_cafe_chair3" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table3" instance=ExtResource("9_eb6dy")]
 transform = Transform3D(0.0473345, 0.064936, 0.996765, 0.0335896, 0.997215, -0.0665605, -0.998314, 0.0366316, 0.0450229, -0.628124, 0.0321808, -0.0196772)
 
-[node name="LO_cafe_chair4" parent="LevelFloor/cafe bar/cafe seating/LO_cafe_table3" instance=ExtResource("9_eb6dy")]
+[node name="LO_cafe_chair4" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table3" instance=ExtResource("9_eb6dy")]
 transform = Transform3D(0.997873, 0.00113389, 0.0651676, -0.000913994, 0.999993, -0.00340413, -0.0651699, 0.00333734, 0.997868, -0.0153732, -0.0103583, -0.70997)
 
-[node name="LO_cafe_chair5" parent="LevelFloor/cafe bar/cafe seating/LO_cafe_table3" instance=ExtResource("9_eb6dy")]
+[node name="LO_cafe_chair5" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table3" instance=ExtResource("9_eb6dy")]
 transform = Transform3D(0.0156708, 0.0352125, -0.999257, 0.0665879, 0.997123, 0.0361816, 0.997657, -0.0671054, 0.0132802, 0.593395, -0.0298636, 0.0527554)
 
-[node name="LO_cafe_chair6" parent="LevelFloor/cafe bar/cafe seating/LO_cafe_table3" instance=ExtResource("9_eb6dy")]
+[node name="LO_cafe_chair6" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table3" instance=ExtResource("9_eb6dy")]
 transform = Transform3D(-0.987111, 0.100827, -0.124276, 0.104682, 0.994194, -0.0248692, 0.121045, -0.0375581, -0.991935, -0.047142, 0.0082593, 0.370434)
 
-[node name="LO_trolley" parent="LevelFloor/cafe bar/cafe seating" instance=ExtResource("10_og1vs")]
-transform = Transform3D(0.994542, 0.0516479, -0.0906607, -0.0500021, 0.998542, 0.0203332, 0.0915785, -0.015689, 0.995673, -2.54402, -1.50326, 4.71168)
+[node name="LO_trolley" parent="LevelFloor/cafe bar/LO_cafe_main" instance=ExtResource("10_og1vs")]
+transform = Transform3D(0.971476, 0.0516479, -0.231449, -0.0465946, 0.998542, 0.0272506, 0.232518, -0.015689, 0.972464, -2.07741, 0.109533, 6.53137)
 
-[node name="LO_pie_slice" parent="LevelFloor/cafe bar/cafe seating/LO_trolley" instance=ExtResource("11_2wyq8")]
-transform = Transform3D(-0.0369749, 2.87786e-08, -0.999315, -2.45465e-08, 1, 1.59194e-08, 0.999317, -9.7723e-08, -0.0369753, -0.0568619, 1.34406, -0.209504)
+[node name="OmniLight3D" type="OmniLight3D" parent="LevelFloor/cafe bar"]
+transform = Transform3D(-0.127372, 0.0516479, -0.990509, 0.0221681, 0.998542, 0.0492161, 0.991607, -0.0156891, -0.128331, -2.63, 1.22838, 3.24164)
+light_color = Color(0.698039, 0.760784, 0.662745, 1)
+omni_range = 5.858
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="LevelFloor/cafe bar"]
+transform = Transform3D(-0.127372, 0.0516479, -0.990509, 0.0221681, 0.998542, 0.0492161, 0.991607, -0.0156891, -0.128331, -3.48555, 2.5895, -1.40405)
+light_color = Color(0.698039, 0.760784, 0.662745, 1)
+omni_range = 5.858
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="LevelFloor/cafe bar"]
+transform = Transform3D(-0.127372, 0.0516479, -0.990509, 0.0221681, 0.998542, 0.0492161, 0.991607, -0.0156891, -0.128331, -0.856842, 1.08874, -5.11571)
+light_color = Color(0.698039, 0.760784, 0.662745, 1)
+omni_range = 5.858
 
 [node name="lockers" type="Node3D" parent="LevelFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4611, 0, 3.57088)
@@ -188,6 +177,12 @@ transform = Transform3D(0.447222, 0.000863491, -1.98764, -0.0152936, 0.654239, -
 
 [node name="LO_workbench_quest" parent="LevelFloor/workbench tools" instance=ExtResource("12_jkv2x")]
 transform = Transform3D(-0.952635, 0, -0.304116, 0, 1, 0, 0.304116, 0, -0.952635, 15.8303, 0.519612, 44.749)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="LevelFloor/workbench tools"]
+transform = Transform3D(0.458184, 0, 0.888857, 0, 1, 0, -0.888857, 0, 0.458184, 14.8604, 2.38319, 45.3318)
+light_color = Color(0.698039, 0.760784, 0.662745, 1)
+light_energy = 0.3
+shadow_enabled = true
 
 [node name="trees_final" type="Node3D" parent="LevelFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
@@ -322,10 +317,10 @@ transform = Transform3D(0.0593238, 0, -0.998239, 0, 1, 0, 0.998239, 0, 0.0593238
 transform = Transform3D(-0.187124, 0, -0.982336, 0, 1, 0, 0.982336, 0, -0.187124, 1.88779, -1.31994, -21.1492)
 
 [node name="LO_Tree_Try30" parent="LevelFloor/trees_final" instance=ExtResource("16_jbj1t")]
-transform = Transform3D(0.272163, 0, 0.962251, 0, 1, 0, -0.962251, 0, 0.272163, 9.01954, 0.264481, -29.2997)
+transform = Transform3D(0.272163, 0, 0.962251, 0, 1, 0, -0.962251, 0, 0.272163, 9.01954, -1.18408, -29.2997)
 
 [node name="LO_Tree_Try31" parent="LevelFloor/trees_final" instance=ExtResource("16_jbj1t")]
-transform = Transform3D(0.160226, 0, -0.98708, 0, 1, 0, 0.98708, 0, 0.160226, 18.0757, 0.264481, -29.4129)
+transform = Transform3D(0.160226, 0, -0.98708, 0, 1, 0, 0.98708, 0, 0.160226, 18.0757, -0.975612, -29.4129)
 
 [node name="LO_Tree_Try32" parent="LevelFloor/trees_final" instance=ExtResource("16_jbj1t")]
 transform = Transform3D(-0.604182, 0, 0.796846, 0, 1, 0, -0.796846, 0, -0.604182, -10.4512, -2.66242, -27.4885)
@@ -357,12 +352,18 @@ transform = Transform3D(0.53674, 0, -0.843748, 0, 1, 0, 0.843748, 0, 0.53674, 23
 [node name="LO_Tree_Try13" parent="LevelFloor/trees_final" instance=ExtResource("16_jbj1t")]
 transform = Transform3D(-0.66497, 0, 0.74687, 0, 1, 0, -0.74687, 0, -0.66497, 28.2246, -2.70273, 13.0755)
 
-[node name="q_Col_bench" type="Node3D" parent="LevelFloor"]
+[node name="quest_items" type="Node3D" parent="LevelFloor"]
 
-[node name="LO_bench2" parent="LevelFloor/q_Col_bench" instance=ExtResource("21_jscy8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.67666, 4.15155, 12.1602)
+[node name="LO_basket_filled" parent="LevelFloor/quest_items" instance=ExtResource("28_2f3dj")]
+transform = Transform3D(1, 0, 0, 0, 0.99441, 0.105587, 0, -0.105587, 0.99441, 19.793, 4.90439, -27.038)
 
-[node name="LO_mag" parent="LevelFloor/q_Col_bench" instance=ExtResource("15_pm3ni")]
+[node name="LO_basket_filled2" parent="LevelFloor/quest_items" instance=ExtResource("28_2f3dj")]
+transform = Transform3D(1, 0, 0, 0, 0.99441, 0.105587, 0, -0.105587, 0.99441, -28.731, 0.513247, -14.143)
+
+[node name="LO_basket_filled_star" parent="LevelFloor/quest_items" instance=ExtResource("19_yq6so")]
+transform = Transform3D(0.9987, -0.0509764, 0, 0.0509764, 0.9987, 0, 0, 0, 1, -24.1955, 1.10962, 25.1261)
+
+[node name="LO_mag" parent="LevelFloor/quest_items" instance=ExtResource("15_pm3ni")]
 transform = Transform3D(-0.720261, 0, 0.693704, 0, 1, 0, -0.693704, 0, -0.720261, 9.24444, 4.54606, 12.1258)
 
 [node name="space_sky_sketch" type="WorldEnvironment" parent="."]
@@ -376,14 +377,885 @@ environment = ExtResource("6_tefeu")
 visible = false
 
 [node name="LO_dome_struts" parent="Dome" instance=ExtResource("16_muem4")]
+visible = false
 
 [node name="paths" type="Node3D" parent="Dome"]
 
 [node name="LO_path_rock1" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.96373, -1.24288, -39.0628)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.79464, -1.24288, -41.8308)
 
-[node name="LO_level_door" parent="Dome/paths" instance=ExtResource("19_0ld40")]
-transform = Transform3D(0.0976698, 0, 0.995219, 0, 1, 0, -0.995219, 0, 0.0976698, -47.5833, 0.497813, -6.19233)
+[node name="LO_path_rock2" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.08962, -1.24288, -41.9702)
+
+[node name="LO_path_rock3" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.55019, -1.24288, -41.1451)
+
+[node name="LO_path_rock4" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.84517, -1.24288, -41.2844)
+
+[node name="LO_path_rock5" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.2238, -1.24288, -41.5485)
+
+[node name="LO_path_rock6" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.5188, -1.24288, -41.6879)
+
+[node name="LO_path_rock7" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.9793, -1.24288, -40.8628)
+
+[node name="LO_path_rock8" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.2743, -1.24288, -41.0021)
+
+[node name="LO_path_rock9" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.55055, -1.24288, -40.3946)
+
+[node name="LO_path_rock10" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.84552, -1.24288, -40.534)
+
+[node name="LO_path_rock11" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.30609, -1.24288, -39.7089)
+
+[node name="LO_path_rock12" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.60107, -1.24288, -39.8483)
+
+[node name="LO_path_rock13" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.9797, -1.24288, -40.1123)
+
+[node name="LO_path_rock14" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.2747, -1.24288, -40.2517)
+
+[node name="LO_path_rock15" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.7352, -1.24288, -39.4266)
+
+[node name="LO_path_rock16" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.0302, -1.24288, -39.566)
+
+[node name="LO_path_rock17" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.704, -1.24288, -41.2888)
+
+[node name="LO_path_rock18" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.9989, -1.24288, -41.4282)
+
+[node name="LO_path_rock19" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.4595, -1.24288, -40.6031)
+
+[node name="LO_path_rock20" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.7545, -1.24288, -40.7425)
+
+[node name="LO_path_rock21" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.1331, -1.24288, -41.0065)
+
+[node name="LO_path_rock22" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.4281, -1.24288, -41.1459)
+
+[node name="LO_path_rock23" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.8886, -1.24288, -40.3208)
+
+[node name="LO_path_rock24" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.1836, -1.24288, -40.4602)
+
+[node name="LO_path_rock25" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.4599, -1.24288, -39.8527)
+
+[node name="LO_path_rock26" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.7548, -1.24288, -39.9921)
+
+[node name="LO_path_rock27" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.2154, -1.24288, -39.167)
+
+[node name="LO_path_rock28" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.5104, -1.24288, -39.3064)
+
+[node name="LO_path_rock29" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.889, -1.24288, -39.5704)
+
+[node name="LO_path_rock30" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.184, -1.24288, -39.7098)
+
+[node name="LO_path_rock31" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.6445, -1.24288, -38.8847)
+
+[node name="LO_path_rock32" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.9395, -1.24288, -39.0241)
+
+[node name="LO_path_rock33" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.5848, -1.24288, -40.7184)
+
+[node name="LO_path_rock34" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.8797, -1.24288, -40.8578)
+
+[node name="LO_path_rock35" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.3403, -1.24288, -40.0327)
+
+[node name="LO_path_rock36" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.6353, -1.24288, -40.1721)
+
+[node name="LO_path_rock37" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.0139, -1.24288, -40.4361)
+
+[node name="LO_path_rock38" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.3089, -1.24288, -40.5755)
+
+[node name="LO_path_rock39" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.7694, -1.24288, -39.7504)
+
+[node name="LO_path_rock40" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.0644, -1.24288, -39.8898)
+
+[node name="LO_path_rock41" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.3407, -1.24288, -39.2822)
+
+[node name="LO_path_rock42" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.6356, -1.24288, -39.4216)
+
+[node name="LO_path_rock43" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.0962, -1.24288, -38.5965)
+
+[node name="LO_path_rock44" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.3912, -1.24288, -38.7359)
+
+[node name="LO_path_rock193" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.2746, -1.24288, -38.2109)
+
+[node name="LO_path_rock194" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.7263, -1.24288, -37.9227)
+
+[node name="LO_path_rock195" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.0213, -1.24288, -38.0621)
+
+[node name="LO_path_rock196" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.0419, -1.24288, -38.6469)
+
+[node name="LO_path_rock197" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.4935, -1.24288, -38.3587)
+
+[node name="LO_path_rock198" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.7885, -1.24288, -38.4981)
+
+[node name="LO_path_rock199" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.4677, -1.24288, -37.7749)
+
+[node name="LO_path_rock200" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.9194, -1.24288, -37.4867)
+
+[node name="LO_path_rock201" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.2144, -1.24288, -37.6261)
+
+[node name="LO_path_rock217" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.8377, -1.24288, -36.9426)
+
+[node name="LO_path_rock223" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.2893, -1.24288, -36.6544)
+
+[node name="LO_path_rock224" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.5843, -1.24288, -36.7938)
+
+[node name="LO_path_rock225" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.6609, -1.24288, -37.3521)
+
+[node name="LO_path_rock229" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.1125, -1.24288, -37.064)
+
+[node name="LO_path_rock230" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.4075, -1.24288, -37.2034)
+
+[node name="LO_path_rock231" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.0035, -1.24288, -36.5377)
+
+[node name="LO_path_rock232" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.4551, -1.24288, -36.2495)
+
+[node name="LO_path_rock233" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.7501, -1.24288, -36.3889)
+
+[node name="LO_path_rock202" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.6313, -1.24288, -37.405)
+
+[node name="LO_path_rock203" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.083, -1.24288, -37.1168)
+
+[node name="LO_path_rock204" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.378, -1.24288, -37.2562)
+
+[node name="LO_path_rock205" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.359, -1.24288, -37.8145)
+
+[node name="LO_path_rock206" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.8106, -1.24288, -37.5264)
+
+[node name="LO_path_rock207" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.1056, -1.24288, -37.6658)
+
+[node name="LO_path_rock208" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.82136, -1.24288, -39.0523)
+
+[node name="LO_path_rock209" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.273, -1.24288, -38.7642)
+
+[node name="LO_path_rock210" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.56798, -1.24288, -38.9036)
+
+[node name="LO_path_rock211" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.13843, -1.24288, -38.2332)
+
+[node name="LO_path_rock212" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.5901, -1.24288, -37.9451)
+
+[node name="LO_path_rock213" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.88506, -1.24288, -38.0845)
+
+[node name="LO_path_rock214" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.62824, -1.24288, -39.5412)
+
+[node name="LO_path_rock215" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.07989, -1.24288, -39.253)
+
+[node name="LO_path_rock216" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.37487, -1.24288, -39.3924)
+
+[node name="LO_path_rock218" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.35734, -1.24288, -38.4207)
+
+[node name="LO_path_rock219" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.65231, -1.24288, -38.5601)
+
+[node name="LO_path_rock220" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.42192, -1.24288, -39.9904)
+
+[node name="LO_path_rock221" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.87357, -1.24288, -39.7022)
+
+[node name="LO_path_rock222" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.16855, -1.24288, -39.8416)
+
+[node name="LO_path_rock226" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -2.20238, -1.24288, -40.466)
+
+[node name="LO_path_rock227" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.65403, -1.24288, -40.1778)
+
+[node name="LO_path_rock228" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -2.94901, -1.24288, -40.3172)
+
+[node name="LO_path_rock45" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.7698, -1.24288, -38.9999)
+
+[node name="LO_path_rock46" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.0648, -1.24288, -39.1393)
+
+[node name="LO_path_rock47" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.5253, -1.24288, -38.3142)
+
+[node name="LO_path_rock48" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.8203, -1.24288, -38.4536)
+
+[node name="LO_path_rock49" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.2978, -1.24288, -43.5707)
+
+[node name="LO_path_rock50" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.5928, -1.24288, -43.71)
+
+[node name="LO_path_rock51" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.0534, -1.24288, -42.8849)
+
+[node name="LO_path_rock52" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.3483, -1.24288, -43.0243)
+
+[node name="LO_path_rock53" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.727, -1.24288, -43.2884)
+
+[node name="LO_path_rock54" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.0219, -1.24288, -43.4277)
+
+[node name="LO_path_rock55" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.4825, -1.24288, -42.6026)
+
+[node name="LO_path_rock56" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.7775, -1.24288, -42.742)
+
+[node name="LO_path_rock57" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.0537, -1.24288, -42.1345)
+
+[node name="LO_path_rock58" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.3487, -1.24288, -42.2739)
+
+[node name="LO_path_rock59" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.8093, -1.24288, -41.4488)
+
+[node name="LO_path_rock60" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.1042, -1.24288, -41.5882)
+
+[node name="LO_path_rock61" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.4829, -1.24288, -41.8522)
+
+[node name="LO_path_rock62" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.7778, -1.24288, -41.9916)
+
+[node name="LO_path_rock63" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.2384, -1.24288, -41.1665)
+
+[node name="LO_path_rock64" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.5334, -1.24288, -41.3059)
+
+[node name="LO_path_rock65" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.36, -1.24288, -44.1982)
+
+[node name="LO_path_rock66" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.655, -1.24288, -44.3375)
+
+[node name="LO_path_rock67" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.1155, -1.24288, -43.5124)
+
+[node name="LO_path_rock68" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.4105, -1.24288, -43.6518)
+
+[node name="LO_path_rock69" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.7891, -1.24288, -43.9159)
+
+[node name="LO_path_rock70" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.0841, -1.24288, -44.0552)
+
+[node name="LO_path_rock71" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.5447, -1.24288, -43.2301)
+
+[node name="LO_path_rock72" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.8396, -1.24288, -43.3695)
+
+[node name="LO_path_rock73" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.1159, -1.24288, -42.762)
+
+[node name="LO_path_rock74" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.4109, -1.24288, -42.9014)
+
+[node name="LO_path_rock75" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.8714, -1.24288, -42.0763)
+
+[node name="LO_path_rock76" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.1664, -1.24288, -42.2157)
+
+[node name="LO_path_rock77" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.545, -1.24288, -42.4797)
+
+[node name="LO_path_rock78" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.84, -1.24288, -42.6191)
+
+[node name="LO_path_rock79" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.3006, -1.24288, -41.794)
+
+[node name="LO_path_rock80" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -13.5956, -1.24288, -41.9334)
+
+[node name="LO_path_rock81" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.4507, -1.24288, -44.7116)
+
+[node name="LO_path_rock82" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.74565, -1.24288, -44.851)
+
+[node name="LO_path_rock83" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.2062, -1.24288, -44.0258)
+
+[node name="LO_path_rock84" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.50119, -1.24288, -44.1652)
+
+[node name="LO_path_rock85" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.8798, -1.24288, -44.4293)
+
+[node name="LO_path_rock86" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.1748, -1.24288, -44.5687)
+
+[node name="LO_path_rock87" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.6354, -1.24288, -43.7435)
+
+[node name="LO_path_rock88" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.9303, -1.24288, -43.8829)
+
+[node name="LO_path_rock89" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.2066, -1.24288, -43.2754)
+
+[node name="LO_path_rock90" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.50155, -1.24288, -43.4148)
+
+[node name="LO_path_rock91" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.96211, -1.24288, -42.5897)
+
+[node name="LO_path_rock92" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.25709, -1.24288, -42.7291)
+
+[node name="LO_path_rock93" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.6357, -1.24288, -42.9931)
+
+[node name="LO_path_rock94" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.9307, -1.24288, -43.1325)
+
+[node name="LO_path_rock95" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.3913, -1.24288, -42.3074)
+
+[node name="LO_path_rock96" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.6862, -1.24288, -42.4468)
+
+[node name="LO_path_rock97" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.54135, -1.24288, -45.3391)
+
+[node name="LO_path_rock98" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.83633, -1.24288, -45.4785)
+
+[node name="LO_path_rock99" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.2969, -1.24288, -44.6533)
+
+[node name="LO_path_rock100" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.59188, -1.24288, -44.7927)
+
+[node name="LO_path_rock101" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.9705, -1.24288, -45.0568)
+
+[node name="LO_path_rock102" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.26548, -1.24288, -45.1962)
+
+[node name="LO_path_rock103" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.72604, -1.24288, -44.371)
+
+[node name="LO_path_rock104" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.02102, -1.24288, -44.5104)
+
+[node name="LO_path_rock105" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.29726, -1.24288, -43.9029)
+
+[node name="LO_path_rock106" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.59224, -1.24288, -44.0423)
+
+[node name="LO_path_rock107" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.0528, -1.24288, -43.2172)
+
+[node name="LO_path_rock108" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.34778, -1.24288, -43.3566)
+
+[node name="LO_path_rock109" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.7264, -1.24288, -43.6206)
+
+[node name="LO_path_rock110" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.02138, -1.24288, -43.76)
+
+[node name="LO_path_rock111" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.48194, -1.24288, -42.9349)
+
+[node name="LO_path_rock112" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.77692, -1.24288, -43.0743)
+
+[node name="LO_path_rock113" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.94238, -1.24288, -42.4583)
+
+[node name="LO_path_rock114" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.23735, -1.24288, -42.5977)
+
+[node name="LO_path_rock115" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.69792, -1.24288, -41.7726)
+
+[node name="LO_path_rock116" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.9929, -1.24288, -41.9119)
+
+[node name="LO_path_rock117" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.37152, -1.24288, -42.176)
+
+[node name="LO_path_rock118" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.6665, -1.24288, -42.3154)
+
+[node name="LO_path_rock119" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.12706, -1.24288, -41.4902)
+
+[node name="LO_path_rock120" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.42204, -1.24288, -41.6296)
+
+[node name="LO_path_rock121" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.69828, -1.24288, -41.0221)
+
+[node name="LO_path_rock122" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.99326, -1.24288, -41.1615)
+
+[node name="LO_path_rock123" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.45382, -1.24288, -40.3364)
+
+[node name="LO_path_rock124" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.7488, -1.24288, -40.4758)
+
+[node name="LO_path_rock125" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.12742, -1.24288, -40.7398)
+
+[node name="LO_path_rock126" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.4224, -1.24288, -40.8792)
+
+[node name="LO_path_rock127" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.88297, -1.24288, -40.0541)
+
+[node name="LO_path_rock128" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.17795, -1.24288, -40.1935)
+
+[node name="LO_path_rock129" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.1786, -1.24288, -42.9717)
+
+[node name="LO_path_rock130" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.4736, -1.24288, -43.1111)
+
+[node name="LO_path_rock261" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.581, -1.24288, -44.2503)
+
+[node name="LO_path_rock262" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.876, -1.24288, -44.3896)
+
+[node name="LO_path_rock263" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.0101, -1.24288, -43.968)
+
+[node name="LO_path_rock264" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.3051, -1.24288, -44.1073)
+
+[node name="LO_path_rock265" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.7568, -1.24288, -43.7907)
+
+[node name="LO_path_rock266" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.1829, -1.24288, -43.5253)
+
+[node name="LO_path_rock267" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.4779, -1.24288, -43.6647)
+
+[node name="LO_path_rock268" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.612, -1.24288, -43.243)
+
+[node name="LO_path_rock269" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.907, -1.24288, -43.3824)
+
+[node name="LO_path_rock270" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -22.3587, -1.24288, -43.0658)
+
+[node name="LO_path_rock271" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.5697, -1.24288, -44.9752)
+
+[node name="LO_path_rock272" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.8646, -1.24288, -45.1146)
+
+[node name="LO_path_rock288" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.8679, -1.24288, -43.8233)
+
+[node name="LO_path_rock290" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.6234, -1.24288, -43.1376)
+
+[node name="LO_path_rock291" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.1511, -1.24288, -44.5029)
+
+[node name="LO_path_rock292" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.1397, -1.24288, -45.2278)
+
+[node name="LO_path_rock273" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.9988, -1.24288, -44.6929)
+
+[node name="LO_path_rock274" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.2938, -1.24288, -44.8323)
+
+[node name="LO_path_rock275" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.7454, -1.24288, -44.5156)
+
+[node name="LO_path_rock276" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.1942, -1.24288, -44.2842)
+
+[node name="LO_path_rock277" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.4892, -1.24288, -44.4236)
+
+[node name="LO_path_rock278" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.6234, -1.24288, -44.0019)
+
+[node name="LO_path_rock279" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.9183, -1.24288, -44.1413)
+
+[node name="LO_path_rock280" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -22.37, -1.24288, -43.8247)
+
+[node name="LO_path_rock281" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -16.3658, -1.24288, -45.7567)
+
+[node name="LO_path_rock282" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -15.6608, -1.24288, -45.8961)
+
+[node name="LO_path_rock283" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.7949, -1.24288, -45.4744)
+
+[node name="LO_path_rock284" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.0899, -1.24288, -45.6138)
+
+[node name="LO_path_rock285" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.5415, -1.24288, -45.2971)
+
+[node name="LO_path_rock286" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.945, -1.24288, -45.0884)
+
+[node name="LO_path_rock287" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.24, -1.24288, -45.2278)
+
+[node name="LO_path_rock289" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.6692, -1.24288, -44.9455)
+
+[node name="LO_path_rock131" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.9342, -1.24288, -42.286)
+
+[node name="LO_path_rock132" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.2291, -1.24288, -42.4254)
+
+[node name="LO_path_rock133" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.6078, -1.24288, -42.6894)
+
+[node name="LO_path_rock134" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.9027, -1.24288, -42.8288)
+
+[node name="LO_path_rock135" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.3633, -1.24288, -42.0037)
+
+[node name="LO_path_rock136" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.6583, -1.24288, -42.1431)
+
+[node name="LO_path_rock137" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.9345, -1.24288, -41.5355)
+
+[node name="LO_path_rock138" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.2295, -1.24288, -41.6749)
+
+[node name="LO_path_rock139" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.6901, -1.24288, -40.8498)
+
+[node name="LO_path_rock140" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.985, -1.24288, -40.9892)
+
+[node name="LO_path_rock141" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.3637, -1.24288, -41.2532)
+
+[node name="LO_path_rock142" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.6586, -1.24288, -41.3926)
+
+[node name="LO_path_rock143" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.1192, -1.24288, -40.5675)
+
+[node name="LO_path_rock144" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.4142, -1.24288, -40.7069)
+
+[node name="LO_path_rock145" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.4941, -1.24288, -40.1479)
+
+[node name="LO_path_rock146" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.789, -1.24288, -40.2873)
+
+[node name="LO_path_rock147" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.2496, -1.24288, -39.4622)
+
+[node name="LO_path_rock148" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.5446, -1.24288, -39.6016)
+
+[node name="LO_path_rock149" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.9232, -1.24288, -39.8656)
+
+[node name="LO_path_rock246" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.31, -1.24288, -42.5308)
+
+[node name="LO_path_rock247" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.0656, -1.24288, -41.8451)
+
+[node name="LO_path_rock248" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.0659, -1.24288, -41.0946)
+
+[node name="LO_path_rock249" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.8215, -1.24288, -40.4089)
+
+[node name="LO_path_rock250" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.6255, -1.24288, -39.7071)
+
+[node name="LO_path_rock251" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -22.0463, -1.24288, -42.3949)
+
+[node name="LO_path_rock252" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.8018, -1.24288, -41.7092)
+
+[node name="LO_path_rock253" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.8022, -1.24288, -40.9587)
+
+[node name="LO_path_rock254" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.5577, -1.24288, -40.273)
+
+[node name="LO_path_rock255" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.3617, -1.24288, -39.5711)
+
+[node name="LO_path_rock256" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -22.7825, -1.24288, -42.2476)
+
+[node name="LO_path_rock257" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -22.538, -1.24288, -41.5619)
+
+[node name="LO_path_rock258" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -22.5384, -1.24288, -40.8115)
+
+[node name="LO_path_rock259" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -22.2939, -1.24288, -40.1258)
+
+[node name="LO_path_rock260" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -22.0979, -1.24288, -39.4239)
+
+[node name="LO_path_rock150" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.2182, -1.24288, -40.005)
+
+[node name="LO_path_rock151" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.6788, -1.24288, -39.1799)
+
+[node name="LO_path_rock152" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.9737, -1.24288, -39.3193)
+
+[node name="LO_path_rock153" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.25, -1.24288, -38.7118)
+
+[node name="LO_path_rock154" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.545, -1.24288, -38.8512)
+
+[node name="LO_path_rock155" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.0055, -1.24288, -38.0261)
+
+[node name="LO_path_rock156" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -17.3005, -1.24288, -38.1654)
+
+[node name="LO_path_rock157" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.6791, -1.24288, -38.4295)
+
+[node name="LO_path_rock158" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.9741, -1.24288, -38.5689)
+
+[node name="LO_path_rock159" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.4347, -1.24288, -37.7438)
+
+[node name="LO_path_rock234" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -19.8261, -1.24288, -36.9167)
+
+[node name="LO_path_rock235" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.3923, -1.24288, -39.0327)
+
+[node name="LO_path_rock236" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.3927, -1.24288, -38.2822)
+
+[node name="LO_path_rock237" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.1482, -1.24288, -37.5965)
+
+[node name="LO_path_rock238" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.5397, -1.24288, -36.7808)
+
+[node name="LO_path_rock239" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.1059, -1.24288, -38.8967)
+
+[node name="LO_path_rock240" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.1063, -1.24288, -38.1463)
+
+[node name="LO_path_rock241" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -20.8618, -1.24288, -37.4606)
+
+[node name="LO_path_rock242" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.2419, -1.24288, -36.6562)
+
+[node name="LO_path_rock243" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.8082, -1.24288, -38.7721)
+
+[node name="LO_path_rock244" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.8085, -1.24288, -38.0217)
+
+[node name="LO_path_rock245" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -21.5641, -1.24288, -37.336)
+
+[node name="LO_path_rock160" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -18.7296, -1.24288, -37.8831)
+
+[node name="LO_path_rock161" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.11863, -1.24288, -43.0572)
+
+[node name="LO_path_rock162" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.41361, -1.24288, -43.1966)
+
+[node name="LO_path_rock163" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.87417, -1.24288, -42.3715)
+
+[node name="LO_path_rock164" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.16915, -1.24288, -42.5109)
+
+[node name="LO_path_rock165" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.54777, -1.24288, -42.7749)
+
+[node name="LO_path_rock166" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.84275, -1.24288, -42.9143)
+
+[node name="LO_path_rock167" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.30332, -1.24288, -42.0892)
+
+[node name="LO_path_rock168" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.5983, -1.24288, -42.2286)
+
+[node name="LO_path_rock169" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.87453, -1.24288, -41.6211)
+
+[node name="LO_path_rock170" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.16951, -1.24288, -41.7605)
+
+[node name="LO_path_rock171" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.63008, -1.24288, -40.9354)
+
+[node name="LO_path_rock172" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -2.92506, -1.24288, -41.0748)
+
+[node name="LO_path_rock173" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.30368, -1.24288, -41.3388)
+
+[node name="LO_path_rock174" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.59866, -1.24288, -41.4782)
+
+[node name="LO_path_rock175" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.05922, -1.24288, -40.6531)
+
+[node name="LO_path_rock176" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.3542, -1.24288, -40.7925)
+
+[node name="LO_path_rock177" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.68908, -1.24288, -45.9666)
+
+[node name="LO_path_rock178" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.98406, -1.24288, -46.106)
+
+[node name="LO_path_rock179" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.44463, -1.24288, -45.2808)
+
+[node name="LO_path_rock180" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.7396, -1.24288, -45.4202)
+
+[node name="LO_path_rock181" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.11823, -1.24288, -45.6843)
+
+[node name="LO_path_rock182" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.41321, -1.24288, -45.8237)
+
+[node name="LO_path_rock183" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.87377, -1.24288, -44.9985)
+
+[node name="LO_path_rock184" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.16875, -1.24288, -45.1379)
+
+[node name="LO_path_rock185" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.44499, -1.24288, -44.5304)
+
+[node name="LO_path_rock186" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.73997, -1.24288, -44.6698)
+
+[node name="LO_path_rock187" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.20053, -1.24288, -43.8447)
+
+[node name="LO_path_rock188" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.49551, -1.24288, -43.9841)
+
+[node name="LO_path_rock189" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.87413, -1.24288, -44.2481)
+
+[node name="LO_path_rock190" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.16911, -1.24288, -44.3875)
+
+[node name="LO_path_rock191" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.62967, -1.24288, -43.5624)
+
+[node name="LO_path_rock192" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.92465, -1.24288, -43.7018)
 
 [node name="walls" type="Node3D" parent="Dome"]
 
@@ -425,7 +1297,13 @@ transform = Transform3D(0.0154281, 0, -0.999881, 0, 1, 0, 0.999881, 0, 0.0154281
 [node name="LO_basket1" parent="Dome/garden furniture" instance=ExtResource("25_2wyq8")]
 transform = Transform3D(0.382135, 0, -0.924106, 0, 1, 0, 0.924106, 0, 0.382135, -6.38131, -1.18539, -43.6126)
 
+[node name="LO_bench2" parent="Dome/garden furniture" instance=ExtResource("21_jscy8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.67666, 3.88707, 12.1602)
+
 [node name="airlock" type="Node3D" parent="Dome"]
+
+[node name="LO_airlock" parent="Dome/airlock" instance=ExtResource("20_gqmmt")]
+transform = Transform3D(-0.961344, 0, -0.275352, 0, 1, 0, 0.275352, 0, -0.961344, 12.3364, 0.653622, 49.0338)
 
 [node name="LO_suit" parent="Dome/airlock" instance=ExtResource("25_vxglm")]
 transform = Transform3D(-0.593837, 0, -0.0857743, 0, 0.6, 0, 0.0857743, 0, -0.593837, 7.08683, 0.711964, 48.5093)
@@ -442,7 +1320,14 @@ transform = Transform3D(-0.599317, 0, -0.0286195, 0, 0.6, 0, 0.0286195, 0, -0.59
 [node name="LO_suit4" parent="Dome/airlock" instance=ExtResource("25_vxglm")]
 transform = Transform3D(-0.599317, 0, -0.0286195, 0, 0.6, 0, 0.0286195, 0, -0.599317, 3.2426, 0.711964, 48.8295)
 
+[node name="OmniLight3D5" type="OmniLight3D" parent="Dome/airlock"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.962, 1.67462, 48.2736)
+light_energy = 0.5
+
 [node name="LO_terrain" parent="Dome" instance=ExtResource("26_vxglm")]
 
-[node name="LO_airlock" parent="." instance=ExtResource("20_gqmmt")]
-transform = Transform3D(-0.961344, 0, -0.275352, 0, 1, 0, 0.275352, 0, -0.961344, 12.3364, 0.653622, 49.0338)
+[node name="LO_level_door" parent="Dome" instance=ExtResource("19_0ld40")]
+transform = Transform3D(0.0976698, 0, 0.995219, 0, 1, 0, -0.995219, 0, 0.0976698, -47.5833, 0.497813, -6.19233)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/LO_level_door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.326677, 2.19278, 0.372719)

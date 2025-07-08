@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c570lhwj4yll7"
-path="res://.godot/imported/LO_star.glb-562f5c7daf0ff073af4edb3bee955100.scn"
+uid="uid://cbpm5wqs2sqkq"
+path="res://.godot/imported/LO_basket_filled_star.glb-e6334da96d88b9491b6c32567408afe6.scn"
 
 [deps]
 
-source_file="res://quest_props_lemonade/LO_star.glb"
-dest_files=["res://.godot/imported/LO_star.glb-562f5c7daf0ff073af4edb3bee955100.scn"]
+source_file="res://quest_props_lemonade/LO_basket_filled_star.glb"
+dest_files=["res://.godot/imported/LO_basket_filled_star.glb-e6334da96d88b9491b6c32567408afe6.scn"]
 
 [params]
 

@@ -1,6 +1,6 @@
-AudioStreamPlayer
 OmniLight3D
 Node3D
+AudioStreamPlayer
 MeshInstance3D
 VBoxContainer
 Label
@@ -12,4 +12,3 @@ Control
 CanvasLayer
 Label3D
 StaticBody3D
-Area3D
