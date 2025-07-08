@@ -8,3 +8,5 @@ signal on_transition_finished
 signal first_item_pickup
 
 signal item_picked_up
+
+signal note_picked_up

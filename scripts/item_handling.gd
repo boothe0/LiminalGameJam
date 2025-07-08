@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 			Emitter.emit_signal("first_item_pickup")
 		Globals.number_items += 1
 		Emitter.emit_signal("item_picked_up")
+		Emitter.emit_signal("note_picked_up")
 
 # handles label visibility
 func _on_area_3d_body_entered(body: Node3D) -> void:

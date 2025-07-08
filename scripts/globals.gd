@@ -1,5 +1,6 @@
 extends Node
 
+
 var motion_sickness_flag = true
 
 # empty dictionary to store item pickups to load on each scene reload
@@ -12,3 +13,4 @@ var item = {
 }
 var number_items = 0
 var scene_counter = 0
+var note_picked_up = ""

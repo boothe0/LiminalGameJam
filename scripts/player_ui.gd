@@ -21,10 +21,8 @@ func adding_to_inv():
 	if item_key == "WorkNote" || "PicnicNote" || "DateNode" || "LemonNote":
 		make_asset(post_it)
 		quest_trigger()
+		Emitter.emit_signal("note_picked_up")
 	match item_key:
-		"PicnicNote":
-			make_asset(post_it)
-			quest_trigger()
 		"drillasset":
 			make_asset(drill)
 		"mirrorstickasset":
@@ -38,6 +36,7 @@ func adding_to_inv():
 
 func quest_trigger():
 	var item_node = Globals.most_recent_node
+	print(Globals.note_picked_up)
 	match item_node:
 		"DateNote":
 			date_night_quest()
