@@ -105,9 +105,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	# attaches mouse 
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	# ui_cancel is the esc key
+	# free mouse is the alt key
 	# frees the mouse so the window can be closed
-	elif event.is_action_pressed("ui_cancel"):
+	elif event.is_action_pressed("free_mouse"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	# rotating the neck
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:

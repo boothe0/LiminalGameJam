@@ -1,14 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1751950819
+::res://::1751952591
 icon.svg::CompressedTexture2D/CompressedTexture2D::3803705575170224692::1751928038::1751928127::1::::<><><>0<>0<>3a30221590cee000b014c16b8f54243e<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1751928038::0::1::::<><><>0<>0<><>::
 ::res://assets/::1751928038
 dome.gdshader::Shader/Shader::6342616441763278937::1751928038::0::1::::<><><>0<>0<><>::
-::res://audio/::1751952002
-Liminal Jam - Last Night Shift.ogg::AudioStreamOggVorbis::6041460725012098749::1751952002::1751952003::1::::<><><>0<>0<>0c514fd96d01bde9dd572fd1883e5292<>res://.godot/imported/Liminal Jam - Last Night Shift.ogg-e346b063e4d591884d0ed7b45a84b71b.oggvorbisstr::
-Liminal Jam - Main Menu Music.ogg::AudioStreamOggVorbis::1447912664870803734::1751951448::1751951448::1::::<><><>0<>0<>62f21c7a499497386c1481a971449dd0<>res://.godot/imported/Liminal Jam - Main Menu Music.ogg-3bd3264860cc53c6544d8bba178340b1.oggvorbisstr::
+::res://audio/::1751952577
+Liminal Jam - Last Night Shift.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::6041460725012098749::1751952577::1751952592::1::::<><><>0<>0<>0c514fd96d01bde9dd572fd1883e5292<>res://.godot/imported/Liminal Jam - Last Night Shift.ogg-e346b063e4d591884d0ed7b45a84b71b.oggvorbisstr::
+Liminal Jam - Main Menu Music.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::1447912664870803734::1751952577::1751952592::1::::<><><>0<>0<>62f21c7a499497386c1481a971449dd0<>res://.godot/imported/Liminal Jam - Main Menu Music.ogg-3bd3264860cc53c6544d8bba178340b1.oggvorbisstr::
 Liminal Jam - Night Shift Concept Music.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::2162502085252575914::1751928038::1751928126::1::::<><><>0<>0<>8536857e88a752d4173aa6d2f48aeed2<>res://.godot/imported/Liminal Jam - Night Shift Concept Music.ogg-7cba76f9ed3fa9a841d201764a31e369.oggvorbisstr::
-Liminal Jam - Night Shift Variation.ogg::AudioStreamOggVorbis::2103354207021302518::1751951796::1751951796::1::::<><><>0<>0<>6263ded1c3cefdc7c376ecc839345c59<>res://.godot/imported/Liminal Jam - Night Shift Variation.ogg-0bf3986961797e3f74999ee7465f0e7f.oggvorbisstr::
+Liminal Jam - Night Shift Variation.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::2103354207021302518::1751952577::1751952592::1::::<><><>0<>0<>6263ded1c3cefdc7c376ecc839345c59<>res://.godot/imported/Liminal Jam - Night Shift Variation.ogg-0bf3986961797e3f74999ee7465f0e7f.oggvorbisstr::
 ::res://furniture/::1751928130
 LO_bench.glb::PackedScene/PackedScene::436294703396035037::1751928038::1751928130::1::::<><><>0<>0<>d404308d3404a8bfc39a37dff4f3d053<>res://.godot/imported/LO_bench.glb-934275858fdd96220cc40976ed806654.scn::uid://sf66if6ocsin::::res://furniture/LO_bench_bench_tex.png
 LO_bench_bench_tex.png::CompressedTexture2D/CompressedTexture2D::1275659089979823733::1751928038::1751928127::1::::<><><>0<>0<>0e870a675e337c25e6620745442163f8<>res://.godot/imported/LO_bench_bench_tex.png-277b85bccce054e904911305a9297d3b.s3tc.ctex::
@@ -69,36 +69,36 @@ LO_tablet_tablet_tex.png::CompressedTexture2D/CompressedTexture2D::7062454539150
 LO_tether.glb::PackedScene/PackedScene::4765755570355775018::1751928039::1751928130::1::::<><><>0<>0<>633b2299c1db1a04ef2bddbfaaefcc17<>res://.godot/imported/LO_tether.glb-60ff455b98cf829d8404be109d237e93.scn::uid://c8yaac8cit6aq::::res://quest_props_tools/LO_tether_rope_tex.png<>uid://dqdupgnbpvt01::::res://quest_props_tools/LO_tether_hook_tex.png
 LO_tether_hook_tex.png::CompressedTexture2D/CompressedTexture2D::8289718144602790320::1751928039::1751928127::1::::<><><>0<>0<>820c576aa0e1728f0b2a8dd5a93918c4<>res://.godot/imported/LO_tether_hook_tex.png-3623b8f8f705f374758dfe7410e4a36b.s3tc.ctex::
 LO_tether_rope_tex.png::CompressedTexture2D/CompressedTexture2D::7138618429666295588::1751928039::1751928127::1::::<><><>0<>0<>d0ee4257c7b2276d64f612adf7819d31<>res://.godot/imported/LO_tether_rope_tex.png-6a03f96ac92b19c7c0deb12de8e7f77e.s3tc.ctex::
-::res://scenes/::1751951953
+::res://scenes/::1751952577
 dome.tscn::PackedScene/PackedScene::1992376583478400003::1751928039::0::1::::<><><>0<>0<><>::uid://36ggs3jar12::::res://assets/3d-model.fbx
 door.tscn::PackedScene/PackedScene::4705477628738796534::1751928039::0::1::::<><><>0<>0<><>::uid://b4wbasjxbmtiw::::res://scripts/door.gd
 fade_effect_transition.tscn::PackedScene/PackedScene::2314766505131493186::1751928039::0::1::::<><><>0<>0<><>::uid://cvl1s6twkl07k::::res://scripts/transition_screen.gd
-intro.tscn::PackedScene::7952303432763552875::1751951953::0::1::::<><><>0<>0<><>::uid://ct0bsu1m4yotf::::res://scripts/intro.gd
-lo_dome.tscn::PackedScene::8379315895642496230::1751951953::0::1::::<><><>0<>0<><>::uid://drfmelgmeoeh0::::res://skybox_setup/LO_dome.glb<>uid://ndvy8n4sh753::::res://shaders/dome-inherited.gdshader
-lo_dome_sketch.tscn::PackedScene::9177100923974551733::1751950819::0::1::::<><><>0<>0<><>::uid://drcr87ep8fct3::::res://skybox_setup/LO_dome_sketch.glb<>uid://ndvy8n4sh753::::res://shaders/dome-inherited.gdshader<>uid://bwopemupmyxvd::::res://skybox_setup/LO_terrain.glb<>uid://bj28kncam2bly::::res://scenes/lo_terrain_sketch.tscn
+intro.tscn::PackedScene::7952303432763552875::1751952577::0::1::::<><><>0<>0<><>::uid://ct0bsu1m4yotf::::res://scripts/intro.gd
+lo_dome.tscn::PackedScene::8379315895642496230::1751952577::0::1::::<><><>0<>0<><>::uid://drfmelgmeoeh0::::res://skybox_setup/LO_dome.glb<>uid://ndvy8n4sh753::::res://shaders/dome-inherited.gdshader
+lo_dome_sketch.tscn::PackedScene::9177100923974551733::1751952577::0::1::::<><><>0<>0<><>::uid://drcr87ep8fct3::::res://skybox_setup/LO_dome_sketch.glb<>uid://ndvy8n4sh753::::res://shaders/dome-inherited.gdshader<>uid://bwopemupmyxvd::::res://skybox_setup/LO_terrain.glb<>uid://bj28kncam2bly::::res://scenes/lo_terrain_sketch.tscn
 lo_terrain_sketch.tscn::PackedScene/PackedScene::3075880680405608234::1751928039::0::1::::<><><>0<>0<><>::uid://bj06pdg883khk::::res://skybox_setup/LO_terrain_sketch.glb<>uid://jel0kyd5s05p::::res://meshes/grass_small.res
-lo_terrain_w_collision.tscn::PackedScene::1832249629305402100::1751951953::0::1::::<><><>0<>0<><>::uid://bwopemupmyxvd::::res://skybox_setup/LO_terrain.glb
-main.tscn::PackedScene::4646249985624823251::1751951953::0::1::::<><><>0<>0<><>::uid://dewwokd62pf8t::::res://scenes/player.tscn<>uid://nhd3heorschy::::res://scripts/main.gd<>uid://b8bmr8uose6du::::res://scenes/door.tscn<>uid://52sdf766bulm::::res://audio/Liminal Jam - Night Shift Concept Music.ogg<>uid://drow2luecl41x::::res://scenes/note_asset.tscn<>uid://n3a27p6ob2dp::::res://set_dressing_props/LO_cafe_main.glb<>uid://bhrb4ick732vx::::res://skybox_setup/sky_enviro.tres<>uid://b0n1wom0m40ep::::res://set_dressing_props/LO_cafe_cubes.glb<>uid://d3dqe7qfdoqmb::::res://furniture/LO_cafe_table.glb<>uid://c46rpf0uicpt6::::res://furniture/LO_cafe_chair.glb<>uid://8xnrb3ofrvra::::res://furniture/LO_trolley.glb<>uid://c446gbo450fv3::::res://furniture/LO_locker_tall.glb<>uid://ckec5ggrqdptn::::res://quest_props_cake/LO_pie_slice.glb<>uid://dbi8k8cv8rt2y::::res://set_dressing_props/LO_workbench1.glb<>uid://bjveiw46aoj4j::::res://set_dressing_props/LO_workbench_quest.glb<>uid://drnadxrfew5p7::::res://scenes/lo_dome.tscn<>uid://d041wgdttbrjj::::res://quest_props_lemonade/LO_mag.glb<>uid://mgif50hgfn44::::res://plants/LO_Tree_Try3.glb<>uid://dedn6m75bj4xh::::res://skybox_setup/LO_dome_struts.glb<>uid://befa0eh1j0fas::::res://set_dressing_props/LO_path_rock1.glb<>uid://b067nxqc4wy2j::::res://set_dressing_props/LO_level_door.glb<>uid://sqjduohsf2h0::::res://set_dressing_props/LO_airlock.glb<>uid://b7miiwgkmgaqq::::res://set_dressing_props/LO_wall1.glb<>uid://ghlye1xi6414::::res://furniture/LO_bench.glb<>uid://p724aii50oa4::::res://quest_props_lemonade/LO_basket.glb<>uid://cccl3tkur786t::::res://set_dressing_props/LO_suit.glb<>uid://1ds5bs6v1vqa::::res://scenes/lo_terrain_w_collision.tscn
-main_menu.tscn::PackedScene::3509064663872231520::1751951953::0::1::::<><><>0<>0<><>::uid://bffmic6k50g8i::::res://scripts/ui.gd<>uid://uvm57arsw1uw::::res://audio/Liminal Jam - Main Menu Music.ogg
-message.tscn::PackedScene/PackedScene::8110392672792345658::1751928039::0::1::::<><><>0<>0<><>::uid://ce7ujat82xhj::::res://scripts/message.gd
-notes_inventory.tscn::PackedScene::5171483691578050981::1751950720::0::1::::<><><>0<>0<><>::uid://bp74tdijobib0::::res://scripts/notes_inventory.gd<>uid://eu2o5fawdjq6::::res://set_dressing_props/LO_workbench_quest_welding_tex.png
+lo_terrain_w_collision.tscn::PackedScene::1832249629305402100::1751952255::0::1::::<><><>0<>0<><>::uid://bwopemupmyxvd::::res://skybox_setup/LO_terrain.glb
+main.tscn::PackedScene::4646249985624823251::1751952577::0::1::::<><><>0<>0<><>::uid://dewwokd62pf8t::::res://scenes/player.tscn<>uid://nhd3heorschy::::res://scripts/main.gd<>uid://b8bmr8uose6du::::res://scenes/door.tscn<>uid://52sdf766bulm::::res://audio/Liminal Jam - Night Shift Concept Music.ogg<>uid://drow2luecl41x::::res://scenes/note_asset.tscn<>uid://n3a27p6ob2dp::::res://set_dressing_props/LO_cafe_main.glb<>uid://bhrb4ick732vx::::res://skybox_setup/sky_enviro.tres<>uid://b0n1wom0m40ep::::res://set_dressing_props/LO_cafe_cubes.glb<>uid://d3dqe7qfdoqmb::::res://furniture/LO_cafe_table.glb<>uid://c46rpf0uicpt6::::res://furniture/LO_cafe_chair.glb<>uid://8xnrb3ofrvra::::res://furniture/LO_trolley.glb<>uid://c446gbo450fv3::::res://furniture/LO_locker_tall.glb<>uid://ckec5ggrqdptn::::res://quest_props_cake/LO_pie_slice.glb<>uid://dbi8k8cv8rt2y::::res://set_dressing_props/LO_workbench1.glb<>uid://bjveiw46aoj4j::::res://set_dressing_props/LO_workbench_quest.glb<>uid://drnadxrfew5p7::::res://scenes/lo_dome.tscn<>uid://d041wgdttbrjj::::res://quest_props_lemonade/LO_mag.glb<>uid://mgif50hgfn44::::res://plants/LO_Tree_Try3.glb<>uid://dedn6m75bj4xh::::res://skybox_setup/LO_dome_struts.glb<>uid://befa0eh1j0fas::::res://set_dressing_props/LO_path_rock1.glb<>uid://b067nxqc4wy2j::::res://set_dressing_props/LO_level_door.glb<>uid://sqjduohsf2h0::::res://set_dressing_props/LO_airlock.glb<>uid://b7miiwgkmgaqq::::res://set_dressing_props/LO_wall1.glb<>uid://ghlye1xi6414::::res://furniture/LO_bench.glb<>uid://p724aii50oa4::::res://quest_props_lemonade/LO_basket.glb<>uid://cccl3tkur786t::::res://set_dressing_props/LO_suit.glb<>uid://1ds5bs6v1vqa::::res://scenes/lo_terrain_w_collision.tscn
+main_menu.tscn::PackedScene::3509064663872231520::1751952577::0::1::::<><><>0<>0<><>::uid://bffmic6k50g8i::::res://scripts/ui.gd<>uid://uvm57arsw1uw::::res://audio/Liminal Jam - Main Menu Music.ogg
+message.tscn::PackedScene::8110392672792345658::1751952255::0::1::::<><><>0<>0<><>::uid://ce7ujat82xhj::::res://scripts/message.gd
+notes_inventory.tscn::PackedScene::5171483691578050981::1751952577::0::1::::<><><>0<>0<><>::uid://bp74tdijobib0::::res://scripts/notes_inventory.gd<>uid://eu2o5fawdjq6::::res://set_dressing_props/LO_workbench_quest_welding_tex.png
 note_asset.tscn::PackedScene/PackedScene::8382758280596806007::1751928039::0::1::::<><><>0<>0<><>::uid://bg47861wufoby::::res://scripts/item_handling.gd
 player.tscn::PackedScene/PackedScene::7486795042489368913::1751928039::0::1::::<><><>0<>0<><>::uid://dyh8qctya6qm2::::res://scripts/player.gd<>uid://dy0opw5l8se03::::res://scenes/player_ui.tscn
-player_ui.tscn::PackedScene::8896281769453316094::1751950720::0::1::::<><><>0<>0<><>::uid://rxwceslksu6g::::res://scripts/player_ui.gd<>uid://w377iah1yuu::::res://scripts/label_inv.gd
-::res://scripts/::1751951952
-door.gd::GDScript::4467375137148509058::1751950883::0::1::::<>StaticBody3D<><>0<>0<><>::
+player_ui.tscn::PackedScene::8896281769453316094::1751952577::0::1::::<><><>0<>0<><>::uid://rxwceslksu6g::::res://scripts/player_ui.gd<>uid://w377iah1yuu::::res://scripts/label_inv.gd
+::res://scripts/::1751952577
+door.gd::GDScript::4467375137148509058::1751952577::0::1::::<>StaticBody3D<><>0<>0<><>::
 emitter.gd::GDScript/GDScript::8339256528263803144::1751933752::0::1::::<>Node<><>0<>0<><>::
 globals.gd::GDScript/GDScript::4169966318154605087::1751933752::0::1::::<>Node<><>0<>0<><>::
 intro.gd::GDScript/GDScript::6158132792860223059::1751928039::0::1::::<>CanvasLayer<><>0<>0<><>::
 item_handling.gd::GDScript/GDScript::2869424244771705370::1751933752::0::1::::<>StaticBody3D<><>0<>0<><>::
-label_inv.gd::GDScript::47175224907777372::1751928039::0::1::::<>Label<><>0<>0<><>::
-main.gd::GDScript::927138139282668270::1751951952::0::1::::<>Node3D<><>0<>0<><>::
+label_inv.gd::GDScript::47175224907777372::1751952577::0::1::::<>Label<><>0<>0<><>::
+main.gd::GDScript::927138139282668270::1751952577::0::1::::<>Node3D<><>0<>0<><>::
 message.gd::GDScript/GDScript::150614331557540123::1751928039::0::1::::<>CanvasLayer<><>0<>0<><>::
-notes_inventory.gd::GDScript::3507108319624082019::1751928039::0::1::::<>CanvasLayer<><>0<>0<><>::
+notes_inventory.gd::GDScript::3507108319624082019::1751952577::0::1::::<>CanvasLayer<><>0<>0<><>::
 player.gd::GDScript/GDScript::8860277311623942187::1751933752::0::1::::<>CharacterBody3D<><>0<>0<><>::
-player_ui.gd::GDScript::1242030614032362116::1751951094::0::1::::<>CanvasLayer<><>0<>0<><>::
+player_ui.gd::GDScript::1242030614032362116::1751952577::0::1::::<>CanvasLayer<><>0<>0<><>::
 transition_screen.gd::GDScript/GDScript::6271127683770299302::1751928039::0::1::::<>CanvasLayer<><>0<>0<><>::
-ui.gd::GDScript::2748429834349070762::1751951564::0::1::::<>CanvasLayer<><>0<>0<><>::
+ui.gd::GDScript::2748429834349070762::1751952577::0::1::::<>CanvasLayer<><>0<>0<><>::
 ::res://set_dressing_props/::1751928160
 LO_airlock.glb::PackedScene/PackedScene::1296982112302746907::1751928039::1751928154::1::::<><><>0<>0<>fd5a28af7924a6796a77cb673487fd75<>res://.godot/imported/LO_airlock.glb-21b49a847b9ea6125029087b48665ccd.scn::uid://dlq5e68ojkbu6::::res://set_dressing_props/LO_airlock_airlock_tex.png
 LO_airlock_airlock_tex.png::CompressedTexture2D/CompressedTexture2D::7966199707972147371::1751928039::1751928150::1::::<><><>0<>0<>5e4a4883563ec9dfb0f5645dd090bce6<>res://.godot/imported/LO_airlock_airlock_tex.png-43deba86304d1f55b8c1d93a670ba0f5.s3tc.ctex::
@@ -141,11 +141,11 @@ LO_workbench_quest_stick_tex.png::CompressedTexture2D/CompressedTexture2D::60146
 LO_workbench_quest_welding_tex.png::CompressedTexture2D/CompressedTexture2D::323708873006742811::1751928040::1751928150::1::::<><><>0<>0<>e3714847f856ed57c5cf1f58fb9089f3<>res://.godot/imported/LO_workbench_quest_welding_tex.png-0363a086bb94961cd65f25fbe4c278d4.s3tc.ctex::
 LO_workbench_quest_workbench1_tex.png::CompressedTexture2D/CompressedTexture2D::3573140607688095472::1751928040::1751928150::1::::<><><>0<>0<>73f6b90d3737fa49408df085e0c4205f<>res://.godot/imported/LO_workbench_quest_workbench1_tex.png-eede13372656cf2d1b2992faac632693.s3tc.ctex::
 LO_workbench_quest_workbench_quest_tex.png::CompressedTexture2D/CompressedTexture2D::3050164978998916314::1751928040::1751928150::1::::<><><>0<>0<>cde9c5f6edf61fe93a91f767eb45e51a<>res://.godot/imported/LO_workbench_quest_workbench_quest_tex.png-0b6b467efa0cab80ea54b1ff073eda82.s3tc.ctex::
-::res://shaders/::1751951953
-dome-inherited.gdshader::Shader::919967771153420240::1751951953::0::1::::<><><>0<>0<><>::
-floor.gdshader::Shader::1028504347093061948::1751928039::0::1::::<><><>0<>0<><>::
-lo_terrain_sketch.gdshader::Shader::2188190848335521118::1751928039::0::1::::<><><>0<>0<><>::
-workshop.gdshader::Shader::6051849812055043648::1751928039::0::1::::<><><>0<>0<><>::
+::res://shaders/::1751952577
+dome-inherited.gdshader::Shader::919967771153420240::1751952577::0::1::::<><><>0<>0<><>::
+floor.gdshader::Shader::1028504347093061948::1751952577::0::1::::<><><>0<>0<><>::
+lo_terrain_sketch.gdshader::Shader::2188190848335521118::1751952577::0::1::::<><><>0<>0<><>::
+workshop.gdshader::Shader::6051849812055043648::1751952577::0::1::::<><><>0<>0<><>::
 ::res://skybox_setup/::1751950653
 LO_dome.glb::PackedScene/PackedScene::8363530616361773383::1751928040::1751928130::1::::<><><>0<>0<>995bf6698dae7964c4796428c5363edc<>res://.godot/imported/LO_dome.glb-697742f8052367749a9fa2ba25fd39c8.scn::
 LO_dome_cut.glb::PackedScene/PackedScene::5171807954943226359::1751928040::1751928129::1::::<><><>0<>0<>d5683e31aa4f673435fbc025fe47966e<>res://.godot/imported/LO_dome_cut.glb-810707bdcb79ef71f1269479c6a665e5.scn::
@@ -156,7 +156,7 @@ LO_dome_struts_strut_tex.png::CompressedTexture2D/CompressedTexture2D::635505668
 LO_terrain.glb::PackedScene/PackedScene::3960395092228594953::1751928040::1751928128::1::::<><><>0<>0<>788da0362467a8fd1b3b7652e582e60a<>res://.godot/imported/LO_terrain.glb-6b5b1ceec3b516d5f3a870a88e627c0c.scn::uid://lv0a8ft4w7j7::::res://skybox_setup/LO_terrain_terrain_tex.png
 LO_terrain_sketch.glb::PackedScene/PackedScene::3071638902354678064::1751928040::1751928129::1::::<><><>0<>0<>6d845f64f91d0f38a43805e3dc241ad0<>res://.godot/imported/LO_terrain_sketch.glb-5c1c5b73fb766aca28d38c166ed954c1.scn::
 LO_terrain_terrain_tex.png::CompressedTexture2D/CompressedTexture2D::816948879570278770::1751928040::1751928127::1::::<><><>0<>0<>5975c9fa8954093155ded657861c506f<>res://.godot/imported/LO_terrain_terrain_tex.png-41791b71a6cd463b0b7d9b95223a968f.s3tc.ctex::
-sky.tres::Sky/Sky::903738846099173153::1751950653::0::1::::<><><>0<>0<><>::uid://dymgcgidp8w8v::::res://skybox_setup/skybox_test2.hdr
+sky.tres::Sky::903738846099173153::1751950653::0::1::::<><><>0<>0<><>::uid://dymgcgidp8w8v::::res://skybox_setup/skybox_test2.hdr
 skybox_test1j.hdr::CompressedTexture2D/CompressedTexture2D::1038149368740451646::1751928040::1751928127::1::::<><><>0<>0<>70edaf10c33d4e9ef4f1f5f157edb2a9<>res://.godot/imported/skybox_test1j.hdr-ce4235a01fe98aa6a35546770e99f6c4.bptc.ctex::
 skybox_test2.hdr::CompressedTexture2D/CompressedTexture2D::8868935032641417383::1751928040::1751928127::1::::<><><>0<>0<>6ef16b5faaa6c86c5a04dff083abb753<>res://.godot/imported/skybox_test2.hdr-31a35b5f9bf39fbd2c0062477bb89da5.bptc.ctex::
-sky_enviro.tres::Environment/Environment::2912949939769011821::1751950653::0::1::::<><><>0<>0<><>::uid://m41pgpl64w7r::::res://skybox_setup/sky.tres
+sky_enviro.tres::Environment::2912949939769011821::1751950653::0::1::::<><><>0<>0<><>::uid://m41pgpl64w7r::::res://skybox_setup/sky.tres
