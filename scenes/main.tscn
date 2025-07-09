@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=39 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -19,11 +19,17 @@
 [ext_resource type="PackedScene" uid="uid://mgif50hgfn44" path="res://plants/LO_Tree_Try3.glb" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://dedn6m75bj4xh" path="res://skybox_setup/LO_dome_struts.glb" id="16_muem4"]
 [ext_resource type="PackedScene" uid="uid://befa0eh1j0fas" path="res://set_dressing_props/LO_path_rock1.glb" id="18_dp3eg"]
+[ext_resource type="PackedScene" uid="uid://r3al7pxig55q" path="res://quest_props_tools/LO_drill.glb" id="18_qkpxi"]
 [ext_resource type="PackedScene" uid="uid://b067nxqc4wy2j" path="res://set_dressing_props/LO_level_door.glb" id="19_0ld40"]
+[ext_resource type="PackedScene" uid="uid://dvkcu2wfh1hkx" path="res://quest_props_tools/LO_mirrorstick.glb" id="19_5q0nq"]
 [ext_resource type="PackedScene" uid="uid://cbpm5wqs2sqkq" path="res://quest_props_lemonade/LO_basket_filled_star.glb" id="19_yq6so"]
+[ext_resource type="PackedScene" uid="uid://dqqdftj0fg4un" path="res://quest_props_tools/LO_panel_opener.glb" id="20_dgi5k"]
 [ext_resource type="PackedScene" uid="uid://sqjduohsf2h0" path="res://set_dressing_props/LO_airlock.glb" id="20_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://b7miiwgkmgaqq" path="res://set_dressing_props/LO_wall1.glb" id="20_yc10j"]
+[ext_resource type="PackedScene" uid="uid://c3x7kd8bj21wm" path="res://quest_props_tools/LO_tablet.glb" id="21_j8jky"]
 [ext_resource type="PackedScene" uid="uid://ghlye1xi6414" path="res://furniture/LO_bench.glb" id="21_jscy8"]
+[ext_resource type="PackedScene" uid="uid://cfsip6aajtpto" path="res://quest_props_date/LO_picnic.glb" id="22_dgi5k"]
+[ext_resource type="PackedScene" uid="uid://cdw87twdledwv" path="res://quest_props_date/LO_lantern.glb" id="23_j8jky"]
 [ext_resource type="PackedScene" uid="uid://p724aii50oa4" path="res://quest_props_lemonade/LO_basket.glb" id="25_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://cccl3tkur786t" path="res://set_dressing_props/LO_suit.glb" id="25_vxglm"]
 [ext_resource type="PackedScene" uid="uid://1ds5bs6v1vqa" path="res://scenes/lo_terrain_w_collision.tscn" id="26_vxglm"]
@@ -355,16 +361,43 @@ transform = Transform3D(-0.66497, 0, 0.74687, 0, 1, 0, -0.74687, 0, -0.66497, 28
 [node name="quest_items" type="Node3D" parent="LevelFloor"]
 
 [node name="LO_basket_filled" parent="LevelFloor/quest_items" instance=ExtResource("28_2f3dj")]
-transform = Transform3D(1, 0, 0, 0, 0.99441, 0.105587, 0, -0.105587, 0.99441, 19.793, 4.90439, -27.038)
+transform = Transform3D(1, 0, 0, 0, 0.99441, 0.105587, 0, -0.105587, 0.99441, 8.93844, 4.383, -23.6266)
 
 [node name="LO_basket_filled2" parent="LevelFloor/quest_items" instance=ExtResource("28_2f3dj")]
-transform = Transform3D(1, 0, 0, 0, 0.99441, 0.105587, 0, -0.105587, 0.99441, -28.731, 0.513247, -14.143)
+transform = Transform3D(1, 0, 0, 0, 0.99441, 0.105587, 0, -0.105587, 0.99441, -25.1645, 1.1621, 23.6929)
 
 [node name="LO_basket_filled_star" parent="LevelFloor/quest_items" instance=ExtResource("19_yq6so")]
-transform = Transform3D(0.9987, -0.0509764, 0, 0.0509764, 0.9987, 0, 0, 0, 1, -24.1955, 1.10962, 25.1261)
+transform = Transform3D(0.9987, -0.0509764, 0, 0.0509764, 0.9987, 0, 0, 0, 1, 24.495, 2.00732, 2.17645)
 
 [node name="LO_mag" parent="LevelFloor/quest_items" instance=ExtResource("15_pm3ni")]
 transform = Transform3D(-0.720261, 0, 0.693704, 0, 1, 0, -0.693704, 0, -0.720261, 9.24444, 4.54606, 12.1258)
+
+[node name="LO_drill" parent="LevelFloor/quest_items" instance=ExtResource("18_qkpxi")]
+transform = Transform3D(-0.118439, -0.990317, -0.07242, 0.00859993, 0.0719076, -0.997374, 0.992924, -0.118751, 5.19075e-09, -10.4143, -0.413772, -41.4834)
+
+[node name="LO_mirrorstick" parent="LevelFloor/quest_items" instance=ExtResource("19_5q0nq")]
+transform = Transform3D(0.108676, 0.994077, 0, -0.994077, 0.108676, 0, 0, 0, 1, -5.746, 3.6946, 11.019)
+
+[node name="LO_panel_opener" parent="LevelFloor/quest_items" instance=ExtResource("20_dgi5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8781, 44.496, -11.5564)
+
+[node name="LO_tablet" parent="LevelFloor/quest_items" instance=ExtResource("21_j8jky")]
+transform = Transform3D(0.414646, -0.900456, -0.13133, 0, 0.144322, -0.989531, 0.909983, 0.410305, 0.0598423, 46.4419, 2.28595, -10.9717)
+
+[node name="LO_picnic" parent="LevelFloor/quest_items" instance=ExtResource("22_dgi5k")]
+transform = Transform3D(0.999982, -0.00601693, -0.000230621, 0.00602135, 0.999248, 0.0382999, 0, -0.0383006, 0.999266, -26.6519, 1.0693, 3.12425)
+
+[node name="LO_lantern1" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("23_j8jky")]
+transform = Transform3D(0.0284974, -0.999594, 1.75046e-09, 0.99886, 0.0284764, -0.0383006, 0.0382851, 0.00109147, 0.999266, 0.926287, 0.0145972, -0.127126)
+
+[node name="LO_lantern2" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("23_j8jky")]
+transform = Transform3D(0.0225626, -0.735633, -0.677005, 0.998313, 0.0528118, -0.0241145, 0.0534933, -0.675319, 0.735583, 1.07421, 0.0259961, -0.447778)
+
+[node name="LO_lantern3" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("23_j8jky")]
+transform = Transform3D(0.0160085, -0.444129, -0.89582, 0.998164, 0.0594366, -0.0116301, 0.0584098, -0.893989, 0.444265, 1.36797, 0.0254256, -0.479075)
+
+[node name="LO_lantern4" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("23_j8jky")]
+transform = Transform3D(-9.05977e-05, 0.271906, -0.962324, 0.998203, 0.0576747, 0.0162021, 0.0599073, -0.960594, -0.271423, 1.61799, 0.0238414, -0.477051)
 
 [node name="space_sky_sketch" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_tefeu")
@@ -793,28 +826,28 @@ transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -1
 transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.6862, -1.24288, -42.4468)
 
 [node name="LO_path_rock97" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.54135, -1.24288, -45.3391)
+transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, -0.180683, 0.00912795, 0.983499, -7.54135, -1.20279, -45.3391)
 
 [node name="LO_path_rock98" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.83633, -1.24288, -45.4785)
+transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, -0.180683, 0.00912795, 0.983499, -6.83633, -1.20152, -45.4785)
 
 [node name="LO_path_rock99" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.2969, -1.24288, -44.6533)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.2969, -1.22028, -44.6533)
 
 [node name="LO_path_rock100" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.59188, -1.24288, -44.7927)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.59188, -1.22028, -44.7927)
 
 [node name="LO_path_rock101" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.9705, -1.24288, -45.0568)
+transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, -0.180683, 0.00912795, 0.983499, -8.9705, -1.20537, -45.0568)
 
 [node name="LO_path_rock102" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.26548, -1.24288, -45.1962)
+transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, -0.180683, 0.00912795, 0.983499, -8.26548, -1.2041, -45.1962)
 
 [node name="LO_path_rock103" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.72604, -1.24288, -44.371)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.72604, -1.22028, -44.371)
 
 [node name="LO_path_rock104" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.02102, -1.24288, -44.5104)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.02102, -1.22028, -44.5104)
 
 [node name="LO_path_rock105" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
 transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -7.29726, -1.24288, -43.9029)
@@ -1210,34 +1243,34 @@ transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5
 transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.3542, -1.24288, -40.7925)
 
 [node name="LO_path_rock177" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.68908, -1.24288, -45.9666)
+transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, -0.180683, 0.00912795, 0.983499, -4.68908, -1.19707, -45.9666)
 
 [node name="LO_path_rock178" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.98406, -1.24288, -46.106)
+transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, -0.180683, 0.00912795, 0.983499, -3.98406, -1.19579, -46.106)
 
 [node name="LO_path_rock179" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.44463, -1.24288, -45.2808)
+transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, -0.180683, 0.00912795, 0.983499, -4.44463, -1.20333, -45.2808)
 
 [node name="LO_path_rock180" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.7396, -1.24288, -45.4202)
+transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, -0.180683, 0.00912795, 0.983499, -3.7396, -1.20205, -45.4202)
 
 [node name="LO_path_rock181" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -6.11823, -1.24288, -45.6843)
+transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, -0.180683, 0.00912795, 0.983499, -6.11823, -1.19964, -45.6843)
 
 [node name="LO_path_rock182" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.41321, -1.24288, -45.8237)
+transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, -0.180683, 0.00912795, 0.983499, -5.41321, -1.19837, -45.8237)
 
 [node name="LO_path_rock183" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.87377, -1.24288, -44.9985)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.87377, -1.22058, -44.9985)
 
 [node name="LO_path_rock184" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.16875, -1.24288, -45.1379)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.16875, -1.22058, -45.1379)
 
 [node name="LO_path_rock185" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.44499, -1.24288, -44.5304)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.44499, -1.22362, -44.5304)
 
 [node name="LO_path_rock186" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.73997, -1.24288, -44.6698)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.73997, -1.22362, -44.6698)
 
 [node name="LO_path_rock187" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
 transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4.20053, -1.24288, -43.8447)
@@ -1246,10 +1279,10 @@ transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -4
 transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -3.49551, -1.24288, -43.9841)
 
 [node name="LO_path_rock189" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.87413, -1.24288, -44.2481)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.87413, -1.22362, -44.2481)
 
 [node name="LO_path_rock190" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.16911, -1.24288, -44.3875)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.16911, -1.22362, -44.3875)
 
 [node name="LO_path_rock191" parent="Dome/paths" instance=ExtResource("18_dp3eg")]
 transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -5.62967, -1.24288, -43.5624)
