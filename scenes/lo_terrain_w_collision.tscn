@@ -10,4 +10,5 @@ data = PackedVector3Array(0.5872, 0.2111, 0.0259, 0.571, 0.2364, 0.041, 0.5708, 
 [node name="StaticBody3D" type="StaticBody3D" parent="terrain_sketch" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="terrain_sketch/StaticBody3D" index="0"]
+visible = false
 shape = SubResource("ConcavePolygonShape3D_skqx7")
