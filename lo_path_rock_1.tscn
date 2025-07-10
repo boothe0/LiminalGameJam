@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://onamqkx0npsb"]
+
+[ext_resource type="PackedScene" uid="uid://befa0eh1j0fas" path="res://set_dressing_props/LO_path_rock1.glb" id="1_noc7t"]
+
+[node name="LO_path_rock1" instance=ExtResource("1_noc7t")]
