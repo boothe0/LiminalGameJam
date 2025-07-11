@@ -2,8 +2,3 @@ res://scenes/main.tscn
 res://skybox_setup/sky.tres
 res://skybox_setup/sky_enviro.tres
 res://shaders/dome-inherited.gdshader
-res://scenes/main_menu.tscn
-res://scenes/lo_terrain_w_collision.tscn
-res://scenes/lo_dome.tscn
-res://scenes/intro.tscn
-res://scenes/message.tscn
