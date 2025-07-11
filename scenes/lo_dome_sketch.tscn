@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://drcr87ep8fct3" path="res://skybox_setup/LO_dome_sketch.glb" id="1_os5br"]
 [ext_resource type="Shader" uid="uid://ndvy8n4sh753" path="res://shaders/dome-inherited.gdshader" id="2_wdslb"]
 [ext_resource type="PackedScene" uid="uid://bwopemupmyxvd" path="res://skybox_setup/LO_terrain.glb" id="4_h7h16"]
-[ext_resource type="PackedScene" uid="uid://bj28kncam2bly" path="res://scenes/lo_terrain_sketch.tscn" id="4_uy8we"]
+[ext_resource type="PackedScene" uid="uid://bj28kncam2bly" path="res://scenes/non_quest/lo_terrain_sketch.tscn" id="4_uy8we"]
 
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xi8qf"]

@@ -1,8 +1,15 @@
-extends StaticBody3D
+extends Node
 
-@onready var label_3d_2: Label3D = $MeshInstance3D/Label3D2
-@onready var label_3d: Label3D = $MeshInstance3D/Label3D
+@export var area_path: NodePath
+@onready var area = get_node(area_path)
+@export var label_3d_2_path: NodePath
+@onready var label_3d_2: Label3D = get_node(label_3d_2_path)
+@export var label_3d_path: NodePath
+@onready var label_3d: Label3D = get_node(label_3d_path)
+
 func _process(delta: float) -> void:
+	area.body_entered.connect(_on_area_3d_body_entered)
+	area.body_exited.connect(_on_area_3d_body_exited)
 	# making sure the player is near the interactable by checking the label
 	if Input.is_action_just_pressed("interact") and label_3d_2.visible == true:
 		# debug statement
@@ -19,6 +26,7 @@ func _process(delta: float) -> void:
 
 # handles label visibility
 func _on_area_3d_body_entered(body: Node3D) -> void:
+	print("HERE")
 	if body.name == "Player":
 		label_3d_2.visible = true
 func _on_area_3d_body_exited(body: Node3D) -> void:

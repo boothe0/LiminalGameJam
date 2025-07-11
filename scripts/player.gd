@@ -12,7 +12,7 @@ const JUMP_VELOCITY = 4.5
 @onready var work_note: StaticBody3D = $"../LevelFloor/workbench tools/WorkNote"
 @onready var picnic_note: StaticBody3D = $"../LevelFloor/PicnicNote"
 
-var message = preload("res://scenes/message.tscn")
+var message = preload("res://scenes/non_quest/message.tscn")
 var motion_sickness_flag = Globals.motion_sickness_flag
 
 # fov change based on speed
