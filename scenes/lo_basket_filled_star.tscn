@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbisx472sc2md"]
+[gd_scene load_steps=5 format=3 uid="uid://dbisx472sc2md"]
 
 [ext_resource type="PackedScene" uid="uid://cbpm5wqs2sqkq" path="res://quest_props_lemonade/LO_basket_filled_star.glb" id="1_67m3x"]
 [ext_resource type="Script" uid="uid://bg47861wufoby" path="res://scripts/item_handling.gd" id="2_4gt1e"]
+[ext_resource type="AudioStream" uid="uid://crv2q5kclt8jo" path="res://audio/LMJ - SFX -Platic Basket Picking.ogg" id="3_nx8ql"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4gt1e"]
 size = Vector3(1.3, 0.648169, 1.61589)
 
 [node name="LO_basket_filled_star" instance=ExtResource("1_67m3x")]
 script = ExtResource("2_4gt1e")
+audio_path = NodePath("AudioStreamPlayer")
 area_path = NodePath("Area3D")
 label_3d_2_path = NodePath("grren_001/Label3D")
 
@@ -21,3 +23,6 @@ text = "Pickup?"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(1.2465, 0, 0, 0, 1, 0, 0, 0, 1.02782, 0, 0.325916, 0.0224912)
 shape = SubResource("BoxShape3D_4gt1e")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("3_nx8ql")

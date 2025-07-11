@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://djyss2pbgph3w"
+path="res://.godot/imported/Liminal Jam - SFX - Tools MirrorStick.ogg-a0d395f3015958ca5d57229fbf0b805c.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Liminal Jam - SFX - Tools MirrorStick.ogg"
+dest_files=["res://.godot/imported/Liminal Jam - SFX - Tools MirrorStick.ogg-a0d395f3015958ca5d57229fbf0b805c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

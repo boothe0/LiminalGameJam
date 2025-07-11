@@ -17,15 +17,16 @@ func _ready():
 	Emitter.item_picked_up.connect(self.adding_to_inv)
 
 func adding_to_inv():
-	var item_key = Globals.most_recent_item_key
-	if item_key == "WorkNote" || "PicnicNote" || "DateNode" || "LemonNote":
+	var item_key = Globals.most_recent_node
+	print("Item key is: ", item_key)
+	if item_key in ["WorkNote", "PicnicNote", "DateNote", "LemonNote"]:
 		make_asset(post_it)
 		quest_trigger()
 		Emitter.emit_signal("note_picked_up")
 	match item_key:
-		"drillasset":
+		"LO_drill2":
 			make_asset(drill)
-		"mirrorstickasset":
+		"LO_mirrorstick":
 			make_asset(mirrorstick)
 		"panelopenerasset":
 			make_asset(panel_opener)
@@ -165,4 +166,16 @@ func handle_label_inv(node_name):
 			label.visible = true
 		"DateNote":
 			label.text = "Surprise! Be at the three trees by 22:00 Dress up! :)"
+			label.visible = true
+		"LO_mirrorstick":
+			label.text = "Mirrorstick"
+			label.visible = true
+		"LO_basket_filled_star2":
+			label.text = "Lemon Basket"
+			label.visible = true
+		"LO_drill2":
+			label.text = "Drill"
+			label.visible = true
+		"LO_mag":
+			label.text = "Mag"
 			label.visible = true

@@ -117,7 +117,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			camera.rotate_x(-event.relative.y * 0.01)
 			# could lower the -30 degrees if you want the player to look down more
 			# to look at items etc
-			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-50), deg_to_rad(60))
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-70), deg_to_rad(60))
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
 	# vertical bob
