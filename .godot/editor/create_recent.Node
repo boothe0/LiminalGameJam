@@ -1,10 +1,10 @@
+TextureRect
 OmniLight3D
 Node3D
 MeshInstance3D
 AudioStreamPlayer
 VBoxContainer
 Label
-TextureRect
 HBoxContainer
 Panel
 PanelContainer
