@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://w1h5g35r4hdd"]
+[gd_scene load_steps=5 format=3 uid="uid://w1h5g35r4hdd"]
 
 [ext_resource type="PackedScene" uid="uid://r3al7pxig55q" path="res://quest_props_tools/LO_drill.glb" id="1_ukcak"]
 [ext_resource type="Script" uid="uid://bg47861wufoby" path="res://scripts/item_handling.gd" id="2_cpu3s"]
+[ext_resource type="AudioStream" uid="uid://duny3uqui2aty" path="res://audio/Liminal Jam - SFX - Tools Drill.ogg" id="3_cpu3s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8nf3p"]
 size = Vector3(1.3, 0.648169, 1.61589)
 
 [node name="LO_drill" instance=ExtResource("1_ukcak")]
 script = ExtResource("2_cpu3s")
+audio_path = NodePath("AudioStreamPlayer")
 area_path = NodePath("Area3D")
 label_3d_2_path = NodePath("drill v82/cuerpo entero/Label3D")
 
@@ -21,3 +23,6 @@ text = "Pickup"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(1.2465, 0, 0, 0, 1, 0, 0, 0, 1.02782, 0, 0.325916, 0.0224912)
 shape = SubResource("BoxShape3D_8nf3p")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("3_cpu3s")

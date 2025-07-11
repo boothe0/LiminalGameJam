@@ -368,7 +368,7 @@ transform = Transform3D(0.132464, -0.104657, 0.985647, 0, 0.99441, 0.105587, -0.
 [node name="LO_mag" parent="LevelFloor/quest_items/LO_basket_filled" instance=ExtResource("16_5he1u")]
 transform = Transform3D(0.996981, 0.0762531, -0.0146182, -0.0714831, 0.827996, -0.556159, -0.030305, 0.555525, 0.830948, 0.0891953, 0.258707, -0.0920486)
 
-[node name="LO_basket_filled3" parent="LevelFloor/quest_items" instance=ExtResource("17_5poiv")]
+[node name="LO_basket_filled2" parent="LevelFloor/quest_items" instance=ExtResource("17_5poiv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.2996, 1.11226, 23.0268)
 
 [node name="LO_basket_filled_star2" parent="LevelFloor/quest_items" instance=ExtResource("18_5poiv")]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dk7rt3hlarkxe"]
+[gd_scene load_steps=6 format=3 uid="uid://dk7rt3hlarkxe"]
 
 [ext_resource type="PackedScene" uid="uid://dvkcu2wfh1hkx" path="res://quest_props_tools/LO_mirrorstick.glb" id="1_nr2cg"]
 [ext_resource type="Script" uid="uid://bg47861wufoby" path="res://scripts/item_handling.gd" id="2_nr2cg"]
+[ext_resource type="AudioStream" uid="uid://djyss2pbgph3w" path="res://audio/Liminal Jam - SFX - Tools MirrorStick.ogg" id="3_hytlb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nr2cg"]
 size = Vector3(0.639343, 0.640022, 0.0583191)
@@ -11,6 +12,7 @@ size = Vector3(1.3, 0.648169, 1.61589)
 
 [node name="LO_mirrorstick" instance=ExtResource("1_nr2cg")]
 script = ExtResource("2_nr2cg")
+audio_path = NodePath("AudioStreamPlayer")
 area_path = NodePath("Area3D")
 label_3d_2_path = NodePath("mirrorstick/Label3D")
 
@@ -28,3 +30,6 @@ shape = SubResource("BoxShape3D_nr2cg")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(1.2465, 0, 0, 0, 1, 0, 0, 0, 1.02782, 0, 0.325916, 0.0224912)
 shape = SubResource("BoxShape3D_hytlb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("3_hytlb")
