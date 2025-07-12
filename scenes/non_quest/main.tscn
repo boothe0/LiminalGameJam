@@ -116,6 +116,15 @@ transform = Transform3D(1, -3.72529e-09, 0, 0, 1, 1.62981e-09, 3.72529e-09, 1.28
 [node name="LO_cafe_chair2" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table" instance=ExtResource("9_eb6dy")]
 transform = Transform3D(0.112265, 0.0303113, -0.993216, 0.0614993, 0.997406, 0.0373905, 0.991773, -0.0652797, 0.11011, 0.627583, -0.031143, 0.0838461)
 
+[node name="LO_cafe_table4" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating" instance=ExtResource("8_ya4ey")]
+transform = Transform3D(-0.927559, 0.0940174, -0.361656, 0.105333, 0.994369, -0.0116531, 0.358523, -0.0489032, -0.932239, -3.92176, -1.54455, -5.94511)
+
+[node name="LO_cafe_chair" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table4" instance=ExtResource("9_eb6dy")]
+transform = Transform3D(1, -3.72529e-09, 0, 0, 1, 1.62981e-09, 3.72529e-09, 1.28057e-09, 1, -0.00722504, -0.0619931, -0.58846)
+
+[node name="LO_cafe_chair2" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table4" instance=ExtResource("9_eb6dy")]
+transform = Transform3D(0.112265, 0.0303113, -0.993216, 0.0614993, 0.997406, 0.0373905, 0.991773, -0.0652797, 0.11011, 0.627583, -0.031143, 0.0838461)
+
 [node name="LO_cafe_table2" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating" instance=ExtResource("8_ya4ey")]
 transform = Transform3D(0.997436, 0.00125672, 0.0715472, -0.000991624, 0.999992, -0.00374106, -0.0715517, 0.00366052, 0.99743, -4.9637, -1.36942, 5.28733)
 
