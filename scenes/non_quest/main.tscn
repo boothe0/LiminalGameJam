@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://drnadxrfew5p7" path="res://scenes/lo_dome.tscn" id="15_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://d041wgdttbrjj" path="res://quest_props_lemonade/LO_mag.glb" id="15_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://dqhh3cjbrq05u" path="res://scenes/lo_mag.tscn" id="16_5he1u"]
-[ext_resource type="PackedScene" uid="uid://bkun8eplvffb1" path="res://plants/LO_Tree_Try3.glb" id="16_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://bkun8eplvffb1" path="res://plants/LO_tree_try3.glb" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://dedn6m75bj4xh" path="res://skybox_setup/LO_dome_struts.glb" id="16_muem4"]
 [ext_resource type="PackedScene" uid="uid://di6kr4lg4kus3" path="res://scenes/lo_basket_filled.tscn" id="17_5poiv"]
 [ext_resource type="PackedScene" uid="uid://dbisx472sc2md" path="res://scenes/lo_basket_filled_star.tscn" id="18_5poiv"]
