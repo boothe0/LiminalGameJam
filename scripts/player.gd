@@ -26,8 +26,9 @@ const BOB_AMP = 0.08
 var sin_bob = 0.0
 
 func _ready():
-	Emitter.first_item_pickup.connect(display_message.bind(false))
-	Emitter.too_many_items.connect(display_message.bind(true))
+	Emitter.first_item_pickup.connect(display_message.bind("first_item"))
+	Emitter.too_many_items.connect(display_message.bind("too_many"))
+	Emitter.display_warning.connect(display_message.bind("display_lemon_warning"))
 	Emitter.note_picked_up.connect(handle_note_despawn)
 	print(Globals.notes_picked_up)
 	for note in Globals.notes_picked_up:
@@ -118,17 +119,22 @@ func _headbob(time) -> Vector3:
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
 	
-func display_message(too_many_items):
+func display_message(type):
 	var message = message.instantiate()
 	var label = message.get_child(0)
-	if too_many_items:
-		label.text = "You have too many items and can no longer pick any more up place the items you have and leave."
+	match type:
 		
-	else:
-		label.text = "Items you pick up will remain in your inventory until you end the shift.
-		Each shift will begin with an empty inventory.
-		Be careful what you pick up... One note and 4 items only!
-		Make sure you handled the items how you wanted before you clock out!"
+		"too_many":
+			label.text = "You have too many items and can no longer pick any more up place the items you have and leave."
+		
+		"first_item":
+			label.text = "Items you pick up will remain in your inventory until you end the shift.
+			Each shift will begin with an empty inventory.
+			Be careful what you pick up... One note and 9 items only!
+			Make sure you handled the items how you wanted before you clock out!"
+		"display_lemon_warning":
+			label.text = "Make sure to have 3 lemons before you bring it back to the cafe if you wish to fill it!"
+		
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	camera_3d.add_child(message)
 

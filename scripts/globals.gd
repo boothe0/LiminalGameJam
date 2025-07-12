@@ -16,3 +16,12 @@ var scene_counter = 0
 var notes_picked_up = []
 var can_interact = true
 var did_player_interact = false
+
+# Lemon count general
+var lemon_count = 0
+
+# Lemon Quest Flags
+var lemon_picking = false
+var returned_full_basket = false
+var picked_up_star_basket = false
+var mag_picked_up = false

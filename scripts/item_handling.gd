@@ -29,10 +29,12 @@ func _process(delta: float) -> void:
 		if Globals.did_player_interact == false:
 			Emitter.emit_signal("first_item_pickup")
 			Globals.did_player_interact = true
-		if Globals.number_items >= 2:
+		Globals.number_items += 1
+		if Globals.number_items > 8 :
 			Emitter.emit_signal("too_many_items")
 			Globals.can_interact = false
-		Globals.number_items += 1
+		# Debug for later if it goes to 9 and not trigger too many items
+		print("Number ITEMS: ", Globals.number_items)
 		Emitter.emit_signal("item_picked_up")
 
 # handles label visibility

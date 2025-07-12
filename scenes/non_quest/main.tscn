@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=49 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/non_quest/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://1ds5bs6v1vqa" path="res://scenes/non_quest/lo_terrain_w_collision.tscn" id="26_vxglm"]
 [ext_resource type="PackedScene" uid="uid://w1h5g35r4hdd" path="res://scenes/lo_drill.tscn" id="27_waink"]
 [ext_resource type="PackedScene" uid="uid://dib8g7jl1tgdv" path="res://quest_props_lemonade/LO_basket_filled.glb" id="28_2f3dj"]
+[ext_resource type="PackedScene" uid="uid://druaignotkvd8" path="res://scenes/lo_lemon.tscn" id="28_e3qwn"]
 [ext_resource type="PackedScene" uid="uid://c35mbkj30tmse" path="res://furniture/LO_outdoor_floor_lamp.glb" id="37_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://dsjn2s146x6s8" path="res://set_dressing_props/LO_attachment.glb" id="37_fuf3a"]
 [ext_resource type="Texture2D" uid="uid://deoqlr6gjaf0y" path="res://assets/LO_level_001c.jpg" id="38_pibwh"]
@@ -47,6 +48,12 @@ albedo_color = Color(0.265314, 0.634456, 0.469927, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_f5myc"]
 material = SubResource("StandardMaterial3D_f5myc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vxlqu"]
+size = Vector3(1.4082, 0.436523, 1.26941)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e3qwn"]
+size = Vector3(1, 0.523438, 1.34309)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6pm6"]
 albedo_texture = ExtResource("38_pibwh")
@@ -101,7 +108,7 @@ transform = Transform3D(1, -7.45058e-09, -5.96046e-08, 0, 1, -9.31323e-10, -1.49
 transform = Transform3D(0.989824, -0.00170929, -0.142292, 0.00276179, 0.999971, 0.0071995, 0.142274, -0.0075192, 0.989798, 1.10858, 1.58585, 2.2184)
 
 [node name="LO_cafe_table" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating" instance=ExtResource("8_ya4ey")]
-transform = Transform3D(0.986322, -0.00188215, -0.164818, 0.0032967, 0.99996, 0.0083095, 0.164796, -0.00873921, 0.986289, -4.99339, -1.37724, 1.17535)
+transform = Transform3D(0.986322, -0.00188214, -0.164818, 0.0032967, 0.99996, 0.0083095, 0.164796, -0.00873921, 0.986289, -5.90615, -1.34268, 0.370232)
 
 [node name="LO_cafe_chair" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table" instance=ExtResource("9_eb6dy")]
 transform = Transform3D(1, -3.72529e-09, 0, 0, 1, 1.62981e-09, 3.72529e-09, 1.28057e-09, 1, -0.00722504, -0.0619931, -0.58846)
@@ -117,6 +124,17 @@ transform = Transform3D(0.0437361, 0.0651248, 0.996919, 0.0337732, 0.997208, -0.
 
 [node name="LO_cafe_chair2" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table2" instance=ExtResource("9_eb6dy")]
 transform = Transform3D(0.121655, 0.0298428, -0.992125, 0.0609968, 0.997434, 0.037482, 0.990697, -0.0650761, 0.119522, 0.596928, -0.0300727, 0.0509877)
+
+[node name="TableArea" type="Area3D" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table2/TableArea"]
+transform = Transform3D(1, 4.47035e-08, 4.47035e-08, -3.01749e-07, 1.00001, -1.72295e-07, -3.72529e-07, 1.01514e-07, 1, -0.141033, 0.937402, 0.115547)
+shape = SubResource("BoxShape3D_vxlqu")
+
+[node name="TableLabel" type="Label3D" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table2"]
+transform = Transform3D(0.3, 1.11759e-09, 4.47035e-09, -1.11759e-09, 0.3, -5.58793e-10, -4.47035e-09, 5.58793e-10, 0.3, 0.0430946, 0.833201, -0.0130916)
+visible = false
+text = "Find the lemon basket with a star."
 
 [node name="LO_cafe_table3" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating" instance=ExtResource("8_ya4ey")]
 transform = Transform3D(0.890355, 0.0128215, 0.455086, -0.00148188, 0.99968, -0.0252655, -0.455265, 0.0218209, 0.890089, -6.16046, -1.32517, 3.18044)
@@ -374,11 +392,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.2996, 1.11226, 23.0268)
 [node name="LO_basket_filled_star2" parent="LevelFloor/quest_items" instance=ExtResource("18_5poiv")]
 transform = Transform3D(0.7418, 0, 0.670621, 0, 1, 0, -0.670621, 0, 0.7418, 24.4157, 1.93512, 1.64553)
 
+[node name="Lemon1Quest" type="Label3D" parent="LevelFloor/quest_items/LO_basket_filled_star2"]
+transform = Transform3D(0.0167464, 0, 0.299532, 0, 0.3, 0, -0.299532, 0, 0.0167464, 0.169003, 0.298252, -0.0283985)
+text = "Bring back 3 lemons for this basket or just bring back!"
+
+[node name="Area3D" type="Area3D" parent="LevelFloor/quest_items/LO_basket_filled_star2/Lemon1Quest"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelFloor/quest_items/LO_basket_filled_star2/Lemon1Quest/Area3D"]
+transform = Transform3D(3.06289, 0, 1.19209e-07, 0, 0.912187, 0, -3.57628e-07, 0, 1.63966, 5.72205e-06, 0.238281, 0.446259)
+shape = SubResource("BoxShape3D_e3qwn")
+
 [node name="LO_mag" parent="LevelFloor/quest_items" instance=ExtResource("15_pm3ni")]
 transform = Transform3D(0.831557, 0, -0.55544, 0, 1, 0, 0.55544, 0, 0.831557, 21.1812, 4.55499, -29.1349)
 
 [node name="LO_drill2" parent="LevelFloor/quest_items" instance=ExtResource("27_waink")]
-transform = Transform3D(0.000339627, -0.999874, -0.0158956, -0.0213585, -0.0158993, 0.999645, -0.999772, 0, -0.0213612, -10.3098, -0.414248, -41.4041)
+transform = Transform3D(0.000339627, -0.999874, -0.0158956, -0.0213585, -0.0158993, 0.999645, -0.999772, 0, -0.0213612, -10.9911, -0.414248, -40.395)
 
 [node name="LO_panel_opener" parent="LevelFloor/quest_items" instance=ExtResource("20_dgi5k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8781, 44.496, -11.5564)
@@ -415,6 +443,15 @@ transform = Transform3D(0.986182, 0, 0.165667, 0, 1, 0, -0.165667, 0, 0.986182, 
 
 [node name="LO_beehive3" parent="LevelFloor/quest_items/LO_beehive1" instance=ExtResource("25_kmb1v")]
 transform = Transform3D(-0.327317, 0, 0.944915, 0, 1, 0, -0.944915, 0, -0.327317, -1.36234, 0, 4.25568)
+
+[node name="LO_Lemon1" parent="LevelFloor/quest_items" instance=ExtResource("28_e3qwn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.18485, -0.889543, -43.1233)
+
+[node name="LO_Lemon2" parent="LevelFloor/quest_items" instance=ExtResource("28_e3qwn")]
+transform = Transform3D(-0.102596, 0.955281, 0.277332, 0.994282, 0.106785, 0, -0.0296147, 0.275746, -0.960774, -10.3535, 3.63948, -27.5765)
+
+[node name="LO_Lemon3" parent="LevelFloor/quest_items" instance=ExtResource("28_e3qwn")]
+transform = Transform3D(-0.102596, 0.955281, 0.277332, 0.994282, 0.106785, 0, -0.0296147, 0.275746, -0.960774, -10.7935, 3.63948, -27.2706)
 
 [node name="space_sky_sketch" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_tefeu")
@@ -1039,28 +1076,28 @@ transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, 
 transform = Transform3D(0.98354, 0, 0.180691, 0.00164934, 0.999958, -0.0089777, -0.180683, 0.00912795, 0.983499, -3.7396, -1.20205, -45.4202)
 
 [node name="LO_path_rock1" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.79464, -1.24288, -41.8308)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.476, -1.24288, -40.8217)
 
 [node name="LO_path_rock2" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.08962, -1.24288, -41.9702)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.77095, -1.24288, -40.9611)
 
 [node name="LO_path_rock3" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.55019, -1.24288, -41.1451)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.2315, -1.24288, -40.136)
 
 [node name="LO_path_rock4" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -8.84517, -1.24288, -41.2844)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.5265, -1.24288, -40.2753)
 
 [node name="LO_path_rock5" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.2238, -1.24288, -41.5485)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.9051, -1.24288, -40.5394)
 
 [node name="LO_path_rock6" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.5188, -1.24288, -41.6879)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.2001, -1.24288, -40.6788)
 
 [node name="LO_path_rock7" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.9793, -1.24288, -40.8628)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.6606, -1.24288, -39.8537)
 
 [node name="LO_path_rock8" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.2743, -1.24288, -41.0021)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -10.9556, -1.24288, -39.993)
 
 [node name="LO_path_rock9" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
 transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -9.55055, -1.24288, -40.3946)
@@ -1090,13 +1127,13 @@ transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -1
 transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.704, -1.24288, -41.2888)
 
 [node name="LO_path_rock18" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.9989, -1.24288, -41.4282)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.6802, -1.24288, -40.4191)
 
 [node name="LO_path_rock19" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
 transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.4595, -1.24288, -40.6031)
 
 [node name="LO_path_rock20" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
-transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -11.7545, -1.24288, -40.7425)
+transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -12.4358, -1.24288, -39.7334)
 
 [node name="LO_path_rock21" parent="Dome/paths/cafe_floor" instance=ExtResource("18_dp3eg")]
 transform = Transform3D(0.98354, 0, 0.180691, 0, 1, 0, -0.180691, 0, 0.98354, -14.1331, -1.24288, -41.0065)
@@ -2694,6 +2731,12 @@ transform = Transform3D(0.382135, 0, -0.924106, 0, 1, 0, 0.924106, 0, 0.382135, 
 [node name="LO_bench2" parent="Dome/garden furniture" instance=ExtResource("21_jscy8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.4239, 3.896, -29.1076)
 
+[node name="MagLabel" type="Label3D" parent="Dome/garden furniture/LO_bench2"]
+transform = Transform3D(-0.299995, 0, -0.00165457, 0, 0.3, 0, 0.00165457, 0, -0.299995, 0, 0.454262, 0)
+visible = false
+text = "Leave the flyer or remove it.
+(removing it will keep it permanently in your inventory until the next day."
+
 [node name="airlock" type="Node3D" parent="Dome"]
 
 [node name="LO_airlock" parent="Dome/airlock" instance=ExtResource("20_gqmmt")]
@@ -2876,3 +2919,8 @@ transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 100, 0, -100, -4.37114e-06, 
 visible = false
 material_override = SubResource("StandardMaterial3D_c6pm6")
 mesh = SubResource("QuadMesh_5he1u")
+
+[connection signal="body_entered" from="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table2/TableArea" to="." method="_on_table_area_body_entered"]
+[connection signal="body_exited" from="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table2/TableArea" to="." method="_on_table_area_body_exited"]
+[connection signal="body_entered" from="LevelFloor/quest_items/LO_basket_filled_star2/Lemon1Quest/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="LevelFloor/quest_items/LO_basket_filled_star2/Lemon1Quest/Area3D" to="." method="_on_area_3d_body_exited"]

@@ -12,3 +12,7 @@ signal item_picked_up
 signal note_picked_up
 
 signal too_many_items
+
+signal display_warning
+
+signal remove_inv_assets
