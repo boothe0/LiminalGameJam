@@ -2,7 +2,7 @@ extends CanvasLayer
 @onready var inventory: HBoxContainer = $Inventory
 @onready var quests: VBoxContainer = $Quests
 
-@onready var area_2d: Array[Area2D] = [$Inventory/Area2D, $Inventory/Area2D2, $Inventory/Area2D3, $Inventory/Area2D4, $Inventory/Area2D5]
+@onready var area_2d: Array[Area2D] = [$Inventory/Area2D, $Inventory/Area2D2, $Inventory/Area2D3, $Inventory/Area2D4, $Inventory/Area2D5, $Inventory/Area2D6, $Inventory/Area2D7, $Inventory/Area2D8, $Inventory/Area2D9 ]
 @onready var label: Label = $Label
 
 var area_texture_dictionary = {}
@@ -15,12 +15,14 @@ var tether_hook = preload("res://quest_props_tools/LO_tether_hook_tex.png")
 var tether_rope = preload("res://quest_props_tools/LO_tether_rope_tex.png")
 var lemon_basket = preload("res://set_dressing_props/LO_cafe_main_shutter_tex.png")
 var mag = preload("res://quest_props_lemonade/LO_mag_mag_tex.png")
+var lemon = preload("res://quest_props_lemonade/LO_Lemon1_lemon_tex.png")
 
 func _ready():
 	for area in area_2d:
 		area.mouse_entered.connect(_on_area_2d_mouse_entered.bind(area))
 		area.mouse_exited.connect(_on_area_2d_mouse_exited.bind(area))
 	Emitter.item_picked_up.connect(self.adding_to_inv)
+	Emitter.remove_inv_assets.connect(self.remove_asset.bind("lemon_basket_2"))
 
 func adding_to_inv():
 	var item_key = Globals.most_recent_node
@@ -40,9 +42,19 @@ func adding_to_inv():
 		"tetherropeasset":
 			make_asset(tether_rope)
 		"LO_basket_filled_star2":
+			Globals.picked_up_star_basket = true
 			make_asset(lemon_basket)
 		"LO_mag":
 			make_asset(mag)
+		"LO_Lemon1":
+			Globals.lemon_count += 1
+			make_asset(lemon)
+		"LO_Lemon2":
+			Globals.lemon_count += 1
+			make_asset(lemon)
+		"LO_Lemon3":
+			Globals.lemon_count += 1
+			make_asset(lemon)
 func quest_trigger():
 	var item_node = Globals.most_recent_node
 	match item_node:
@@ -65,6 +77,23 @@ func make_asset(texture):
 	var area = area_2d[Globals.number_items - 1]
 	area_texture_dictionary[area] = texture_rect
 
+func remove_asset(type_of_asset):
+	if type_of_asset == "lemon_basket_2":
+		var lemons_to_remove = []
+		for area in area_texture_dictionary:
+			var texture = area_texture_dictionary[area]
+			if texture.name in ["LO_Lemon1", "LO_Lemon2", "LO_Lemon3"]:
+				texture.queue_free()
+				lemons_to_remove.append(area)
+				Globals.lemon_count -= 1
+			if texture.name == "LO_basket_filled_star2":
+				texture.queue_free()
+				lemons_to_remove.append(area)
+		for lemon in lemons_to_remove:
+			area_texture_dictionary.erase(lemon)
+		print(Globals.lemon_count)
+		
+	
 func date_night_quest():
 	var v_box = VBoxContainer.new()
 	var quest_title = Label.new()
@@ -98,6 +127,9 @@ func lemon_picking_quest():
 	quests.add_child(v_box)
 	v_box.add_child(quest_title)
 	v_box.add_child(quest_information)
+	
+	# trigger global boolean
+	Globals.lemon_picking = true
 
 func lemon_cake_quest():
 	var v_box = VBoxContainer.new()
@@ -138,11 +170,20 @@ func handle_label_inv(node_name):
 			label.text = "Mirrorstick"
 			label.visible = true
 		"LO_basket_filled_star2":
-			label.text = "Lemon Basket"
+			label.text = "Lemon Basket (rembember to bring with 3 lemons!)"
 			label.visible = true
 		"LO_drill2":
 			label.text = "Drill"
 			label.visible = true
 		"LO_mag":
 			label.text = "Mag"
+			label.visible = true
+		"LO_Lemon1":
+			label.text = "Lemon"
+			label.visible = true
+		"LO_Lemon2":
+			label.text = "Lemon"
+			label.visible = true
+		"LO_Lemon3":
+			label.text = "Lemon"
 			label.visible = true

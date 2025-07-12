@@ -19,6 +19,7 @@ visible = false
 text = "Pickup"
 
 [node name="Area3D" type="Area3D" parent="." index="1"]
+transform = Transform3D(0.40209, 0, 0, 0, 0.43684, 0, 0, 0, 0.529306, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(1.2465, 0, 0, 0, 1, 0, 0, 0, 1.02782, 0, 0.325916, 0.0224912)

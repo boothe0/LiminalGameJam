@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://druaignotkvd8"]
+
+[ext_resource type="PackedScene" uid="uid://br24ksrrdae5h" path="res://quest_props_lemonade/LO_Lemon1.glb" id="1_ixbxo"]
+[ext_resource type="Script" uid="uid://bg47861wufoby" path="res://scripts/item_handling.gd" id="2_3nvvb"]
+[ext_resource type="AudioStream" uid="uid://h3c8840p85yw" path="res://audio/LMJ - SFX - Lemon Picking.ogg" id="3_hwesk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ixbxo"]
+size = Vector3(1.3, 0.648169, 1.61589)
+
+[node name="LO_Lemon1" instance=ExtResource("1_ixbxo")]
+script = ExtResource("2_3nvvb")
+audio_path = NodePath("AudioStreamPlayer")
+area_path = NodePath("Area3D")
+label_3d_2_path = NodePath("lemon/Label3D")
+
+[node name="lemon" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0104301, 0, 0)
+
+[node name="Label3D" type="Label3D" parent="lemon" index="0"]
+transform = Transform3D(0.3, 0, 0, 0, -1.1059e-08, 0.145, 0, -0.253, -6.33815e-09, 0, 0.0682965, -0.00489589)
+visible = false
+text = "Pickup"
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+transform = Transform3D(0.164478, 0, 0, 0, 0.119536, 0, 0, 0, 0.125614, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1.2465, 0, 0, 0, 1, 0, 0, 0, 1.02782, 0, 0.325916, 0.0224912)
+shape = SubResource("BoxShape3D_ixbxo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("3_hwesk")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://h3c8840p85yw"
+path="res://.godot/imported/LMJ - SFX - Lemon Picking.ogg-ec4088b7a22a1a137c808d7ffa9b46a1.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/LMJ - SFX - Lemon Picking.ogg"
+dest_files=["res://.godot/imported/LMJ - SFX - Lemon Picking.ogg-ec4088b7a22a1a137c808d7ffa9b46a1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
