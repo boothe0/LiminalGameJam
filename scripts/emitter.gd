@@ -10,3 +10,5 @@ signal first_item_pickup
 signal item_picked_up
 
 signal note_picked_up
+
+signal too_many_items

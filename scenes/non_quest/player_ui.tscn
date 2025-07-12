@@ -43,6 +43,25 @@ position = Vector2(50, 50)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_48xfa")
 
+[node name="TextureRect" type="TextureRect" parent="Inventory"]
+layout_mode = 2
+
+[node name="Area2D4" type="Area2D" parent="Inventory"]
+position = Vector2(315, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/Area2D4"]
+position = Vector2(50, 50)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_48xfa")
+
+[node name="Area2D5" type="Area2D" parent="Inventory"]
+position = Vector2(420, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/Area2D5"]
+position = Vector2(50, 50)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_48xfa")
+
 [node name="Quests" type="VBoxContainer" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
@@ -61,10 +80,3 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "hello"
 script = ExtResource("2_sk4pr")
-
-[connection signal="mouse_entered" from="Inventory/Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Inventory/Area2D" to="." method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="Inventory/Area2D2" to="." method="_on_area_2d_2_mouse_entered"]
-[connection signal="mouse_exited" from="Inventory/Area2D2" to="." method="_on_area_2d_2_mouse_exited"]
-[connection signal="mouse_entered" from="Inventory/Area2D3" to="." method="_on_area_2d_3_mouse_entered"]
-[connection signal="mouse_exited" from="Inventory/Area2D3" to="." method="_on_area_2d_3_mouse_exited"]
