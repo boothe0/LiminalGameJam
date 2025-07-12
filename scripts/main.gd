@@ -19,3 +19,9 @@ func _ready():
 	elif Globals.scene_counter == 2:
 		audio_stream_player.stream = LIMINAL_JAM_LAST_NIGHT_SHIFT
 		audio_stream_player.play()
+	# add another elif or else to direct to another function handling the end scene
+	
+	
+	# reset globals for next rounds
+	Globals.can_interact = true
+	Globals.number_items = 0

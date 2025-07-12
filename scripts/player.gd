@@ -26,29 +26,21 @@ const BOB_AMP = 0.08
 var sin_bob = 0.0
 
 func _ready():
-	Emitter.first_item_pickup.connect(dislay_message)
+	Emitter.first_item_pickup.connect(display_message.bind(false))
+	Emitter.too_many_items.connect(display_message.bind(true))
 	Emitter.note_picked_up.connect(handle_note_despawn)
-	match Globals.note_picked_up:
-		"lemon_note":
-			lemon_note.visible = false
-			date_note.visible = true
-			work_note.visible = true
-			picnic_note.visible = true
-		"date_note":
-			date_note.visible = false
-			work_note.visible = true
-			picnic_note.visible = true
-			lemon_note.visible = true
-		"picnic_note":
-			date_note.visible = false
-			work_note.visible = true
-			picnic_note.visible = true
-			lemon_note.visible = true
-		"work_note":
-			work_note.visible = false
-			date_note.visible = true
-			picnic_note.visible = true
-			lemon_note.visible = true
+	print(Globals.notes_picked_up)
+	for note in Globals.notes_picked_up:
+		match note:
+			"lemon_note":
+				lemon_note.visible = false
+			"date_note":
+				date_note.visible = false
+			"picnic_note":
+				picnic_note.visible = false
+			"work_note":
+				work_note.visible = false
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -126,30 +118,40 @@ func _headbob(time) -> Vector3:
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
 	
-func dislay_message():
+func display_message(too_many_items):
 	var message = message.instantiate()
+	var label = message.get_child(0)
+	if too_many_items:
+		label.text = "You have too many items and can no longer pick any more up place the items you have and leave."
+		
+	else:
+		label.text = "Items you pick up will remain in your inventory until you end the shift.
+		Each shift will begin with an empty inventory.
+		Be careful what you pick up... One note and 4 items only!
+		Make sure you handled the items how you wanted before you clock out!"
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	camera_3d.add_child(message)
 
 func handle_note_despawn():
 	var item = Globals.most_recent_node
 	match item:
 		"LemonNote":
-			Globals.note_picked_up = "lemon_note"
+			Globals.notes_picked_up.append("lemon_note")
 			picnic_note.visible = false
 			work_note.visible = false
 			date_note.visible = false
 		"WorkNote":
-			Globals.note_picked_up = "work_note"
+			Globals.notes_picked_up.append("work_note")
 			picnic_note.visible = false
 			date_note.visible = false
 			lemon_note.visible = false
 		"PicnicNote":
-			Globals.note_picked_up = "picknic_note"
+			Globals.notes_picked_up.append("picnic_note")
 			date_note.visible = false
 			work_note.visible = false
 			lemon_note.visible = false
 		"DateNote":
-			Globals.note_picked_up = "date_note"
+			Globals.notes_picked_up.append("date_note") 
 			picnic_note.visible = false
 			work_note.visible = false
 			lemon_note.visible = false

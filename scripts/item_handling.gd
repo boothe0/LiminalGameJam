@@ -8,15 +8,14 @@ extends Node
 @onready var label_3d_2: Label3D = get_node(label_3d_2_path)
 @export var label_3d_path: NodePath
 @onready var label_3d: Label3D = get_node(label_3d_path)
-
+var message = preload("res://scenes/non_quest/message.tscn")
 func _ready() -> void:
 	area.body_entered.connect(_on_area_3d_body_entered)
 	area.body_exited.connect(_on_area_3d_body_exited)
-
 func _process(delta: float) -> void:
 
 	# making sure the player is near the interactable by checking the label
-	if Input.is_action_just_pressed("interact") and label_3d_2.visible == true:
+	if Input.is_action_just_pressed("interact") and label_3d_2.visible == true and Globals.can_interact:
 		# debug statement
 		# if there is an audio stream
 		if audio:
@@ -27,14 +26,17 @@ func _process(delta: float) -> void:
 		var scene = self.get_scene_file_path()
 		Globals.item[str(self.name)] = scene
 		self.queue_free()
-		if Globals.number_items == 0:
+		if Globals.did_player_interact == false:
 			Emitter.emit_signal("first_item_pickup")
+			Globals.did_player_interact = true
+		if Globals.number_items >= 2:
+			Emitter.emit_signal("too_many_items")
+			Globals.can_interact = false
 		Globals.number_items += 1
 		Emitter.emit_signal("item_picked_up")
 
 # handles label visibility
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	print("HERE")
 	if body.name == "Player":
 		label_3d_2.visible = true
 func _on_area_3d_body_exited(body: Node3D) -> void:

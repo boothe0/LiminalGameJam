@@ -13,4 +13,6 @@ var item = {
 }
 var number_items = 0
 var scene_counter = 0
-var note_picked_up = ""
+var notes_picked_up = []
+var can_interact = true
+var did_player_interact = false

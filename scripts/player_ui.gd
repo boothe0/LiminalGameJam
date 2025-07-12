@@ -2,9 +2,10 @@ extends CanvasLayer
 @onready var inventory: HBoxContainer = $Inventory
 @onready var quests: VBoxContainer = $Quests
 
-@onready var area_2d: Array[Area2D] = [$Inventory/Area2D, $Inventory/Area2D2, $Inventory/Area2D3]
+@onready var area_2d: Array[Area2D] = [$Inventory/Area2D, $Inventory/Area2D2, $Inventory/Area2D3, $Inventory/Area2D4, $Inventory/Area2D5]
 @onready var label: Label = $Label
 
+var area_texture_dictionary = {}
 
 var post_it = preload("res://quest_props_tools/LO_post_it_note_tex.png")
 var drill = preload("res://quest_props_tools/LO_drill_drill_tex.png")
@@ -12,17 +13,21 @@ var mirrorstick = preload("res://quest_props_tools/LO_mirrorstick_stick_tex.png"
 var panel_opener = preload("res://quest_props_tools/LO_panel_opener_panel_opener_tex.png")
 var tether_hook = preload("res://quest_props_tools/LO_tether_hook_tex.png")
 var tether_rope = preload("res://quest_props_tools/LO_tether_rope_tex.png")
+var lemon_basket = preload("res://set_dressing_props/LO_cafe_main_shutter_tex.png")
+var mag = preload("res://quest_props_lemonade/LO_mag_mag_tex.png")
 
 func _ready():
+	for area in area_2d:
+		area.mouse_entered.connect(_on_area_2d_mouse_entered.bind(area))
+		area.mouse_exited.connect(_on_area_2d_mouse_exited.bind(area))
 	Emitter.item_picked_up.connect(self.adding_to_inv)
 
 func adding_to_inv():
 	var item_key = Globals.most_recent_node
-	print("Item key is: ", item_key)
 	if item_key in ["WorkNote", "PicnicNote", "DateNote", "LemonNote"]:
 		make_asset(post_it)
 		quest_trigger()
-		Emitter.emit_signal("note_picked_up")
+		Emitter.emit_signal("note_picked_up") 
 	match item_key:
 		"LO_drill2":
 			make_asset(drill)
@@ -34,10 +39,12 @@ func adding_to_inv():
 			make_asset(tether_hook)
 		"tetherropeasset":
 			make_asset(tether_rope)
-
+		"LO_basket_filled_star2":
+			make_asset(lemon_basket)
+		"LO_mag":
+			make_asset(mag)
 func quest_trigger():
 	var item_node = Globals.most_recent_node
-	print(Globals.note_picked_up)
 	match item_node:
 		"DateNote":
 			date_night_quest()
@@ -54,15 +61,9 @@ func make_asset(texture):
 	texture_rect.expand_mode = texture_rect.EXPAND_FIT_WIDTH
 	texture_rect.name = Globals.most_recent_node
 	inventory.add_child(texture_rect)
-	# store the area
+	
 	var area = area_2d[Globals.number_items - 1]
-	# store the collision
-	var collision = area.get_child(0)
-	area.remove_child(collision)
-	# reparent to texture
-	get_parent().remove_child(area)
-	texture_rect.add_child(area)
-	area.add_child(collision)
+	area_texture_dictionary[area] = texture_rect
 
 func date_night_quest():
 	var v_box = VBoxContainer.new()
@@ -110,48 +111,14 @@ func lemon_cake_quest():
 	v_box.add_child(quest_title)
 	v_box.add_child(quest_information)
 
+func _on_area_2d_mouse_entered(area):
+	var texture_rect = area_texture_dictionary.get(area)
+	if texture_rect:
+		handle_label_inv(texture_rect.name)
 
-
-func _on_area_2d_mouse_entered() -> void:
-	# get the name of the texture rectangle to get corresponding text
-	var node_name
-	for child in inventory.get_children():
-		if child is TextureRect:
-			node_name = child.name
-	handle_label_inv(node_name)
-
-	# otherwise it is an actual item
-	
-func _on_area_2d_2_mouse_entered() -> void:
-	# get the name of the texture rectangle to get corresponding text
-	var node_name
-	var count = 0
-	for child in inventory.get_children():
-		if child is TextureRect:
-			count += 1
-		if child is TextureRect and count == 1:
-			node_name = child.name
-	handle_label_inv(node_name)
-
-	# otherwise it is an actual item	
-func _on_area_2d_3_mouse_entered() -> void:
-	# get the name of the texture rectangle to get corresponding text
-	var node_name
-	var count = 0
-	for child in inventory.get_children():
-		if child is TextureRect:
-			count += 1
-		if child is TextureRect and count == 2:
-			node_name = child.name
-	handle_label_inv(node_name)
-	# otherwise it is an actual item
-
-func _on_area_2d_mouse_exited() -> void:
+func _on_area_2d_mouse_exited(area):
 	label.visible = false
-func _on_area_2d_2_mouse_exited() -> void:
-	label.visible = false
-func _on_area_2d_3_mouse_exited() -> void:
-	label.visible = false
+
 
 func handle_label_inv(node_name):
 	match node_name:
