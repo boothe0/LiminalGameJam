@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=53 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/non_quest/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://d0m0t7wnjrptc" path="res://quest_props_tools/LO_free_candy.glb" id="10_vxlqu"]
 [ext_resource type="PackedScene" uid="uid://dbi8k8cv8rt2y" path="res://set_dressing_props/LO_workbench1.glb" id="11_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://bjveiw46aoj4j" path="res://set_dressing_props/LO_workbench_quest.glb" id="12_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://dwku1y3hlo3xu" path="res://plants/LO_xtra_plants3.glb" id="13_xssco"]
 [ext_resource type="PackedScene" uid="uid://drnadxrfew5p7" path="res://scenes/lo_dome.tscn" id="15_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://d041wgdttbrjj" path="res://quest_props_lemonade/LO_mag.glb" id="15_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://dqhh3cjbrq05u" path="res://scenes/lo_mag.tscn" id="16_5he1u"]
@@ -44,6 +45,7 @@
 [ext_resource type="PackedScene" uid="uid://c35mbkj30tmse" path="res://furniture/LO_outdoor_floor_lamp.glb" id="37_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://dsjn2s146x6s8" path="res://set_dressing_props/LO_attachment.glb" id="37_fuf3a"]
 [ext_resource type="Texture2D" uid="uid://deoqlr6gjaf0y" path="res://assets/LO_level_001c.jpg" id="38_pibwh"]
+[ext_resource type="PackedScene" uid="uid://ck6r62o178u1g" path="res://plants/LO_grass1.glb" id="45_pr4t1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5myc"]
 albedo_color = Color(0.265314, 0.634456, 0.469927, 1)
@@ -217,6 +219,29 @@ omni_range = 5.858
 transform = Transform3D(-0.127372, 0.0516479, -0.990509, 0.0221681, 0.998542, 0.0492161, 0.991607, -0.0156891, -0.128331, -0.856842, 1.08874, -5.11571)
 light_color = Color(0.698039, 0.760784, 0.662745, 1)
 omni_range = 5.858
+
+[node name="cafe_roof_plants" type="Node3D" parent="LevelFloor/cafe bar"]
+
+[node name="LO_grass1" parent="LevelFloor/cafe bar/cafe_roof_plants" instance=ExtResource("45_pr4t1")]
+transform = Transform3D(-0.127372, 0.0516479, -0.990509, 0.0221681, 0.998542, 0.0492161, 0.991607, -0.0156891, -0.128331, -2.17968, 1.48841, -1.7904)
+
+[node name="LO_grass2" parent="LevelFloor/cafe bar/cafe_roof_plants" instance=ExtResource("45_pr4t1")]
+transform = Transform3D(-0.127372, 0.0516479, -0.990509, 0.0221681, 0.998542, 0.0492161, 0.991607, -0.0156891, -0.128331, -0.0393028, 1.44314, 2.3749)
+
+[node name="LO_grass3" parent="LevelFloor/cafe bar/cafe_roof_plants" instance=ExtResource("45_pr4t1")]
+transform = Transform3D(0.998562, 0.0516479, -0.0143371, -0.0514107, 0.998542, 0.0164497, 0.0151659, -0.0156891, 0.999762, -1.66796, 1.49284, 0.176691)
+
+[node name="LO_grass4" parent="LevelFloor/cafe bar/cafe_roof_plants" instance=ExtResource("45_pr4t1")]
+transform = Transform3D(-0.997683, 0.0516479, 0.0442678, 0.0508944, 0.998542, -0.0179836, -0.0451322, -0.0156891, -0.998858, -0.779987, 1.41219, -2.03305)
+
+[node name="LO_grass5" parent="LevelFloor/cafe bar/cafe_roof_plants" instance=ExtResource("45_pr4t1")]
+transform = Transform3D(0.998492, 0.0516479, -0.0185371, -0.051341, 0.998542, 0.0166658, 0.0193709, -0.0156891, 0.99969, -1.43841, 1.51472, 2.32506)
+
+[node name="LO_xtra_plants3" parent="LevelFloor/cafe bar/cafe_roof_plants" instance=ExtResource("13_xssco")]
+transform = Transform3D(-0.382115, 0.154944, -2.97153, 0.0665044, 2.99563, 0.147648, 2.97482, -0.047067, -0.384993, -1.36926, 1.65394, -2.37303)
+
+[node name="LO_xtra_plants4" parent="LevelFloor/cafe bar/cafe_roof_plants" instance=ExtResource("13_xssco")]
+transform = Transform3D(-2.82737, 0.154944, 0.990939, 0.130617, 2.99563, -0.0957193, -0.994438, -0.0470671, -2.82999, -1.11957, 1.72556, 3.00701)
 
 [node name="lockers" type="Node3D" parent="LevelFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4611, 0, 3.57088)
@@ -494,7 +519,7 @@ transform = Transform3D(0.986182, 0, 0.165667, 0, 1, 0, -0.165667, 0, 0.986182, 
 transform = Transform3D(-0.327317, 0, 0.944915, 0, 1, 0, -0.944915, 0, -0.327317, -1.36234, 0, 4.25568)
 
 [node name="LO_Lemon1" parent="LevelFloor/quest_items" instance=ExtResource("28_e3qwn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.18485, -0.889543, -43.1233)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.50781, -0.169045, -41.1984)
 
 [node name="LO_Lemon2" parent="LevelFloor/quest_items" instance=ExtResource("28_e3qwn")]
 transform = Transform3D(-0.102596, 0.955281, 0.277332, 0.994282, 0.106785, 0, -0.0296147, 0.275746, -0.960774, -10.3535, 3.63948, -27.5765)
@@ -511,10 +536,9 @@ environment = ExtResource("6_tefeu")
 [node name="Dome" type="Node3D" parent="."]
 
 [node name="LO_dome" parent="Dome" instance=ExtResource("15_jkv2x")]
-visible = false
 
 [node name="LO_dome_struts" parent="Dome" instance=ExtResource("16_muem4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.114722, 0)
 
 [node name="paths" type="Node3D" parent="Dome"]
 
@@ -2745,31 +2769,31 @@ transform = Transform3D(0.773708, 0, -0.633543, 0, 1, 0, 0.633543, 0, 0.773708, 
 [node name="walls" type="Node3D" parent="Dome"]
 
 [node name="LO_wall1" parent="Dome/walls" instance=ExtResource("20_yc10j")]
-transform = Transform3D(0.996866, 0, 0.0791029, 0, 1, 0, -0.0791029, 0, 0.996866, 4.99378, 0.626731, 49.2524)
+transform = Transform3D(0.996866, 0, 0.0791029, 0, 1, 0, -0.0791029, 0, 0.996866, 4.99378, -0.307399, 49.2524)
 
 [node name="LO_wall10" parent="Dome/walls" instance=ExtResource("20_yc10j")]
-transform = Transform3D(0.998508, 0, 0.0546016, 0, 1, 0, -0.0546016, 0, 0.998508, 1.17638, 0.626731, 49.5061)
+transform = Transform3D(0.998508, 0, 0.0546016, 0, 1, 0, -0.0546016, 0, 0.998508, 1.17638, -0.307399, 49.5061)
 
 [node name="LO_wall2" parent="Dome/walls" instance=ExtResource("20_yc10j")]
-transform = Transform3D(0.990483, 0, 0.137635, 0, 1, 0, -0.137635, 0, 0.990483, 8.81698, 0.626731, 48.8264)
+transform = Transform3D(0.990483, 0, 0.137635, 0, 1, 0, -0.137635, 0, 0.990483, 8.81698, -0.307399, 48.8264)
 
 [node name="LO_wall3" parent="Dome/walls" instance=ExtResource("20_yc10j")]
-transform = Transform3D(0.950005, 0, 0.312235, 0, 1, 0, -0.312235, 0, 0.950005, 15.5272, 0.626731, 47.074)
+transform = Transform3D(0.950005, 0, 0.312235, 0, 1, 0, -0.312235, 0, 0.950005, 15.5272, -0.307399, 47.074)
 
 [node name="LO_wall4" parent="Dome/walls" instance=ExtResource("20_yc10j")]
-transform = Transform3D(0.929982, 0, 0.367605, 0, 1, 0, -0.367605, 0, 0.929982, 19.1495, 0.626731, 45.7507)
+transform = Transform3D(0.929982, 0, 0.367605, 0, 1, 0, -0.367605, 0, 0.929982, 19.1495, -0.307399, 45.7507)
 
 [node name="LO_wall5" parent="Dome/walls" instance=ExtResource("20_yc10j")]
-transform = Transform3D(0.893018, 0, 0.45002, 0, 1, 0, -0.45002, 0, 0.893018, 22.6821, 0.626731, 44.1469)
+transform = Transform3D(0.893018, 0, 0.45002, 0, 1, 0, -0.45002, 0, 0.893018, 22.6821, -0.307399, 44.1469)
 
 [node name="LO_wall6" parent="Dome/walls" instance=ExtResource("20_yc10j")]
-transform = Transform3D(0.864985, 0, 0.501798, 0, 1, 0, -0.501798, 0, 0.864985, 26.0674, 0.626731, 42.2997)
+transform = Transform3D(0.864985, 0, 0.501798, 0, 1, 0, -0.501798, 0, 0.864985, 26.0674, -0.307399, 42.2997)
 
 [node name="LO_wall7" parent="Dome/walls" instance=ExtResource("20_yc10j")]
-transform = Transform3D(0.796171, 0, 0.605072, 0, 1, 0, -0.605072, 0, 0.796171, 29.2743, 0.626731, 40.1418)
+transform = Transform3D(0.796171, 0, 0.605072, 0, 1, 0, -0.605072, 0, 0.796171, 29.2743, -0.307399, 40.1418)
 
 [node name="LO_wall8" parent="Dome/walls" instance=ExtResource("20_yc10j")]
-transform = Transform3D(0.75918, 0, 0.65088, 0, 1, 0, -0.65088, 0, 0.75918, 32.2667, 0.626731, 37.7092)
+transform = Transform3D(0.75918, 0, 0.65088, 0, 1, 0, -0.65088, 0, 0.75918, 32.2667, -0.307399, 37.7092)
 
 [node name="LO_wall9" parent="Dome/walls" instance=ExtResource("20_yc10j")]
 transform = Transform3D(0.75918, 0, 0.65088, 0, 1, 0, -0.65088, 0, 0.75918, 35.2732, 0, 35.3597)
@@ -2794,7 +2818,7 @@ text = "Leave the flyer or remove it.
 [node name="airlock" type="Node3D" parent="Dome"]
 
 [node name="LO_airlock" parent="Dome/airlock" instance=ExtResource("20_gqmmt")]
-transform = Transform3D(-0.961344, 0, -0.275352, 0, 1, 0, 0.275352, 0, -0.961344, 12.3364, 0.653622, 49.0338)
+transform = Transform3D(-0.961344, 0, -0.275352, 0, 1, 0, 0.275352, 0, -0.961344, 12.7282, 0.653622, 50.1602)
 
 [node name="LO_suit" parent="Dome/airlock" instance=ExtResource("25_vxglm")]
 transform = Transform3D(-0.593837, 0, -0.0857743, 0, 0.6, 0, 0.0857743, 0, -0.593837, 7.08683, 0.711964, 48.5093)
