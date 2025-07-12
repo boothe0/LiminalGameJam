@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjhuoex8woeub"
-path.s3tc="res://.godot/imported/LO_Tree_Try3_foliage_tex.png-4f6a0cedf93d3ac793f845a8491da495.s3tc.ctex"
+uid="uid://dnswm24blunoc"
+path.s3tc="res://.godot/imported/LO_tree_try3_foliage_tex.png-0dc70a023f2e28b1c538485927d60232.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "a54c4b6625472d96759a6366ab4879d2"
-}
 
 [deps]
 
-source_file="res://plants/LO_Tree_Try3_foliage_tex.png"
-dest_files=["res://.godot/imported/LO_Tree_Try3_foliage_tex.png-4f6a0cedf93d3ac793f845a8491da495.s3tc.ctex"]
+source_file="res://plants/LO_tree_try3_foliage_tex.png"
+dest_files=["res://.godot/imported/LO_tree_try3_foliage_tex.png-0dc70a023f2e28b1c538485927d60232.s3tc.ctex"]
 
 [params]
 

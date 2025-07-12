@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ixhcmfpy2qk"
+uid="uid://ckeoutrdp7qfn"
 path.s3tc="res://.godot/imported/LO_basket_filled_lemon_tex.png-f8cb96f355fd182a47d0ccd6c3aae740.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "161d00fdd6f9ce5e929fffd829e5bd1d"
 }
 
 [deps]

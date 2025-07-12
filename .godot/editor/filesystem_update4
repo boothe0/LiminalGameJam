@@ -1,4 +1,7 @@
-res://scenes/main_menu.tscn
+res://meshes/mirrorstick.res
+res://meshes/grass_small.res
+res://scenes/non_quest/main.tscn
+res://shaders/dome-inherited.gdshader
+res://scenes/main_menu_style.tres
 res://skybox_setup/sky.tres
 res://skybox_setup/sky_enviro.tres
-res://shaders/dome-inherited.gdshader
