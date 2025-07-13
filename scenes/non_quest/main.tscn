@@ -468,6 +468,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.2996, 1.11226, 23.0268)
 
 [node name="BeeLabel" type="Label3D" parent="LevelFloor/quest_items/LO_basket_filled2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.678656, 0)
+visible = false
 text = "Fix this mess"
 font = ExtResource("10_7ox3u")
 

@@ -18,8 +18,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and label_3d_2.visible == true and Globals.can_interact:
 		# debug statement
 		# if there is an audio stream
-		if self.name == "LO_basket_filled2" and Globals.choice_picked == false and Globals.lemon_quest_triggered == true:
-			Emitter.emit_signal("bee_basket_choice")
+
 		
 		if self.name != "LO_basket_filled2":
 			if audio:
@@ -47,6 +46,9 @@ func _process(delta: float) -> void:
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		label_3d_2.visible = true
+	if self.name == "LO_basket_filled2" and Globals.choice_picked == false and Globals.lemon_quest_triggered == true:
+		Emitter.emit_signal("bee_basket_choice")
+
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.name == "Player":
 		label_3d_2.visible = false
