@@ -17,9 +17,7 @@ area_path = NodePath("Area3D")
 label_3d_2_path = NodePath("grren_001/Label3D")
 
 [node name="Label3D" type="Label3D" parent="grren_001" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.202413, 0.136073)
-visible = false
-text = "Pickup?"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93018, 0.136073)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000335693, 0.305187, -0.00682068)

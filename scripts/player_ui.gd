@@ -17,6 +17,8 @@ var lemon_basket = preload("res://set_dressing_props/LO_cafe_main_shutter_tex.pn
 var mag = preload("res://quest_props_lemonade/LO_mag_mag_tex.png")
 var lemon = preload("res://quest_props_lemonade/LO_Lemon1_lemon_tex.png")
 
+var font = preload("res://fonts/Summerti.ttf")
+
 func _ready():
 	for area in area_2d:
 		area.mouse_entered.connect(_on_area_2d_mouse_entered.bind(area))
@@ -56,6 +58,7 @@ func adding_to_inv():
 			Globals.lemon_count += 1
 			make_asset(lemon)
 func quest_trigger():
+	Globals.lemon_quest_triggered = true
 	var item_node = Globals.most_recent_node
 	match item_node:
 		"DateNote":
@@ -102,10 +105,17 @@ func date_night_quest():
 	var quest_information = Label.new()
 	quest_information.text = "Clean Up! \n OR \n Put out Candles!"
 	quest_information.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	quest_information.add_theme_font_override("font", font)
 	quests.add_child(v_box)
 	v_box.add_child(quest_title)
 	v_box.add_child(quest_information)
-
+	quest_information.label_settings = LabelSettings.new()
+	quest_information.label_settings.font_size = 30
+	quest_information.label_settings.font = font
+	
+	quest_title.label_settings = LabelSettings.new()
+	quest_title.label_settings.font_size = 40
+	quest_title.label_settings.font = font
 func tools_quest():
 	var v_box = VBoxContainer.new()
 	var quest_title = Label.new()
@@ -113,10 +123,18 @@ func tools_quest():
 	var quest_information = Label.new()
 	quest_information.text = "Tether Hooks \n Pannel Opener \n Screwdriver \n Mirror on a stick"
 	quest_information.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	quest_information.add_theme_font_override("font", font)
 	quests.add_child(v_box)
 	v_box.add_child(quest_title)
 	v_box.add_child(quest_information)
-
+	
+	quest_information.label_settings = LabelSettings.new()
+	quest_information.label_settings.font_size = 30
+	quest_information.label_settings.font = font
+	
+	quest_title.label_settings = LabelSettings.new()
+	quest_title.label_settings.font_size = 40
+	quest_title.label_settings.font = font
 func lemon_picking_quest():
 	var v_box = VBoxContainer.new()
 	var quest_title = Label.new()
@@ -128,6 +146,14 @@ func lemon_picking_quest():
 	v_box.add_child(quest_title)
 	v_box.add_child(quest_information)
 	
+	quest_information.label_settings = LabelSettings.new()
+	quest_information.label_settings.font_size = 30
+	quest_information.label_settings.font = font
+	
+	quest_title.label_settings = LabelSettings.new()
+	quest_title.label_settings.font_size = 40
+	quest_title.label_settings.font = font
+
 	# trigger global boolean
 	Globals.lemon_picking = true
 
@@ -139,10 +165,18 @@ func lemon_cake_quest():
 	var quest_information = Label.new()
 	quest_information.text = "Bring to workstation! \n OR \n Near the lockers!"
 	quest_information.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	quest_information.add_theme_font_override("font", font)
 	quests.add_child(v_box)
 	v_box.add_child(quest_title)
 	v_box.add_child(quest_information)
-
+	
+	quest_information.label_settings = LabelSettings.new()
+	quest_information.label_settings.font_size = 30
+	quest_information.label_settings.font = font
+	
+	quest_title.label_settings = LabelSettings.new()
+	quest_title.label_settings.font_size = 40
+	quest_title.label_settings.font = font
 func _on_area_2d_mouse_entered(area):
 	var texture_rect = area_texture_dictionary.get(area)
 	if texture_rect:

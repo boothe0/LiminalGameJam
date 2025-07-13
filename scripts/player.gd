@@ -25,10 +25,13 @@ const BOB_AMP = 0.08
 # how far along sin wave player is 
 var sin_bob = 0.0
 
+var font = preload("res://fonts/Summerti.ttf")
+
 func _ready():
 	Emitter.first_item_pickup.connect(display_message.bind("first_item"))
 	Emitter.too_many_items.connect(display_message.bind("too_many"))
 	Emitter.display_warning.connect(display_message.bind("display_lemon_warning"))
+	Emitter.bee_basket_choice.connect(display_message.bind("bee_basket"))
 	Emitter.note_picked_up.connect(handle_note_despawn)
 	print(Globals.notes_picked_up)
 	for note in Globals.notes_picked_up:
@@ -123,7 +126,6 @@ func display_message(type):
 	var message = message.instantiate()
 	var label = message.get_child(0)
 	match type:
-		
 		"too_many":
 			label.text = "You have too many items and can no longer pick any more up place the items you have and leave."
 		
@@ -134,7 +136,16 @@ func display_message(type):
 			Make sure you handled the items how you wanted before you clock out!"
 		"display_lemon_warning":
 			label.text = "Make sure to have 3 lemons before you bring it back to the cafe if you wish to fill it!"
-		
+		"bee_basket":
+			label.text = "basket three is left filled but with some cut-up lemons nearby that have attracted bees. someone left a note: 
+			sure, put stinger food out near the café, why dontcha"
+			var lemons_leave = message.get_child(2)
+			lemons_leave.visible = true
+			var clean_up = message.get_child(3)
+			clean_up.visible = true
+			var clean_up_elsewhere = message.get_child(4)
+			clean_up_elsewhere.visible = true
+			
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	camera_3d.add_child(message)
 

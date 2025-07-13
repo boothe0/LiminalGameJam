@@ -16,3 +16,5 @@ signal too_many_items
 signal display_warning
 
 signal remove_inv_assets
+
+signal bee_basket_choice
