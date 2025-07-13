@@ -40,13 +40,14 @@ func _process(delta: float) -> void:
 			# for bee food part of lemon quest
 			# Debug for later if it goes to 9 and not trigger too many items
 			print("Number ITEMS: ", Globals.number_items)
+			print(self.name)
 			Emitter.emit_signal("item_picked_up")
 
 # handles label visibility
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		label_3d_2.visible = true
-	if self.name == "LO_basket_filled2" and Globals.choice_picked == false and Globals.lemon_quest_triggered == true:
+	if body.name == "Player" and self.name == "LO_basket_filled2" and Globals.choice_picked == false and Globals.lemon_quest_triggered == true:
 		Emitter.emit_signal("bee_basket_choice")
 
 func _on_area_3d_body_exited(body: Node3D) -> void:

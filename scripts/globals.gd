@@ -31,3 +31,9 @@ var left_lemons = false
 var clean_up_food = false
 var put_lemons_away = false
 var choice_picked = false
+
+
+# Picnic Quest flags
+var picnic_quest_triggered = false
+var dropped_off_workbench = false
+var dropped_off_lockers = false

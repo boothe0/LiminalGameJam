@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=57 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/non_quest/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://d0m0t7wnjrptc" path="res://quest_props_tools/LO_free_candy.glb" id="10_vxlqu"]
 [ext_resource type="PackedScene" uid="uid://dbi8k8cv8rt2y" path="res://set_dressing_props/LO_workbench1.glb" id="11_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://bjveiw46aoj4j" path="res://set_dressing_props/LO_workbench_quest.glb" id="12_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://by2h8075ehrk" path="res://scenes/lo_pie_slice.tscn" id="13_i3a3x"]
 [ext_resource type="PackedScene" uid="uid://dwku1y3hlo3xu" path="res://plants/LO_xtra_plants3.glb" id="13_xssco"]
 [ext_resource type="PackedScene" uid="uid://drnadxrfew5p7" path="res://scenes/lo_dome.tscn" id="15_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://d041wgdttbrjj" path="res://quest_props_lemonade/LO_mag.glb" id="15_pm3ni"]
@@ -56,6 +57,12 @@ material = SubResource("StandardMaterial3D_f5myc")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vxlqu"]
 size = Vector3(1.4082, 0.436523, 1.26941)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i3a3x"]
+size = Vector3(2.29688, 1.08643, 2.26331)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xw5be"]
+size = Vector3(2.00989, 1, 2.33386)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e3qwn"]
 size = Vector3(1, 0.523438, 1.34309)
@@ -267,6 +274,20 @@ transform = Transform3D(-0.0331377, 0, 0.99945, 0, 1, 0, -0.99945, 0, -0.0331377
 [node name="LO_locker_tall5" parent="LevelFloor/lockers" instance=ExtResource("10_trceg")]
 transform = Transform3D(-0.154245, 0, 0.988033, 0, 1, 0, -0.988033, 0, -0.154245, -13.4405, 0.608148, 43.3078)
 
+[node name="Pie_Lockers" type="Node3D" parent="LevelFloor/lockers/LO_locker_tall5"]
+
+[node name="Locker_Pie_Deliver" type="Area3D" parent="LevelFloor/lockers/LO_locker_tall5/Pie_Lockers"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelFloor/lockers/LO_locker_tall5/Pie_Lockers/Locker_Pie_Deliver"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.648403, 1.08787, -0.567936)
+shape = SubResource("BoxShape3D_i3a3x")
+
+[node name="SecondaryPieLabel" type="Label3D" parent="LevelFloor/lockers"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -13.9783, 2.63838, 43.5021)
+visible = false
+text = "Drop off pie here?"
+font = ExtResource("10_7ox3u")
+
 [node name="PicnicNote" parent="LevelFloor" instance=ExtResource("5_o6xl0")]
 transform = Transform3D(0.882793, 0.0189118, -1.81529, -0.0152936, 0.654238, -0.111932, 0.383949, 0.0162676, 1.66723, -6.18139, 1.71907, -5.36039)
 
@@ -280,6 +301,20 @@ transform = Transform3D(0.447222, 0.000863491, -1.98764, -0.0152936, 0.654239, -
 
 [node name="LO_workbench_quest" parent="LevelFloor/workbench tools" instance=ExtResource("12_jkv2x")]
 transform = Transform3D(-0.952635, 0, -0.304116, 0, 1, 0, 0.304116, 0, -0.952635, 15.8303, 0.519612, 44.749)
+
+[node name="Pie_Work_Bench" type="Node3D" parent="LevelFloor/workbench tools/LO_workbench_quest"]
+
+[node name="Work_Bench_Area" type="Area3D" parent="LevelFloor/workbench tools/LO_workbench_quest/Pie_Work_Bench"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelFloor/workbench tools/LO_workbench_quest/Pie_Work_Bench/Work_Bench_Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0595102, 1.05123, 0.666924)
+shape = SubResource("BoxShape3D_xw5be")
+
+[node name="PieLabel" type="Label3D" parent="LevelFloor/workbench tools/LO_workbench_quest/Pie_Work_Bench"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.41306, 0)
+visible = false
+text = "Drop Off Pie?"
+font = ExtResource("10_7ox3u")
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="LevelFloor/workbench tools"]
 transform = Transform3D(0.458184, 0, 0.888857, 0, 1, 0, -0.888857, 0, 0.458184, 14.8604, 2.38319, 45.3318)
@@ -538,6 +573,9 @@ transform = Transform3D(-0.102596, 0.955281, 0.277332, 0.994282, 0.106785, 0, -0
 
 [node name="LO_candy_compartment" parent="LevelFloor/quest_items" instance=ExtResource("30_84tei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3265, 0.49132, -12.1258)
+
+[node name="LO_pie_slice" parent="LevelFloor/quest_items" instance=ExtResource("13_i3a3x")]
+transform = Transform3D(0.898817, -0.039631, 0.436529, 0.0516479, 0.998543, -0.015689, -0.435272, 0.0366474, 0.899553, -7.56442, -0.0276479, -43.6907)
 
 [node name="space_sky_sketch" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_tefeu")
@@ -3012,5 +3050,7 @@ mesh = SubResource("QuadMesh_5he1u")
 [connection signal="body_exited" from="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table2/TableArea" to="." method="_on_table_area_body_exited"]
 [connection signal="body_entered" from="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table6/TableArea" to="." method="_on_table_area_body_entered"]
 [connection signal="body_exited" from="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table6/TableArea" to="." method="_on_table_area_body_exited"]
+[connection signal="body_entered" from="LevelFloor/lockers/LO_locker_tall5/Pie_Lockers/Locker_Pie_Deliver" to="." method="_on_locker_pie_deliver_body_entered"]
+[connection signal="body_entered" from="LevelFloor/workbench tools/LO_workbench_quest/Pie_Work_Bench/Work_Bench_Area" to="." method="_on_work_bench_area_body_entered"]
 [connection signal="body_entered" from="LevelFloor/quest_items/LO_basket_filled_star2/Lemon1Quest/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="LevelFloor/quest_items/LO_basket_filled_star2/Lemon1Quest/Area3D" to="." method="_on_area_3d_body_exited"]

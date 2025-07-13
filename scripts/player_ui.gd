@@ -16,15 +16,23 @@ var tether_rope = preload("res://quest_props_tools/LO_tether_rope_tex.png")
 var lemon_basket = preload("res://set_dressing_props/LO_cafe_main_shutter_tex.png")
 var mag = preload("res://quest_props_lemonade/LO_mag_mag_tex.png")
 var lemon = preload("res://quest_props_lemonade/LO_Lemon1_lemon_tex.png")
+var pie = preload("res://quest_props_cake/LO_pie_slice_pie_slice_tex.png")
 
 var font = preload("res://fonts/Summerti.ttf")
+var picnic_quest_was_triggered = false
 
 func _ready():
 	for area in area_2d:
 		area.mouse_entered.connect(_on_area_2d_mouse_entered.bind(area))
 		area.mouse_exited.connect(_on_area_2d_mouse_exited.bind(area))
 	Emitter.item_picked_up.connect(self.adding_to_inv)
-	Emitter.remove_inv_assets.connect(self.remove_asset.bind("lemon_basket_2"))
+	Emitter.remove_inv_asset_lemons.connect(self.remove_asset.bind("lemon_basket_2"))
+	Emitter.remove_inv_lemon_pie.connect(self.remove_asset.bind("lemon_pie"))
+
+func _process(delta: float) -> void:
+	if Globals.picnic_quest_triggered == false and picnic_quest_was_triggered == true:
+		pass
+		# add later for end of quest actions
 
 func adding_to_inv():
 	var item_key = Globals.most_recent_node
@@ -57,6 +65,8 @@ func adding_to_inv():
 		"LO_Lemon3":
 			Globals.lemon_count += 1
 			make_asset(lemon)
+		"LO_pie_slice":
+			make_asset(pie)
 func quest_trigger():
 	Globals.lemon_quest_triggered = true
 	var item_node = Globals.most_recent_node
@@ -95,8 +105,13 @@ func remove_asset(type_of_asset):
 		for lemon in lemons_to_remove:
 			area_texture_dictionary.erase(lemon)
 		print(Globals.lemon_count)
-		
-	
+	if type_of_asset == "lemon_pie":
+		var areas = area_texture_dictionary.keys()  # get a list to avoid modifying while iterating
+		for area in areas:
+			var texture = area_texture_dictionary[area]
+			if texture.name == "LO_pie_slice":
+				texture.queue_free()
+				area_texture_dictionary.erase(area)
 func date_night_quest():
 	var v_box = VBoxContainer.new()
 	var quest_title = Label.new()
@@ -112,7 +127,6 @@ func date_night_quest():
 	quest_information.label_settings = LabelSettings.new()
 	quest_information.label_settings.font_size = 30
 	quest_information.label_settings.font = font
-	
 	quest_title.label_settings = LabelSettings.new()
 	quest_title.label_settings.font_size = 40
 	quest_title.label_settings.font = font
@@ -177,6 +191,9 @@ func lemon_cake_quest():
 	quest_title.label_settings = LabelSettings.new()
 	quest_title.label_settings.font_size = 40
 	quest_title.label_settings.font = font
+	
+	Globals.picnic_quest_triggered = true
+	picnic_quest_was_triggered = true
 func _on_area_2d_mouse_entered(area):
 	var texture_rect = area_texture_dictionary.get(area)
 	if texture_rect:

@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://by2h8075ehrk"]
+
+[ext_resource type="PackedScene" uid="uid://ckec5ggrqdptn" path="res://quest_props_cake/LO_pie_slice.glb" id="1_6a4le"]
+[ext_resource type="FontFile" uid="uid://07s78ct06jd1" path="res://fonts/BLOCKSS.otf" id="2_bkkse"]
+[ext_resource type="Script" uid="uid://bg47861wufoby" path="res://scripts/item_handling.gd" id="2_ito6d"]
+[ext_resource type="AudioStream" uid="uid://crv2q5kclt8jo" path="res://audio/LMJ - SFX -Platic Basket Picking.ogg" id="4_7ac4i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ito6d"]
+size = Vector3(1.64299, 0.648169, 1.26542)
+
+[node name="LO_pie_slice" instance=ExtResource("1_6a4le")]
+script = ExtResource("2_ito6d")
+area_path = NodePath("Area3D")
+label_3d_2_path = NodePath("pieplate/Label3D")
+
+[node name="Label3D" type="Label3D" parent="pieplate" index="0"]
+transform = Transform3D(1.5, 0, 2.2507e-09, 0, 1.265, 0, -4.65661e-09, 0, 0.725, -1.49012e-08, 0.44469, -0.0048959)
+visible = false
+text = "Pickup"
+font = ExtResource("2_bkkse")
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+transform = Transform3D(0.18915, 0, 0, 0, 0.203211, 0, 0, 0, 0.45173, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1.2465, 0, 0, 0, 0.999982, 0, 0, 0, 1.02782, 0.00756242, 0.325916, 0.300922)
+shape = SubResource("BoxShape3D_ito6d")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("4_7ac4i")
