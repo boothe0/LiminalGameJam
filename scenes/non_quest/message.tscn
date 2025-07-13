@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnsy8nvmw6bew"]
+[gd_scene load_steps=3 format=3 uid="uid://dnsy8nvmw6bew"]
 
 [ext_resource type="Script" uid="uid://ce7ujat82xhj" path="res://scripts/message.gd" id="1_11qlq"]
+[ext_resource type="FontFile" uid="uid://dnayjoyecpuqb" path="res://fonts/Summerti.ttf" id="2_tj534"]
 
 [node name="Message" type="CanvasLayer"]
 script = ExtResource("1_11qlq")
@@ -11,12 +12,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -263.0
-offset_top = -226.0
-offset_right = 293.0
-offset_bottom = -151.0
+offset_left = -291.0
+offset_top = -244.0
+offset_right = 321.0
+offset_bottom = -132.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_tj534")
+theme_override_font_sizes/font_size = 30
 text = "Items you pick up will remain in your inventory until you end the shift.
 Each shift will begin with an empty inventory. 
 Make sure you handled the items how you wanted before you clock out!"
@@ -27,12 +30,75 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -26.0
-offset_top = -141.5
+offset_left = -32.0
+offset_top = -107.0
 offset_right = 24.0
-offset_bottom = -110.5
+offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_tj534")
+theme_override_font_sizes/font_size = 30
 text = "Close"
+metadata/_edit_use_anchors_ = true
+
+[node name="LemonsLeave" type="Button" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -394.0
+offset_top = -39.0
+offset_right = -190.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_tj534")
+theme_override_font_sizes/font_size = 30
+text = "Leave the Cut Lemons"
+metadata/_edit_use_anchors_ = true
+
+[node name="CleanUP" type="Button" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -39.0
+offset_right = 110.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_tj534")
+theme_override_font_sizes/font_size = 30
+text = "Clean Up Bee Food"
+metadata/_edit_use_anchors_ = true
+
+[node name="CleanUP2" type="Button" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 155.0
+offset_top = -39.0
+offset_right = 460.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_tj534")
+theme_override_font_sizes/font_size = 30
+text = "Clean up and put lemons elsewhere"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="LemonsLeave" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="LemonsLeave" to="." method="_on_lemons_leave_pressed"]
+[connection signal="pressed" from="CleanUP" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CleanUP" to="." method="_on_clean_up_pressed"]
+[connection signal="pressed" from="CleanUP2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CleanUP2" to="." method="_on_clean_up_2_pressed"]

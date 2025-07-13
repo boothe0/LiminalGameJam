@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlkfjmx1sgepn"]
+[gd_scene load_steps=3 format=3 uid="uid://dlkfjmx1sgepn"]
 
 [ext_resource type="Script" uid="uid://ct0bsu1m4yotf" path="res://scripts/intro.gd" id="1_ioskq"]
+[ext_resource type="FontFile" uid="uid://dnayjoyecpuqb" path="res://fonts/Summerti.ttf" id="2_4t4d3"]
 
 [node name="Intro" type="CanvasLayer"]
 script = ExtResource("1_ioskq")
@@ -29,20 +30,25 @@ size_flags_horizontal = 4
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4t4d3")
+theme_override_font_sizes/font_size = 30
 text = "Continue"
 
 [node name="Label" type="Label" parent="."]
+texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -691.0
-offset_top = -160.0
-offset_right = 707.0
-offset_bottom = -33.0
+offset_left = -690.0
+offset_top = -217.0
+offset_right = 708.0
+offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_4t4d3")
+theme_override_font_sizes/font_size = 30
 text = "The Lemon Orchard is one of several biome modules aboard the space station.
 Until the planet is put back together, the station needs be kept in order.
  That's your job.

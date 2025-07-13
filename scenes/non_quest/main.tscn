@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=54 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/non_quest/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b0n1wom0m40ep" path="res://set_dressing_props/LO_cafe_cubes.glb" id="7_choun"]
 [ext_resource type="PackedScene" uid="uid://d3dqe7qfdoqmb" path="res://furniture/LO_cafe_table.glb" id="8_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://c46rpf0uicpt6" path="res://furniture/LO_cafe_chair.glb" id="9_eb6dy"]
+[ext_resource type="FontFile" uid="uid://07s78ct06jd1" path="res://fonts/BLOCKSS.otf" id="10_7ox3u"]
 [ext_resource type="PackedScene" uid="uid://bj482sfe2xfvy" path="res://quest_props_lemonade/LO_phone.glb" id="10_j8jky"]
 [ext_resource type="PackedScene" uid="uid://8xnrb3ofrvra" path="res://furniture/LO_trolley.glb" id="10_og1vs"]
 [ext_resource type="PackedScene" uid="uid://c446gbo450fv3" path="res://furniture/LO_locker_tall.glb" id="10_trceg"]
@@ -148,6 +149,7 @@ shape = SubResource("BoxShape3D_vxlqu")
 transform = Transform3D(0.3, 1.11759e-09, 4.47035e-09, -1.11759e-09, 0.3, -5.58793e-10, -4.47035e-09, 5.58793e-10, 0.3, 0.0430946, 0.833201, -0.0130916)
 visible = false
 text = "Find the lemon basket with a star."
+font = ExtResource("10_7ox3u")
 
 [node name="LO_cafe_table6" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating" instance=ExtResource("8_ya4ey")]
 transform = Transform3D(0.437474, 0.014969, -0.899106, 0.043208, 0.998356, 0.0376449, 0.898192, -0.0553173, 0.436108, -3.20494, -1.68758, -9.17271)
@@ -168,6 +170,7 @@ shape = SubResource("BoxShape3D_vxlqu")
 transform = Transform3D(0.3, 1.11759e-09, 4.47035e-09, -1.11759e-09, 0.3, -5.58793e-10, -4.47035e-09, 5.58793e-10, 0.3, 0.0430946, 0.833201, -0.0130916)
 visible = false
 text = "Find the lemon basket with a star."
+font = ExtResource("10_7ox3u")
 
 [node name="LO_cafe_table3" parent="LevelFloor/cafe bar/LO_cafe_main/cafe seating" instance=ExtResource("8_ya4ey")]
 transform = Transform3D(0.890355, 0.0128215, 0.455086, -0.00148188, 0.99968, -0.0252655, -0.455265, 0.0218209, 0.890089, -6.16046, -1.32517, 3.18044)
@@ -462,6 +465,11 @@ transform = Transform3D(0.996981, 0.0762531, -0.0146182, -0.0714831, 0.827996, -
 
 [node name="LO_basket_filled2" parent="LevelFloor/quest_items" instance=ExtResource("17_5poiv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.2996, 1.11226, 23.0268)
+
+[node name="BeeLabel" type="Label3D" parent="LevelFloor/quest_items/LO_basket_filled2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.678656, 0)
+text = "Fix this mess"
+font = ExtResource("10_7ox3u")
 
 [node name="LO_basket_filled_star2" parent="LevelFloor/quest_items" instance=ExtResource("18_5poiv")]
 transform = Transform3D(0.7418, 0, 0.670621, 0, 1, 0, -0.670621, 0, 0.7418, 24.4157, 1.93512, 1.64553)
@@ -2814,6 +2822,7 @@ transform = Transform3D(-0.299995, 0, -0.00165457, 0, 0.3, 0, 0.00165457, 0, -0.
 visible = false
 text = "Leave the flyer or remove it.
 (removing it will keep it permanently in your inventory until the next day."
+font = ExtResource("10_7ox3u")
 
 [node name="airlock" type="Node3D" parent="Dome"]
 

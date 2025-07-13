@@ -21,7 +21,13 @@ var did_player_interact = false
 var lemon_count = 0
 
 # Lemon Quest Flags
+var lemon_quest_triggered = false
 var lemon_picking = false
 var returned_full_basket = false
 var picked_up_star_basket = false
 var mag_picked_up = false
+# for bee food 
+var left_lemons = false
+var clean_up_food = false
+var put_lemons_away = false
+var choice_picked = false
