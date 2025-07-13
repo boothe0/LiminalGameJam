@@ -15,6 +15,7 @@ signal too_many_items
 
 signal display_warning
 
-signal remove_inv_assets
+signal remove_inv_asset_lemons
+signal remove_inv_lemon_pie
 
 signal bee_basket_choice

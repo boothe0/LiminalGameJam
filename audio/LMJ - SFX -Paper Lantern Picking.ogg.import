@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dfbr15r4rt21k"
+path="res://.godot/imported/LMJ - SFX -Paper Lantern Picking.ogg-68a5cf4c97622bf5470c7c7deeb12bfa.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/LMJ - SFX -Paper Lantern Picking.ogg"
+dest_files=["res://.godot/imported/LMJ - SFX -Paper Lantern Picking.ogg-68a5cf4c97622bf5470c7c7deeb12bfa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

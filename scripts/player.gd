@@ -40,6 +40,8 @@ func _ready():
 				lemon_note.visible = false
 			"date_note":
 				date_note.visible = false
+				var area_to_disable = date_note.get_child(2)
+				area_to_disable.monitoring = true
 			"picnic_note":
 				picnic_note.visible = false
 			"work_note":
@@ -165,6 +167,8 @@ func handle_note_despawn():
 		"PicnicNote":
 			Globals.notes_picked_up.append("picnic_note")
 			date_note.visible = false
+			var area_to_disable = date_note.get_child(2)
+			area_to_disable.monitoring = false
 			work_note.visible = false
 			lemon_note.visible = false
 		"DateNote":
