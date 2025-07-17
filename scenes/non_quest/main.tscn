@@ -3013,7 +3013,7 @@ transform = Transform3D(0.75918, 0, 0.65088, 0, 1, 0, -0.65088, 0, 0.75918, 35.2
 [node name="garden furniture" type="Node3D" parent="Dome"]
 
 [node name="LO_bench" parent="Dome/garden furniture" instance=ExtResource("21_jscy8")]
-transform = Transform3D(0.0154281, 0, -0.999881, 0, 1, 0, 0.999881, 0, 0.0154281, -16.5435, 0.565448, -12.0339)
+transform = Transform3D(0.0154281, 0, -0.999881, 0, 1, 0, 0.999881, 0, 0.0154281, -16.5435, 0.567232, -12.0339)
 
 [node name="LO_basket1" parent="Dome/garden furniture" instance=ExtResource("25_2wyq8")]
 transform = Transform3D(0.382135, 0, -0.924106, 0, 1, 0, 0.924106, 0, 0.382135, -6.38131, -1.18539, -43.6126)
