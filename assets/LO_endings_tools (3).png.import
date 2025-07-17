@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7vduhff5qvkl"
-path.s3tc="res://.godot/imported/LO_tablet_tablet_tex.png-414d4c61b92490854349ecf76721dea8.s3tc.ctex"
+uid="uid://ds84f6yn271b7"
+path.s3tc="res://.godot/imported/LO_endings_tools (3).png-6c86f41fd9fbbc3d3d19d712d80c0393.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "ae5fbffd1744ee9e39d0c29f6d686a86"
-}
 
 [deps]
 
-source_file="res://quest_props_tools/LO_tablet_tablet_tex.png"
-dest_files=["res://.godot/imported/LO_tablet_tablet_tex.png-414d4c61b92490854349ecf76721dea8.s3tc.ctex"]
+source_file="res://assets/LO_endings_tools (3).png"
+dest_files=["res://.godot/imported/LO_endings_tools (3).png-6c86f41fd9fbbc3d3d19d712d80c0393.s3tc.ctex"]
 
 [params]
 
