@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg87mk3jbx6hw"
-path.s3tc="res://.godot/imported/LO_Tree_Lemon1_tree_trunk_texture2.png-79675248669710f5402f5642a0bf1305.s3tc.ctex"
+uid="uid://dojknsdwkhrc2"
+path.s3tc="res://.godot/imported/LO_Tree_Try3_lemon_tex.png-8eb3f89760f04af901f9868e930b03c7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "524ce3826bd13f7eedbe355ef5189551"
+"md5": "161d00fdd6f9ce5e929fffd829e5bd1d"
 }
 
 [deps]
 
-source_file="res://plants/LO_Tree_Lemon1_tree_trunk_texture2.png"
-dest_files=["res://.godot/imported/LO_Tree_Lemon1_tree_trunk_texture2.png-79675248669710f5402f5642a0bf1305.s3tc.ctex"]
+source_file="res://plants/LO_Tree_Try3_lemon_tex.png"
+dest_files=["res://.godot/imported/LO_Tree_Try3_lemon_tex.png-8eb3f89760f04af901f9868e930b03c7.s3tc.ctex"]
 
 [params]
 
