@@ -126,7 +126,7 @@ mesh = SubResource("BoxMesh_f5myc")
 skeleton = NodePath("")
 
 [node name="Door" parent="." instance=ExtResource("2_0wfyh")]
-transform = Transform3D(0.255237, 0, 1.98365, 0, 2, 0, -1.98365, 0, 0.255237, -47.081, 0, -6.60223)
+transform = Transform3D(0.255237, 0, 1.98365, 0, 2, 0, -1.98365, 0, 0.255237, -47.7309, 0, -6.60223)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_jyhfs")
