@@ -61,15 +61,15 @@ func _process(float) -> void:
 		Emitter.emit_signal("display_warning")
 	# many conditions so they dont accidently turn in this part without actually doing it
 	if Input.is_action_just_pressed("interact") and near_table and Globals.lemon_picking and Globals.picked_up_star_basket:
-		for item in Globals.item:
-			if item in ["LO_Lemon1", "LO_Lemon2", "LO_Lemon3"]:
-				table_label.text = "Nice job on the lemon picking! Now find those other baskets."
-		table_label.text = "Well Done! Now Find the other baskets or exit!"
 		Emitter.emit_signal("remove_inv_asset_lemons")
 		Globals.lemon_picking = false
+		print("Lemon count", Globals.lemon_count)
 		if Globals.lemon_count >= 3:
 			Globals.returned_full_basket = true
-			print("returned full basket")
+			table_label.text = "Nice job on the lemon picking! Now find those other baskets."
+		else:
+			table_label.text = "Well Done! Now Find the other baskets or exit!"
+		Globals.lemon_count = 0
 		
 		
 func _on_area_3d_body_entered(body: Node3D) -> void:

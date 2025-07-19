@@ -94,7 +94,6 @@ func remove_asset(type_of_asset):
 			if texture.name in ["LO_Lemon1", "LO_Lemon2", "LO_Lemon3"]:
 				texture.queue_free()
 				lemons_to_remove.append(area)
-				Globals.lemon_count -= 1
 			if texture.name == "LO_basket_filled_star2":
 				texture.queue_free()
 				lemons_to_remove.append(area)

@@ -23,13 +23,14 @@ transform = Transform3D(0.655736, 0, 0, 0, 1.59426, 0, 0, 0, 0.106472, 0, 0.8095
 mesh = SubResource("BoxMesh_a202f")
 
 [node name="Detection" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.850344, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detection"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.235012, 0.460594)
 shape = SubResource("BoxShape3D_hpvv5")
 
 [node name="ContinueMessage" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860045, 0.0826165)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860045, 0.392709)
 visible = false
 text = "Continue?"
 
