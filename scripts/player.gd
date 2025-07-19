@@ -32,6 +32,7 @@ func _ready():
 	Emitter.too_many_items.connect(display_message.bind("too_many"))
 	Emitter.display_warning.connect(display_message.bind("display_lemon_warning"))
 	Emitter.bee_basket_choice.connect(display_message.bind("bee_basket"))
+	Emitter.lantern_choice.connect(display_message.bind("lantern_picking"))
 	Emitter.note_picked_up.connect(handle_note_despawn)
 	print(Globals.notes_picked_up)
 	for note in Globals.notes_picked_up:
@@ -147,6 +148,12 @@ func display_message(type):
 			clean_up.visible = true
 			var clean_up_elsewhere = message.get_child(4)
 			clean_up_elsewhere.visible = true
+		"lantern_picking":
+			label.text = "Clean Up the place or blow out the candles"
+			var clean_up = message.get_child(5)
+			clean_up.visible = true
+			var candles = message.get_child(6)
+			candles.visible = true
 			
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	camera_3d.add_child(message)

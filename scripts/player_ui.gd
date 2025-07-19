@@ -16,6 +16,7 @@ var mag = preload("res://assets/LO_inventory_mag.png")
 var lemon = preload("res://assets/LO_inventory_lemon.png")
 var pie = preload("res://assets/LO_inventory_cake.png")
 var lemon_basket = preload("res://assets/LO_inventory_basketStar.png")
+var lantern = preload("res://assets/LO_inventory_lantern.png")
 var font = preload("res://fonts/Summerti.ttf")
 var picnic_quest_was_triggered = false
 
@@ -31,6 +32,7 @@ func _process(delta: float) -> void:
 	if Globals.picnic_quest_triggered == false and picnic_quest_was_triggered == true:
 		pass
 		# add later for end of quest actions
+	
 
 func adding_to_inv():
 	var item_key = Globals.most_recent_node
@@ -63,6 +65,18 @@ func adding_to_inv():
 			make_asset(lemon)
 		"LO_pie_slice":
 			make_asset(pie)
+		"LO_lantern1":
+			Globals.lantern_count += 1
+			make_asset(lantern)
+		"LO_lantern2":
+			Globals.lantern_count += 1
+			make_asset(lantern)
+		"LO_lantern3":
+			Globals.lantern_count += 1
+			make_asset(lantern)
+		"LO_lantern4":
+			Globals.lantern_count += 1
+			make_asset(lantern)
 func quest_trigger():
 	Globals.lemon_quest_triggered = true
 	var item_node = Globals.most_recent_node

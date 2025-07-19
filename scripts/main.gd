@@ -70,6 +70,8 @@ func _process(float) -> void:
 		else:
 			table_label.text = "Well Done! Now Find the other baskets or exit!"
 		Globals.lemon_count = 0
+	if Globals.lantern_count >= 4:
+		Emitter.emit_signal("lantern_choice")
 		
 		
 func _on_area_3d_body_entered(body: Node3D) -> void:

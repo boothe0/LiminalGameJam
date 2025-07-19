@@ -37,3 +37,7 @@ var choice_picked = false
 var picnic_quest_triggered = false
 var dropped_off_workbench = false
 var dropped_off_lockers = false
+
+# Date quest variables
+var lantern_count = 0
+var lanterns_up = false
