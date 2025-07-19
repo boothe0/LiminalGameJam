@@ -8,16 +8,14 @@ extends CanvasLayer
 var area_texture_dictionary = {}
 
 var post_it = preload("res://quest_props_tools/LO_post_it_note_tex.png")
-var drill = preload("res://quest_props_tools/LO_drill_drill_tex.png")
-var mirrorstick = preload("res://quest_props_tools/LO_mirrorstick_stick_tex.png")
-var panel_opener = preload("res://quest_props_tools/LO_panel_opener_panel_opener_tex.png")
-var tether_hook = preload("res://quest_props_tools/LO_tether_hook_tex.png")
-var tether_rope = preload("res://quest_props_tools/LO_tether_rope_tex.png")
-var lemon_basket = preload("res://set_dressing_props/LO_cafe_main_shutter_tex.png")
-var mag = preload("res://quest_props_lemonade/LO_mag_mag_tex.png")
-var lemon = preload("res://quest_props_lemonade/LO_Lemon1_lemon_tex.png")
-var pie = preload("res://quest_props_cake/LO_pie_slice_pie_slice_tex.png")
-
+var drill = preload("res://assets/LO_inventory_drill.png")
+var mirrorstick = preload("res://assets/LO_inventory_mirrorstick.png")
+var panel_opener = preload("res://assets/LO_inventory_panelPpener.png")
+var tether_hook = preload("res://assets/LO_inventory_tether.png")
+var mag = preload("res://assets/LO_inventory_mag.png")
+var lemon = preload("res://assets/LO_inventory_lemon.png")
+var pie = preload("res://assets/LO_inventory_cake.png")
+var lemon_basket = preload("res://assets/LO_inventory_basketStar.png")
 var font = preload("res://fonts/Summerti.ttf")
 var picnic_quest_was_triggered = false
 
@@ -49,8 +47,6 @@ func adding_to_inv():
 			make_asset(panel_opener)
 		"tetherhookasset":
 			make_asset(tether_hook)
-		"tetherropeasset":
-			make_asset(tether_rope)
 		"LO_basket_filled_star2":
 			Globals.picked_up_star_basket = true
 			make_asset(lemon_basket)
