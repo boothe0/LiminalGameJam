@@ -2,7 +2,7 @@ extends Node3D
 @onready var table_label: Label3D = $"LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table2/TableLabel"
 @onready var mag_label: Label3D = $"Dome/garden furniture/LO_bench2/MagLabel"
 @onready var bee_label: Label3D = $LevelFloor/quest_items/LO_basket_filled2/BeeLabel
-@onready var pie_label: Label3D = $"LevelFloor/workbench tools/LO_workbench_quest/Pie_Work_Bench/PieLabel"
+@onready var pie_label: Label3D = $"LevelFloor/workbench tools/LO_workbench/Pie_Work_Bench/PieLabel"
 @onready var secondary_pie_label: Label3D = $LevelFloor/lockers/SecondaryPieLabel
 
 
@@ -16,10 +16,17 @@ extends Node3D
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var lemon_1_quest: Label3D = $LevelFloor/quest_items/LO_basket_filled_star2/Lemon1Quest
+
+@onready var workbench_label: Label3D = $LevelFloor/LO_workbench_Quest/WorkbenchLabel
+
 var near_basket = false
 var near_table = false
 var near_lockers = false
 var near_workbench = false
+
+# TOOLS QUEST
+var near_quest_workbench = false
+
 var message = preload("res://scripts/message.gd")
 const LIMINAL_JAM_NIGHT_SHIFT_MUSIC = preload("res://audio/Liminal Jam - Night Shift Concept Music.ogg")
 const LIMINAL_JAM_NIGHT_SHIFT_VARIATION = preload("res://audio/Liminal Jam - Night Shift Variation.ogg")
@@ -48,13 +55,17 @@ func _ready():
 	Emitter.date_quest_start.connect(self.lantern_monitoring)
 	Emitter.lanterns_up.connect(self.show_lanterns)
 func _process(float) -> void:
+	if Globals.lemon_quest_triggered == true:
+		lemon_1_quest.visible = true
+	
 	if Globals.lanterns_up == true:
 		Emitter.emit_signal("lanterns_up")
-	# Lemon Quest Logic
+	# LEMON QUEST
 	if Globals.lemon_picking:
 		mag_label.visible = true
 		table_label.visible = true
 		bee_label.visible = true
+	# DATE QUEST
 	if Globals.picnic_quest_triggered and "LO_pie_slice" in Globals.item:
 		pie_label.visible = true
 		secondary_pie_label.visible = true
@@ -70,6 +81,13 @@ func _process(float) -> void:
 			Globals.picnic_quest_triggered = false
 			pie_label.visible = false
 			secondary_pie_label.visible = false
+	# TOOLS QUEST
+	if Input.is_action_just_pressed("interact") and Globals.tools_quest_triggered and near_quest_workbench:
+		if "LO_drill2" in Globals.item:
+			Emitter.emit_signal("remove_drill")
+		if "LO_mirrorstick" in Globals.item:
+			Emitter.emit_signal("remove_mirrorstick")
+	
 	if Input.is_action_just_pressed("interact") and near_basket and Globals.lemon_picking:
 		# so user knows to bring back 3 lemons
 		Emitter.emit_signal("display_warning")
@@ -130,3 +148,16 @@ func show_lanterns():
 		lantern.visible = true
 	Globals.lanterns_up = false
 	Globals.lanterns_were_up = true
+
+func _on_work_area_body_entered(body: Node3D) -> void:
+	if body.name == "Player" and "LO_drill2" in Globals.item:
+		workbench_label.visible = true
+		near_quest_workbench = true
+
+	if body.name == "Player" and "LO_mirrorstick" in Globals.item:
+		workbench_label.visible = true
+		near_quest_workbench = true
+func _on_work_area_body_exited(body: Node3D) -> void:
+	if workbench_label.visible == true:
+		workbench_label.visible = false
+	near_quest_workbench = false

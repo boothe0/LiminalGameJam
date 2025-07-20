@@ -44,3 +44,8 @@ var lanterns_up = false
 var lanterns_were_up = false
 var lantern_choice_made = false
 var date_quest_triggered = false
+
+# tools quest variables
+var mirrorstick_returned = false
+var drill_returned = false
+var tools_quest_triggered = false

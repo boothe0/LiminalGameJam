@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=72 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/non_quest/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bkun8eplvffb1" path="res://plants/LO_Tree_Try3.glb" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://dedn6m75bj4xh" path="res://skybox_setup/LO_dome_struts.glb" id="16_muem4"]
 [ext_resource type="PackedScene" uid="uid://di6kr4lg4kus3" path="res://scenes/lo_basket_filled.tscn" id="17_5poiv"]
+[ext_resource type="FontFile" uid="uid://dnayjoyecpuqb" path="res://fonts/Summerti.ttf" id="17_7gqkp"]
 [ext_resource type="PackedScene" uid="uid://dbisx472sc2md" path="res://scenes/lo_basket_filled_star.tscn" id="18_5poiv"]
 [ext_resource type="PackedScene" uid="uid://befa0eh1j0fas" path="res://set_dressing_props/LO_path_rock1.glb" id="18_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://dbo3eojahc21t" path="res://plants/LO_tree_lemon_small.glb" id="18_xw5be"]
@@ -67,6 +68,9 @@ size = Vector3(1.4082, 0.436523, 1.26941)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i3a3x"]
 size = Vector3(2.29688, 1.08643, 2.26331)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tfay"]
+size = Vector3(1.99207, 1.27246, 2.00085)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xw5be"]
 size = Vector3(2.00989, 1, 2.33386)
@@ -323,26 +327,39 @@ font = ExtResource("10_7ox3u")
 [node name="PicnicNote" parent="LevelFloor" instance=ExtResource("5_o6xl0")]
 transform = Transform3D(0.882793, 0.0189118, -1.81529, -0.0152936, 0.654238, -0.111932, 0.383949, 0.0162676, 1.66723, -6.18139, 1.71907, -5.36039)
 
-[node name="LO_workbench1" parent="LevelFloor" instance=ExtResource("11_a8y0u")]
+[node name="LO_workbench_Quest" parent="LevelFloor" instance=ExtResource("11_a8y0u")]
 transform = Transform3D(0.274882, 0, -0.961478, 0, 1, 0, 0.961478, 0, 0.274882, 46.3297, 0.667262, -10.675)
+
+[node name="WorkArea" type="Area3D" parent="LevelFloor/LO_workbench_Quest"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelFloor/LO_workbench_Quest/WorkArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.348291, 0.797514, 0.458191)
+shape = SubResource("BoxShape3D_7tfay")
+
+[node name="WorkbenchLabel" type="Label3D" parent="LevelFloor/LO_workbench_Quest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.335503, 1.25287, -0.0134048)
+visible = false
+text = "Drop Off Items?"
+font = ExtResource("17_7gqkp")
+font_size = 40
 
 [node name="workbench tools" type="Node3D" parent="LevelFloor"]
 
 [node name="WorkNote" parent="LevelFloor/workbench tools" instance=ExtResource("5_o6xl0")]
 transform = Transform3D(0.447222, 0.000863491, -1.98764, -0.0152936, 0.654239, -0.111933, 0.749864, 0.00945367, 1.52028, 11.0259, 4.85607, 18.9896)
 
-[node name="LO_workbench_quest" parent="LevelFloor/workbench tools" instance=ExtResource("12_jkv2x")]
+[node name="LO_workbench" parent="LevelFloor/workbench tools" instance=ExtResource("12_jkv2x")]
 transform = Transform3D(-0.952635, 0, -0.304116, 0, 1, 0, 0.304116, 0, -0.952635, 15.8303, 0.519612, 44.749)
 
-[node name="Pie_Work_Bench" type="Node3D" parent="LevelFloor/workbench tools/LO_workbench_quest"]
+[node name="Pie_Work_Bench" type="Node3D" parent="LevelFloor/workbench tools/LO_workbench"]
 
-[node name="Work_Bench_Area" type="Area3D" parent="LevelFloor/workbench tools/LO_workbench_quest/Pie_Work_Bench"]
+[node name="Work_Bench_Area" type="Area3D" parent="LevelFloor/workbench tools/LO_workbench/Pie_Work_Bench"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelFloor/workbench tools/LO_workbench_quest/Pie_Work_Bench/Work_Bench_Area"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LevelFloor/workbench tools/LO_workbench/Pie_Work_Bench/Work_Bench_Area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0595102, 1.05123, 0.666924)
 shape = SubResource("BoxShape3D_xw5be")
 
-[node name="PieLabel" type="Label3D" parent="LevelFloor/workbench tools/LO_workbench_quest/Pie_Work_Bench"]
+[node name="PieLabel" type="Label3D" parent="LevelFloor/workbench tools/LO_workbench/Pie_Work_Bench"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.41306, 0)
 visible = false
 text = "Drop Off Pie?"
@@ -707,7 +724,10 @@ transform = Transform3D(0.7418, 0, 0.670621, 0, 1, 0, -0.670621, 0, 0.7418, 24.4
 
 [node name="Lemon1Quest" type="Label3D" parent="LevelFloor/quest_items/LO_basket_filled_star2"]
 transform = Transform3D(0.0167464, 0, 0.299532, 0, 0.3, 0, -0.299532, 0, 0.0167464, 0.169003, 0.298252, -0.0283985)
+visible = false
 text = "Bring back 3 lemons for this basket or just bring back!"
+font = ExtResource("17_7gqkp")
+font_size = 40
 
 [node name="Area3D" type="Area3D" parent="LevelFloor/quest_items/LO_basket_filled_star2/Lemon1Quest"]
 
@@ -3305,6 +3325,8 @@ mesh = SubResource("QuadMesh_5he1u")
 [connection signal="body_entered" from="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table6/TableArea" to="." method="_on_table_area_body_entered"]
 [connection signal="body_exited" from="LevelFloor/cafe bar/LO_cafe_main/cafe seating/LO_cafe_table6/TableArea" to="." method="_on_table_area_body_exited"]
 [connection signal="body_entered" from="LevelFloor/lockers/LO_locker_tall5/Pie_Lockers/Locker_Pie_Deliver" to="." method="_on_locker_pie_deliver_body_entered"]
-[connection signal="body_entered" from="LevelFloor/workbench tools/LO_workbench_quest/Pie_Work_Bench/Work_Bench_Area" to="." method="_on_work_bench_area_body_entered"]
+[connection signal="body_entered" from="LevelFloor/LO_workbench_Quest/WorkArea" to="." method="_on_work_area_body_entered"]
+[connection signal="body_exited" from="LevelFloor/LO_workbench_Quest/WorkArea" to="." method="_on_work_area_body_exited"]
+[connection signal="body_entered" from="LevelFloor/workbench tools/LO_workbench/Pie_Work_Bench/Work_Bench_Area" to="." method="_on_work_bench_area_body_entered"]
 [connection signal="body_entered" from="LevelFloor/quest_items/LO_basket_filled_star2/Lemon1Quest/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="LevelFloor/quest_items/LO_basket_filled_star2/Lemon1Quest/Area3D" to="." method="_on_area_3d_body_exited"]

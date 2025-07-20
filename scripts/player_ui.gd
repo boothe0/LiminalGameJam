@@ -27,6 +27,8 @@ func _ready():
 	Emitter.item_picked_up.connect(self.adding_to_inv)
 	Emitter.remove_inv_asset_lemons.connect(self.remove_asset.bind("lemon_basket_2"))
 	Emitter.remove_inv_lemon_pie.connect(self.remove_asset.bind("lemon_pie"))
+	Emitter.remove_drill.connect(self.remove_asset.bind("drill"))
+	Emitter.remove_mirrorstick.connect(self.remove_asset.bind("mirrorstick"))
 
 func _process(delta: float) -> void:
 	if Globals.picnic_quest_triggered == false and picnic_quest_was_triggered == true:
@@ -85,6 +87,7 @@ func quest_trigger():
 			Emitter.emit_signal("date_quest_start")
 			date_night_quest()
 		"WorkNote":
+			Globals.tools_quest_triggered = true
 			tools_quest()
 		"LemonNote":
 			Globals.lemon_quest_triggered = true
@@ -116,13 +119,23 @@ func remove_asset(type_of_asset):
 		for lemon in lemons_to_remove:
 			area_texture_dictionary.erase(lemon)
 		print(Globals.lemon_count)
-	if type_of_asset == "lemon_pie":
-		var areas = area_texture_dictionary.keys()  # get a list to avoid modifying while iterating
-		for area in areas:
-			var texture = area_texture_dictionary[area]
-			if texture.name == "LO_pie_slice":
-				texture.queue_free()
-				area_texture_dictionary.erase(area)
+	var areas = area_texture_dictionary.keys()  # get a list to avoid modifying while iterating
+	for area in areas:
+		var texture = area_texture_dictionary[area]
+		if texture.name == "LO_pie_slice" and type_of_asset == "lemon_pie":
+			texture.queue_free()
+			area_texture_dictionary.erase(area)
+		if texture.name == "LO_drill2" and type_of_asset == "drill":
+			texture.queue_free()
+			area_texture_dictionary.erase(area)
+			Globals.drill_returned = true
+		if texture.name == "LO_mirrorstick" and type_of_asset == "mirrorstick":
+			texture.queue_free()
+			area_texture_dictionary.erase(area)
+			Globals.mirrorstick_returned = true
+	#if type_of_asset == "lemon_pie" or type_of_asset == "drill" or type_of_asset == "mirrorstick":
+
+	
 func date_night_quest():
 	var v_box = VBoxContainer.new()
 	var quest_title = Label.new()
