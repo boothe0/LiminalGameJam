@@ -55,7 +55,7 @@ func _ready():
 	Emitter.date_quest_start.connect(self.lantern_monitoring)
 	Emitter.lanterns_up.connect(self.show_lanterns)
 func _process(float) -> void:
-	if Globals.lemon_quest_triggered == true:
+	if lemon_1_quest and Globals.lemon_quest_triggered == true:
 		lemon_1_quest.visible = true
 	
 	if Globals.lanterns_up == true:
