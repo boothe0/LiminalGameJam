@@ -21,6 +21,11 @@ Globals="*res://scripts/globals.gd"
 Emitter="*res://scripts/emitter.gd"
 FadeEffectTransition="*res://scenes/non_quest/fade_effect_transition.tscn"
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="viewport"
+
 [input]
 
 forward={
