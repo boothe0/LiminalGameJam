@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=70 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/non_quest/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -50,6 +50,7 @@
 [ext_resource type="Texture2D" uid="uid://ds84f6yn271b7" path="res://assets/LO_endings_tools (3).png" id="31_hnavv"]
 [ext_resource type="Texture2D" uid="uid://ch432luat3vlu" path="res://assets/LO_endings_tools (4).png" id="32_kpbb4"]
 [ext_resource type="Texture2D" uid="uid://bdpjhubw2hn3q" path="res://assets/LO_endings_tools (5).png" id="33_01pcv"]
+[ext_resource type="PackedScene" uid="uid://rmgvs3k5iixo" path="res://scenes/lo_lantern.tscn" id="36_7tfay"]
 [ext_resource type="PackedScene" uid="uid://c35mbkj30tmse" path="res://furniture/LO_outdoor_floor_lamp.glb" id="37_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://dsjn2s146x6s8" path="res://set_dressing_props/LO_attachment.glb" id="37_fuf3a"]
 [ext_resource type="Texture2D" uid="uid://deoqlr6gjaf0y" path="res://assets/LO_level_001c.jpg" id="38_pibwh"]
@@ -757,17 +758,51 @@ surface_material_override/0 = SubResource("StandardMaterial3D_01pcv")
 [node name="LO_picnic" parent="LevelFloor/quest_items" instance=ExtResource("22_dgi5k")]
 transform = Transform3D(0.999982, -0.00601693, -0.000230621, 0.00602135, 0.999248, 0.0382999, 0, -0.0383006, 0.999266, -26.6519, 1.0693, 3.12425)
 
-[node name="LO_lantern1" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("23_j8jky")]
-transform = Transform3D(0.0284974, -0.999594, 1.75046e-09, 0.99886, 0.0284764, -0.0383006, 0.0382851, 0.00109147, 0.999266, 0.926287, 0.0145972, -0.127126)
+[node name="LO_lantern3" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("36_7tfay")]
+transform = Transform3D(0.804341, -0.593278, -0.0325131, 0.0177553, -0.0306961, 0.999371, -0.593903, -0.804412, -0.0141563, 1.35345, 0.00986552, -0.470177)
 
-[node name="LO_lantern2" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("23_j8jky")]
-transform = Transform3D(0.0225626, -0.735633, -0.677005, 0.998313, 0.0528118, -0.0241145, 0.0534933, -0.675319, 0.735583, 1.07421, 0.0259961, -0.447778)
+[node name="LO_lantern2" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("36_7tfay")]
+transform = Transform3D(0.591806, -0.804748, -0.0463336, 0.0271509, -0.0375469, 0.998926, -0.805623, -0.592429, -0.00037086, 1.15176, 0.00636166, -0.347055)
 
-[node name="LO_lantern3" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("23_j8jky")]
-transform = Transform3D(0.0160085, -0.444129, -0.89582, 0.998164, 0.0594366, -0.0116301, 0.0584098, -0.893989, 0.444265, 1.36797, 0.0254256, -0.479075)
+[node name="LO_lantern4" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("36_7tfay")]
+transform = Transform3D(0.970386, 0.240566, 0.0218741, -0.015249, -0.0293668, 0.999453, 0.241077, -0.970189, -0.0248287, 1.61686, 0.00890082, -0.486421)
 
-[node name="LO_lantern4" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("23_j8jky")]
-transform = Transform3D(-9.05977e-05, 0.271906, -0.962324, 0.998203, 0.0576747, 0.0162021, 0.0599073, -0.960594, -0.271423, 1.61799, 0.0238414, -0.477051)
+[node name="LO_lantern1" parent="LevelFloor/quest_items/LO_picnic" instance=ExtResource("36_7tfay")]
+transform = Transform3D(0.0201228, -0.998054, -0.0590281, 0.0380106, -0.0582336, 0.99758, -0.999075, -0.0223182, 0.0367647, 0.915731, -0.000426292, -0.13285)
+
+[node name="InvisibleLanterns" type="Node3D" parent="LevelFloor/quest_items/LO_picnic"]
+
+[node name="LO_lanternInv" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns" instance=ExtResource("23_j8jky")]
+transform = Transform3D(1, 2.33722e-09, 1.4569e-10, 4.67009e-09, 1, -3.72529e-08, -2.06024e-10, -4.09782e-08, 1, 0.828754, 1.70318, -2.60247)
+visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns/LO_lanternInv"]
+transform = Transform3D(1, -6.50811e-09, -1.45306e-10, 1.48035e-11, 1, 7.45058e-08, -5.15304e-11, 0, 1, -0.0118694, -0.000592232, 0.0173206)
+light_color = Color(1, 0.627451, 0.0196078, 1)
+
+[node name="LO_lanternInv2" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns" instance=ExtResource("23_j8jky")]
+transform = Transform3D(1, 1.87156e-09, 1.16586e-10, 3.73551e-09, 1, -2.98023e-08, -1.64664e-10, -3.35276e-08, 1, -2.20769, 1.37058, -1.64608)
+visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns/LO_lanternInv2"]
+transform = Transform3D(1, -6.50811e-09, -1.45306e-10, 1.48035e-11, 1, 7.45058e-08, -5.15304e-11, 0, 1, -0.0118694, -0.000592232, 0.0173206)
+light_color = Color(1, 0.627451, 0.0196078, 1)
+
+[node name="LO_lanternInv3" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns" instance=ExtResource("23_j8jky")]
+transform = Transform3D(1, 3.03938e-06, -0.000101683, -4.74966e-06, 0.999857, -0.0168937, 0.000101617, 0.0168936, 0.999857, 3.6378, 1.80958, 0.595662)
+visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns/LO_lanternInv3"]
+transform = Transform3D(1, -6.50811e-09, -1.45306e-10, 1.48035e-11, 1, 7.45058e-08, -5.15304e-11, 0, 1, -0.0118694, -0.000592232, 0.0173206)
+light_color = Color(1, 0.627451, 0.0196078, 1)
+
+[node name="LO_lanternInv4" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns" instance=ExtResource("23_j8jky")]
+transform = Transform3D(1, 1.87156e-09, 1.16586e-10, 3.73551e-09, 1, -2.98023e-08, -1.64664e-10, -3.35276e-08, 1, 2.1335, 1.75749, 1.75536)
+visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns/LO_lanternInv4"]
+transform = Transform3D(1, -6.50811e-09, -1.45306e-10, 1.48035e-11, 1, 7.45058e-08, -5.15304e-11, 0, 1, -0.0118694, -0.000592232, 0.0173206)
+light_color = Color(1, 0.627451, 0.0196078, 1)
 
 [node name="LO_phone" parent="LevelFloor/quest_items" instance=ExtResource("10_j8jky")]
 transform = Transform3D(1, -9.31323e-10, 4.47035e-08, 6.51926e-09, 1, -1.04774e-08, 8.9407e-08, -1.62981e-09, 1, -8.06635, -0.148114, -39.9906)

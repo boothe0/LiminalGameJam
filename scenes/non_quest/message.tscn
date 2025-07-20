@@ -95,6 +95,42 @@ theme_override_font_sizes/font_size = 30
 text = "Clean up and put lemons elsewhere"
 metadata/_edit_use_anchors_ = true
 
+[node name="LanternsPutUp" type="Button" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = 76.0
+offset_right = -31.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_tj534")
+theme_override_font_sizes/font_size = 30
+text = "Put up the lanterns?"
+
+[node name="Candles" type="Button" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 74.0
+offset_top = 76.0
+offset_right = 379.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_tj534")
+theme_override_font_sizes/font_size = 30
+text = "Candles Blow Out?"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="LemonsLeave" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="LemonsLeave" to="." method="_on_lemons_leave_pressed"]
@@ -102,3 +138,7 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="CleanUP" to="." method="_on_clean_up_pressed"]
 [connection signal="pressed" from="CleanUP2" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CleanUP2" to="." method="_on_clean_up_2_pressed"]
+[connection signal="pressed" from="LanternsPutUp" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="LanternsPutUp" to="." method="_on_lanterns_put_up_pressed"]
+[connection signal="pressed" from="Candles" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Candles" to="." method="_on_candles_pressed"]

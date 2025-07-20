@@ -8,12 +8,19 @@ extends Node
 @onready var label_3d_2: Label3D = get_node(label_3d_2_path)
 @export var label_3d_path: NodePath
 @onready var label_3d: Label3D = get_node(label_3d_path)
+
+
+
+
+
 var message = preload("res://scenes/non_quest/message.tscn")
 func _ready() -> void:
 	area.body_entered.connect(_on_area_3d_body_entered)
 	area.body_exited.connect(_on_area_3d_body_exited)
 func _process(delta: float) -> void:
 
+
+	
 	# making sure the player is near the interactable by checking the label
 	if Input.is_action_just_pressed("interact") and label_3d_2.visible == true and Globals.can_interact:
 		# debug statement
@@ -50,6 +57,10 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name == "Player" and self.name == "LO_basket_filled2" and Globals.choice_picked == false and Globals.lemon_quest_triggered == true:
 		Emitter.emit_signal("bee_basket_choice")
 
+
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.name == "Player":
 		label_3d_2.visible = false
+	if Globals.lantern_count >= 4 and Globals.lantern_choice_made == false and Globals.date_quest_triggered:
+		Emitter.emit_signal("lantern_choice")
+		

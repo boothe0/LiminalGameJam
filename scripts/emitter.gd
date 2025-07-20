@@ -19,3 +19,7 @@ signal remove_inv_asset_lemons
 signal remove_inv_lemon_pie
 
 signal bee_basket_choice
+
+signal lantern_choice
+signal date_quest_start
+signal lanterns_up
