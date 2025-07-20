@@ -78,14 +78,16 @@ func adding_to_inv():
 			Globals.lantern_count += 1
 			make_asset(lantern)
 func quest_trigger():
-	Globals.lemon_quest_triggered = true
 	var item_node = Globals.most_recent_node
 	match item_node:
 		"DateNote":
+			Globals.date_quest_triggered = true
+			Emitter.emit_signal("date_quest_start")
 			date_night_quest()
 		"WorkNote":
 			tools_quest()
 		"LemonNote":
+			Globals.lemon_quest_triggered = true
 			lemon_picking_quest()
 		"PicnicNote":
 			lemon_cake_quest()

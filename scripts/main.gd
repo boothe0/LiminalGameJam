@@ -5,6 +5,15 @@ extends Node3D
 @onready var pie_label: Label3D = $"LevelFloor/workbench tools/LO_workbench_quest/Pie_Work_Bench/PieLabel"
 @onready var secondary_pie_label: Label3D = $LevelFloor/lockers/SecondaryPieLabel
 
+
+@onready var lo_lantern_1: Node3D = $LevelFloor/quest_items/LO_picnic/LO_lantern1
+@onready var lo_lantern_2: Node3D = $LevelFloor/quest_items/LO_picnic/LO_lantern2
+@onready var lo_lantern_3: Node3D = $LevelFloor/quest_items/LO_picnic/LO_lantern3
+@onready var lo_lantern_4: Node3D = $LevelFloor/quest_items/LO_picnic/LO_lantern4
+@onready var invisible_lanterns: Node3D = $LevelFloor/quest_items/LO_picnic/InvisibleLanterns
+
+
+
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var lemon_1_quest: Label3D = $LevelFloor/quest_items/LO_basket_filled_star2/Lemon1Quest
 var near_basket = false
@@ -35,7 +44,12 @@ func _ready():
 	Globals.can_interact = true
 	Globals.number_items = 0
 	
+	# emitters
+	Emitter.date_quest_start.connect(self.lantern_monitoring)
+	Emitter.lanterns_up.connect(self.show_lanterns)
 func _process(float) -> void:
+	if Globals.lanterns_up == true:
+		Emitter.emit_signal("lanterns_up")
 	# Lemon Quest Logic
 	if Globals.lemon_picking:
 		mag_label.visible = true
@@ -70,9 +84,7 @@ func _process(float) -> void:
 		else:
 			table_label.text = "Well Done! Now Find the other baskets or exit!"
 		Globals.lemon_count = 0
-	if Globals.lantern_count >= 4:
-		Emitter.emit_signal("lantern_choice")
-		
+
 		
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
@@ -100,3 +112,21 @@ func _on_locker_pie_deliver_body_entered(body: Node3D) -> void:
 func _on_work_bench_area_body_entered(body: Node3D) -> void:
 	if body.name == "Player" and "LO_pie_slice" in Globals.item:
 		near_workbench = true
+func lantern_monitoring():
+	var area1 = lo_lantern_1.get_child(1)
+	area1.monitoring = true
+		
+	var area2 = lo_lantern_2.get_child(1)
+	area2.monitoring = true
+			
+	var area3 = lo_lantern_3.get_child(1)
+	area3.monitoring = true
+			
+	var area4 = lo_lantern_4.get_child(1)
+	area4.monitoring = true
+	
+func show_lanterns():
+	for lantern in invisible_lanterns.get_children():
+		lantern.visible = true
+	Globals.lanterns_up = false
+	Globals.lanterns_were_up = true

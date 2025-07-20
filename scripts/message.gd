@@ -3,8 +3,9 @@ extends CanvasLayer
 @onready var clean_up: Button = $CleanUP
 @onready var clean_up_2: Button = $CleanUP2
 @onready var put_up_lanterns: Button = $PutUpLanterns
-@onready var blow_out_candles: Button = $BlowOutCandles
-@onready var button: Button = $Button
+@onready var lanterns_put_up: Button = $LanternsPutUp
+@onready var candles: Button = $Candles
+
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -16,7 +17,11 @@ func _on_button_pressed() -> void:
 		lemons_leave.visible = false
 		clean_up.visible = false
 		clean_up_2.visible = false
+	if candles.visible == true:
+		candles.visible = false
+		lanterns_put_up.visible = false
 	self.queue_free()
+	print("Button pressed")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
@@ -36,12 +41,13 @@ func _on_clean_up_2_pressed() -> void:
 	Globals.choice_picked = true
 	print("Put away lemons")
 
-
-func _on_put_up_lanterns_pressed() -> void:
+func _on_lanterns_put_up_pressed() -> void:
 	Globals.lantern_count = 0
 	Globals.lanterns_up = true
-	
+	Globals.lantern_choice_made = true
+	print("Put up lanterns")
 
-
-func _on_blow_out_candles_pressed() -> void:
+func _on_candles_pressed() -> void:
 	Globals.lantern_count = 0
+	print("Blew out candles")
+	Globals.lantern_choice_made = true
