@@ -23,3 +23,6 @@ signal bee_basket_choice
 signal lantern_choice
 signal date_quest_start
 signal lanterns_up
+
+signal remove_drill
+signal remove_mirrorstick
