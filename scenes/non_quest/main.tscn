@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=60 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/non_quest/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -45,8 +45,10 @@
 [ext_resource type="PackedScene" uid="uid://dib8g7jl1tgdv" path="res://quest_props_lemonade/LO_basket_filled.glb" id="28_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://druaignotkvd8" path="res://scenes/lo_lemon.tscn" id="28_e3qwn"]
 [ext_resource type="PackedScene" uid="uid://dqqn3fj6mcqh6" path="res://quest_props_tools/LO_candy_compartment.glb" id="30_84tei"]
+[ext_resource type="PackedScene" uid="uid://dkmk6yft4vd5f" path="res://quest_props_tools/LO_tree_tether.glb" id="36_27gbm"]
 [ext_resource type="PackedScene" uid="uid://c35mbkj30tmse" path="res://furniture/LO_outdoor_floor_lamp.glb" id="37_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://dsjn2s146x6s8" path="res://set_dressing_props/LO_attachment.glb" id="37_fuf3a"]
+[ext_resource type="PackedScene" uid="uid://b85tkeo7hgmgo" path="res://quest_props_tools/LO_tether.glb" id="37_hnavv"]
 [ext_resource type="Texture2D" uid="uid://deoqlr6gjaf0y" path="res://assets/LO_level_001c.jpg" id="38_pibwh"]
 [ext_resource type="PackedScene" uid="uid://ck6r62o178u1g" path="res://plants/LO_grass1.glb" id="45_pr4t1"]
 
@@ -339,7 +341,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.0176, -4.06943, 3.3239)
 transform = Transform3D(-0.010943, 0, 0.99994, 0, 1, 0, -0.99994, 0, -0.010943, -38.5376, -4.6284, -20.8384)
 
 [node name="LO_tree_lemon_small7" parent="LevelFloor/trees_final/smaller_lemontrees" instance=ExtResource("18_xw5be")]
-transform = Transform3D(-0.304964, 0, 0.952364, 0, 1, 0, -0.952364, 0, -0.304964, -29.8179, -4.06943, -17.71)
+transform = Transform3D(-0.304964, 0, 0.952364, 0, 1, 0, -0.952364, 0, -0.304964, -29.8179, -4.62693, -17.71)
 
 [node name="LO_tree_lemon_small8" parent="LevelFloor/trees_final/smaller_lemontrees" instance=ExtResource("18_xw5be")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8907, -4.42709, -7.72554)
@@ -441,10 +443,10 @@ transform = Transform3D(0.928978, 0, 0.370136, 0, 1, 0, -0.370136, 0, 0.928978, 
 transform = Transform3D(0.928978, 0, 0.370136, 0, 1, 0, -0.370136, 0, 0.928978, -19.8834, -1.17865, -6.12083)
 
 [node name="LO_tree_lemon_small50" parent="LevelFloor/trees_final/smaller_lemontrees" instance=ExtResource("18_xw5be")]
-transform = Transform3D(0.928978, 0, 0.370136, 0, 1, 0, -0.370136, 0, 0.928978, 27.1166, -1.17865, 0.879173)
+transform = Transform3D(0.928978, 0, 0.370136, 0, 1, 0, -0.370136, 0, 0.928978, 27.1166, -3.42883, 0.879173)
 
 [node name="LO_tree_lemon_small51" parent="LevelFloor/trees_final/smaller_lemontrees" instance=ExtResource("18_xw5be")]
-transform = Transform3D(0.794308, 0, -0.607515, 0, 1, 0, 0.607515, 0, 0.794308, 24.1166, -1.17865, 4.87917)
+transform = Transform3D(0.794308, 0, -0.607515, 0, 1, 0, 0.607515, 0, 0.794308, 24.1166, -2.46224, 4.87917)
 
 [node name="LO_tree_lemon_small52" parent="LevelFloor/trees_final/smaller_lemontrees" instance=ExtResource("18_xw5be")]
 transform = Transform3D(0.794308, 0, -0.607515, 0, 1, 0, 0.607515, 0, 0.794308, 40.4952, -1.17865, -14.6602)
@@ -465,7 +467,7 @@ transform = Transform3D(0.897181, 0, -0.441662, 0, 1, 0, 0.441662, 0, 0.897181, 
 transform = Transform3D(-0.317073, 0, 0.948401, 0, 1, 0, -0.948401, 0, -0.317073, 24.5301, -3.56707, 34.4135)
 
 [node name="LO_tree_lemon_small20" parent="LevelFloor/trees_final/smaller_lemontrees" instance=ExtResource("18_xw5be")]
-transform = Transform3D(0.808247, 0, 0.588844, 0, 1, 0, -0.588844, 0, 0.808247, 8.76717, -3.35012, -0.27828)
+transform = Transform3D(0.808247, 0, 0.588844, 0, 1, 0, -0.588844, 0, 0.808247, 8.76717, -3.09718, -0.27828)
 
 [node name="LO_tree_lemon_small21" parent="LevelFloor/trees_final/smaller_lemontrees" instance=ExtResource("18_xw5be")]
 transform = Transform3D(0.64663, 0, 0.762804, 0, 1, 0, -0.762804, 0, 0.64663, 12.2284, -4.06943, 3.84862)
@@ -575,7 +577,7 @@ transform = Transform3D(0.894513, 0, -0.447041, 0, 1, 0, 0.447041, 0, 0.894513, 
 transform = Transform3D(0.0306777, 0, -0.999529, 0, 1, 0, 0.999529, 0, 0.0306777, -38.2263, -4.33033, 9.16175)
 
 [node name="LO_Tree_Try16" parent="LevelFloor/trees_final/tall_lemontrees" instance=ExtResource("16_jbj1t")]
-transform = Transform3D(-0.0334343, 0, -0.999441, 0, 1, 0, 0.999441, 0, -0.0334343, -41.1303, -3.95045, 0.113436)
+transform = Transform3D(-0.0334343, 0, -0.999441, 0, 1, 0, 0.999441, 0, -0.0334343, -41.1303, -4.184, 0.113436)
 
 [node name="LO_Tree_Try17" parent="LevelFloor/trees_final/tall_lemontrees" instance=ExtResource("16_jbj1t")]
 transform = Transform3D(-0.893998, 0, 0.448071, 0, 1, 0, -0.448071, 0, -0.893998, -8.56615, -4.34312, -0.339375)
@@ -590,7 +592,7 @@ transform = Transform3D(-0.643857, 0, -0.765146, 0, 1, 0, 0.765146, 0, -0.643857
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.18919, -3.89815, -9.33909)
 
 [node name="LO_Tree_Try21" parent="LevelFloor/trees_final/tall_lemontrees" instance=ExtResource("16_jbj1t")]
-transform = Transform3D(-0.744137, 0, -0.668027, 0, 1, 0, 0.668027, 0, -0.744137, 1.81081, -4.06715, -7.33909)
+transform = Transform3D(-0.744137, 0, -0.668027, 0, 1, 0, 0.668027, 0, -0.744137, 1.81081, -4.1136, -7.33909)
 
 [node name="LO_Tree_Try22" parent="LevelFloor/trees_final/tall_lemontrees" instance=ExtResource("16_jbj1t")]
 transform = Transform3D(0.47395, 0, -0.880552, 0, 1, 0, 0.880552, 0, 0.47395, 17.8108, -1.51357, 5.66091)
@@ -742,15 +744,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3265, 0.49132, -12.1258)
 [node name="LO_pie_slice" parent="LevelFloor/quest_items" instance=ExtResource("13_i3a3x")]
 transform = Transform3D(0.898817, -0.039631, 0.436529, 0.0516479, 0.998543, -0.015689, -0.435272, 0.0366474, 0.899553, -7.56442, -0.0276479, -43.6907)
 
+[node name="LO_tree_tether" parent="LevelFloor/quest_items" instance=ExtResource("36_27gbm")]
+transform = Transform3D(-0.188084, 0, -0.982153, 0, 1, 0, 0.982153, 0, -0.188084, 24.8794, 1.20159, -3.77439)
+
+[node name="LO_tether" parent="LevelFloor/quest_items" instance=ExtResource("37_hnavv")]
+transform = Transform3D(0.996766, 0.0803555, 0, -0.0803555, 0.996766, 0, 0, 0, 1, 25.8813, 1.37602, -3.24766)
+
 [node name="space_sky_sketch" type="WorldEnvironment" parent="."]
 environment = ExtResource("6_tefeu")
 
 [node name="Dome" type="Node3D" parent="."]
 
 [node name="LO_dome" parent="Dome" instance=ExtResource("15_jkv2x")]
+visible = false
 
 [node name="LO_dome_struts" parent="Dome" instance=ExtResource("16_muem4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.114722, 0)
+visible = false
 
 [node name="paths" type="Node3D" parent="Dome"]
 
