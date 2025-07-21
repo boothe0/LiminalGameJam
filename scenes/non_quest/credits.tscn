@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://ts34nvobmc7n"]
+
+[ext_resource type="Script" uid="uid://ihi3of4liya0" path="res://scenes/non_quest/credits.gd" id="1_c1t8d"]
+[ext_resource type="Theme" uid="uid://cq2cf2c32gsew" path="res://scenes/main_menu_style.tres" id="1_nm7lk"]
+[ext_resource type="Texture2D" uid="uid://sigdyv0ifs50" path="res://assets/LO_Title_Screen.png" id="2_g4wvt"]
+[ext_resource type="FontFile" uid="uid://dnayjoyecpuqb" path="res://fonts/Summerti.ttf" id="4_pjc1l"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c1t8d")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_g4wvt")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 112.0
+offset_right = 1143.0
+offset_bottom = 540.0
+
+[node name="Label" type="Label" parent="ScrollContainer"]
+layout_mode = 2
+theme = ExtResource("1_nm7lk")
+theme_override_fonts/font = ExtResource("4_pjc1l")
+theme_override_font_sizes/font_size = 20
+text = "Art, game design, writing: Jennifer S. Lange
+Programming: Elizabeth Booth
+Audio: CormalvaMusic
+
+3D Assets
+Free Stylized Forest Kit by Asset Quest
+Lockers by hotgreentea
+Spacesuit by cgscalrod
+Basket by Lisenka
+Porto Chair by Eduardo Baroni
+Drill By Denis Gomez
+Phone by Seit Verivel
+Swivel hook by jaco kwoh
+Star by Aung Min Khant
+Smartphone by Piotr Devyatovsky
+Workbench by kavirajsaini
+Multitool by 3DHaupt
+Pliers by salim-benyoucef
+Sanding handholder by anubis-dabao
+Welding machine by lifevkife
+Denso 4-Axis SCARA Robots HS45452 by anyKolab
+Multimeter by 3DBullet
+Garden gloves by wheelsflash
+Surgical pliers by nieves3w
+Vernier caliper by powerfrominfinity
+Low poly tool set by etodd
+Cable coil by lvvrvlad
+PKE Meter by kropaman
+Microwave by toxicofox05
+Roller garage door by sreyrothsor2
+Paper lantern by MayaZ
+Picnic scene by colormori
+Basic pumpkin slice by firedorn-art
+Magazine by bruno-castahari
+Tablet by Ximira
+Sweets by Jonjo Hennes
+Table, bench by chocofur
+Trolley by Opi-
+Airlock by angeloferretti
+Beehive by driesnel4"
+
+[node name="back button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 576.0
+offset_right = 177.0
+offset_bottom = 622.0
+theme = ExtResource("1_nm7lk")
+text = "Back to Main Menu"
+alignment = 0
+
+[connection signal="pressed" from="back button" to="." method="_on_back_button_pressed"]
