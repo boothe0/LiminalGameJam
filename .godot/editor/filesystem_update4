@@ -1,3 +1,9 @@
 res://scenes/non_quest/main.tscn
 res://scenes/main_menu_style.tres
 res://skybox_setup/sky.tres
+res://scenes/non_quest/main_menu.tscn
+res://scenes/non_quest/intro.tscn
+res://credits.tscn
+res://credits.gd
+res://scripts/ui.gd
+res://scenes/non_quest/credits.tscn

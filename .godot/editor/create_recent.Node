@@ -1,4 +1,9 @@
-MeshInstance3D
-Node3D
+Button
 TextureRect
+Label
+VBoxContainer
+ScrollContainer
+Control
+Node3D
+MeshInstance3D
 Sprite3D
