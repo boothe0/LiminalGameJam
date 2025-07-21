@@ -991,11 +991,9 @@ environment = ExtResource("6_tefeu")
 [node name="Dome" type="Node3D" parent="."]
 
 [node name="LO_dome" parent="Dome" instance=ExtResource("15_jkv2x")]
-visible = false
 
 [node name="LO_dome_struts" parent="Dome" instance=ExtResource("16_muem4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.114722, 0)
-visible = false
 
 [node name="paths" type="Node3D" parent="Dome"]
 
