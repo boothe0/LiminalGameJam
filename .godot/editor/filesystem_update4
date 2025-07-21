@@ -1,3 +1,16 @@
-res://scenes/non_quest/main.tscn
+res://meshes/mirrorstick.res
+res://meshes/grass_small.res
 res://scenes/main_menu_style.tres
 res://skybox_setup/sky.tres
+res://scenes/lo_tether.tscn
+res://scenes/non_quest/main.tscn
+res://scripts/item_handling.gd
+res://scripts/player_ui.gd
+res://scripts/globals.gd
+res://scripts/main.gd
+res://scripts/emitter.gd
+res://scenes/non_quest/main_menu.tscn
+res://scenes/non_quest/intro.tscn
+res://scenes/lo_lantern.tscn
+res://scenes/lo_panel_opener.tscn
+res://scenes/lo_mag.tscn

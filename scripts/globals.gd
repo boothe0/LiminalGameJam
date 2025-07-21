@@ -49,3 +49,5 @@ var date_quest_triggered = false
 var mirrorstick_returned = false
 var drill_returned = false
 var tools_quest_triggered = false
+var tether_returned = false
+var panel_opener_returned = false
