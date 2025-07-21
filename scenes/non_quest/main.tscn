@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://b7gxb8s3kfgwh"]
+[gd_scene load_steps=101 format=3 uid="uid://b7gxb8s3kfgwh"]
 
 [ext_resource type="PackedScene" uid="uid://dewwokd62pf8t" path="res://scenes/non_quest/player.tscn" id="1_o00rs"]
 [ext_resource type="Script" uid="uid://nhd3heorschy" path="res://scripts/main.gd" id="1_sugp2"]
@@ -6,8 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://52sdf766bulm" path="res://audio/Liminal Jam - Night Shift Concept Music.ogg" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://drow2luecl41x" path="res://scenes/non_quest/note_asset.tscn" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://n3a27p6ob2dp" path="res://set_dressing_props/LO_cafe_main.glb" id="6_85g3d"]
+[ext_resource type="PackedScene" uid="uid://di3y28x2o4ivk" path="res://quest_props_lemonade/LO_notes_beefood.glb" id="6_872q0"]
 [ext_resource type="Environment" uid="uid://bhrb4ick732vx" path="res://skybox_setup/sky_enviro.tres" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://b0n1wom0m40ep" path="res://set_dressing_props/LO_cafe_cubes.glb" id="7_choun"]
+[ext_resource type="PackedScene" uid="uid://c1bwcmtytfo57" path="res://quest_props_lemonade/LO_notes_bee_cafe.glb" id="7_porst"]
 [ext_resource type="PackedScene" uid="uid://d3dqe7qfdoqmb" path="res://furniture/LO_cafe_table.glb" id="8_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://c46rpf0uicpt6" path="res://furniture/LO_cafe_chair.glb" id="9_eb6dy"]
 [ext_resource type="FontFile" uid="uid://07s78ct06jd1" path="res://fonts/BLOCKSS.otf" id="10_7ox3u"]
@@ -28,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://dedn6m75bj4xh" path="res://skybox_setup/LO_dome_struts.glb" id="16_muem4"]
 [ext_resource type="PackedScene" uid="uid://di6kr4lg4kus3" path="res://scenes/lo_basket_filled.tscn" id="17_5poiv"]
 [ext_resource type="FontFile" uid="uid://dnayjoyecpuqb" path="res://fonts/Summerti.ttf" id="17_7gqkp"]
+[ext_resource type="PackedScene" uid="uid://davhxyb3pxg6p" path="res://quest_props_cake/LO_notes_cake.glb" id="18_0uifx"]
 [ext_resource type="PackedScene" uid="uid://dbisx472sc2md" path="res://scenes/lo_basket_filled_star.tscn" id="18_5poiv"]
 [ext_resource type="PackedScene" uid="uid://befa0eh1j0fas" path="res://set_dressing_props/LO_path_rock1.glb" id="18_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://dbo3eojahc21t" path="res://plants/LO_tree_lemon_small.glb" id="18_xw5be"]
@@ -39,6 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://c3x7kd8bj21wm" path="res://quest_props_tools/LO_tablet.glb" id="21_j8jky"]
 [ext_resource type="PackedScene" uid="uid://ghlye1xi6414" path="res://furniture/LO_bench.glb" id="21_jscy8"]
 [ext_resource type="PackedScene" uid="uid://cfsip6aajtpto" path="res://quest_props_date/LO_picnic.glb" id="22_dgi5k"]
+[ext_resource type="PackedScene" uid="uid://cy7v8dfacflw7" path="res://quest_props_tools/LO_notes_tools.glb" id="22_edkhk"]
 [ext_resource type="PackedScene" uid="uid://cdw87twdledwv" path="res://quest_props_date/LO_lantern.glb" id="23_j8jky"]
 [ext_resource type="PackedScene" uid="uid://p724aii50oa4" path="res://quest_props_lemonade/LO_basket.glb" id="25_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://c8oagve8smqat" path="res://furniture/LO_beehive.glb" id="25_kmb1v"]
@@ -51,6 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://pyxn6e1utm51" path="res://assets/LO_endings_tools (2).png" id="30_27gbm"]
 [ext_resource type="PackedScene" uid="uid://dqqn3fj6mcqh6" path="res://quest_props_tools/LO_candy_compartment.glb" id="30_84tei"]
 [ext_resource type="Texture2D" uid="uid://ds84f6yn271b7" path="res://assets/LO_endings_tools (3).png" id="31_hnavv"]
+[ext_resource type="PackedScene" uid="uid://bixrdpwf4o0cb" path="res://quest_props_tools/LO_notes_drill.glb" id="31_mmnt6"]
 [ext_resource type="Texture2D" uid="uid://ch432luat3vlu" path="res://assets/LO_endings_tools (4).png" id="32_kpbb4"]
 [ext_resource type="Texture2D" uid="uid://bdpjhubw2hn3q" path="res://assets/LO_endings_tools (5).png" id="33_01pcv"]
 [ext_resource type="PackedScene" uid="uid://rmgvs3k5iixo" path="res://scenes/lo_lantern.tscn" id="36_7tfay"]
@@ -60,8 +65,11 @@
 [ext_resource type="Texture2D" uid="uid://b2aryjtth7aab" path="res://assets/LO_endings_cake_buddies.jpg" id="39_eoe1s"]
 [ext_resource type="PackedScene" uid="uid://ck6r62o178u1g" path="res://plants/LO_grass1.glb" id="45_pr4t1"]
 [ext_resource type="Texture2D" uid="uid://dfrwblnufue83" path="res://assets/LO_endings_magreader.jpg" id="46_1dep7"]
+[ext_resource type="Texture2D" uid="uid://c76gt7qcfy2ke" path="res://assets/LO_endings_alone.jpg" id="51_porst"]
+[ext_resource type="Texture2D" uid="uid://dqxnm233sn38g" path="res://assets/LO_endings_together.jpg" id="52_yjrgt"]
 [ext_resource type="PackedScene" uid="uid://cdebs5aieo3vf" path="res://quest_props_tools/LO_tree_tether.glb" id="55_wa4qp"]
 [ext_resource type="PackedScene" uid="uid://b85tkeo7hgmgo" path="res://quest_props_tools/LO_tether.glb" id="56_0gkhn"]
+[ext_resource type="Texture2D" uid="uid://csx6j07aub32g" path="res://assets/LO_tether.jpg" id="67_b6mbt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5myc"]
 albedo_color = Color(0.265314, 0.634456, 0.469927, 1)
@@ -131,11 +139,26 @@ albedo_texture = SubResource("CompressedTexture2D_0gkhn")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eoe1s"]
 albedo_texture = ExtResource("39_eoe1s")
 
+[sub_resource type="QuadMesh" id="QuadMesh_yjrgt"]
+size = Vector2(0.4, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_porst"]
+albedo_texture = ExtResource("51_porst")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6mbt"]
+albedo_texture = ExtResource("52_yjrgt")
+
 [sub_resource type="QuadMesh" id="QuadMesh_47we2"]
 size = Vector2(0.2, 0.2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0uifx"]
 albedo_texture = ExtResource("46_1dep7")
+
+[sub_resource type="QuadMesh" id="QuadMesh_b6mbt"]
+size = Vector2(0.4, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bwtx0"]
+albedo_texture = ExtResource("67_b6mbt")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6pm6"]
 albedo_texture = ExtResource("38_pibwh")
@@ -180,6 +203,12 @@ transform = Transform3D(-0.127372, 0.0221682, 0.991607, 0.0516479, 0.998542, -0.
 
 [node name="LemonNote" parent="LevelFloor/cafe bar" instance=ExtResource("5_o6xl0")]
 transform = Transform3D(0.0778596, 0.0280496, -0.289414, 0.00270019, 0.19949, 0.0447341, 0.275134, -0.00989547, 0.0814617, -2.84958, -0.238341, 0.380929)
+
+[node name="LO_notes_beefood" parent="LevelFloor/cafe bar" instance=ExtResource("6_872q0")]
+transform = Transform3D(-2.96733, -0.243711, -0.368141, 0.352213, 0.201627, -2.97242, 0.266214, -2.98328, -0.170819, -1.38795, 0.0238099, -2.94232)
+
+[node name="LO_notes_bee_cafe" parent="LevelFloor/cafe bar" instance=ExtResource("7_porst")]
+transform = Transform3D(-2.96897, -0.305555, -0.303015, 0.283402, 0.201297, -2.97979, 0.323829, -2.9776, -0.17035, -1.38263, 0.0255387, -2.93693)
 
 [node name="LO_cafe_main" parent="LevelFloor/cafe bar" instance=ExtResource("6_85g3d")]
 transform = Transform3D(0.989823, 0.00276177, 0.142275, -0.00170931, 0.99997, -0.00751921, -0.142291, 0.00719949, 0.989799, -1.4173, -1.56723, -2.04945)
@@ -372,6 +401,9 @@ font = ExtResource("10_7ox3u")
 [node name="PicnicNote" parent="LevelFloor" instance=ExtResource("5_o6xl0")]
 transform = Transform3D(0.882793, 0.0189118, -1.81529, -0.0152936, 0.654238, -0.111932, 0.383949, 0.0162676, 1.66723, -6.18139, 1.71907, -5.36039)
 
+[node name="LO_notes_cake" parent="LevelFloor/PicnicNote" instance=ExtResource("18_0uifx")]
+transform = Transform3D(0.769081, -0.0429812, 0.834494, -0.0123031, 1.52664, 0.0890973, -0.176993, -0.00499758, 0.406751, 0.0561295, 0.277098, -0.177364)
+
 [node name="LO_workbench_Quest" parent="LevelFloor" instance=ExtResource("11_a8y0u")]
 transform = Transform3D(0.274882, 0, -0.961478, 0, 1, 0, 0.961478, 0, 0.274882, 46.3297, 0.667262, -10.675)
 
@@ -416,10 +448,14 @@ light_color = Color(0.698039, 0.760784, 0.662745, 1)
 light_energy = 0.3
 shadow_enabled = true
 
+[node name="LO_notes_tools" parent="LevelFloor/workbench tools" instance=ExtResource("22_edkhk")]
+transform = Transform3D(-1.91321, -0.480695, -0.329488, 0.343499, -0.0166945, -1.97021, 0.470785, -1.9413, 0.0985292, 14.1564, 2.32399, 45.6682)
+
 [node name="trees_final" type="Node3D" parent="LevelFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 
 [node name="smaller_lemontrees" type="Node3D" parent="LevelFloor/trees_final"]
+visible = false
 
 [node name="LO_tree_lemon_small" parent="LevelFloor/trees_final/smaller_lemontrees" instance=ExtResource("18_xw5be")]
 transform = Transform3D(-0.921328, 0, -0.388786, 0, 1, 0, 0.388786, 0, -0.921328, -0.745, -2.76754, 2.97)
@@ -587,6 +623,7 @@ transform = Transform3D(-0.757884, 0, -0.65239, 0, 1, 0, 0.65239, 0, -0.757884, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5397, -2.87372, 23.6729)
 
 [node name="tall_lemontrees" type="Node3D" parent="LevelFloor/trees_final"]
+visible = false
 
 [node name="LO_Tree_Try31" parent="LevelFloor/trees_final/tall_lemontrees" instance=ExtResource("16_jbj1t")]
 transform = Transform3D(0.160226, 0, -0.98708, 0, 1, 0, 0.98708, 0, 0.160226, 18.0757, -0.975612, -29.4129)
@@ -792,6 +829,9 @@ transform = Transform3D(0.831557, 0, -0.55544, 0, 1, 0, 0.55544, 0, 0.831557, 21
 [node name="LO_drill2" parent="LevelFloor/quest_items" instance=ExtResource("27_waink")]
 transform = Transform3D(0.000339627, -0.999874, -0.0158956, -0.0213585, -0.0158993, 0.999645, -0.999772, 0, -0.0213612, -10.9911, -0.414248, -40.395)
 
+[node name="LO_notes_drill" parent="LevelFloor/quest_items/LO_drill2" instance=ExtResource("31_mmnt6")]
+transform = Transform3D(0.809356, -0.09344, -0.579837, -0.587225, -0.111079, -0.801766, 0.0105091, 0.989409, -0.144773, 0.158123, 0.0830059, -0.00439119)
+
 [node name="LO_panel_opener" parent="LevelFloor/quest_items" instance=ExtResource("20_dgi5k")]
 transform = Transform3D(-0.0359213, -0.414919, 0.909149, -0.997496, -0.0405661, -0.0579256, 0.060915, -0.908954, -0.412423, -22.5931, 0.614799, -12.0343)
 
@@ -910,6 +950,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3265, 0.49132, -12.1258)
 
 [node name="LO_pie_slice" parent="LevelFloor/quest_items" instance=ExtResource("13_i3a3x")]
 transform = Transform3D(0.898817, -0.039631, 0.436529, 0.0516479, 0.998543, -0.015689, -0.435272, 0.0366474, 0.899553, -7.56442, -0.0276479, -43.6907)
+
+[node name="LO_phone2" parent="LevelFloor/quest_items" instance=ExtResource("10_j8jky")]
+transform = Transform3D(1, 0, 0, 0, 0.9992, 0.0399923, 0, -0.0399923, 0.9992, -17.9163, -0.0953437, -40.7172)
+
+[node name="star_end_alone" type="MeshInstance3D" parent="LevelFloor/quest_items/LO_phone2"]
+transform = Transform3D(0.000104728, 0.199934, -0.00512726, -0.00799852, 0.00512734, 0.199774, 0.19984, 0.000100447, 0.00799857, 0.00133133, 0.0108355, -0.0897636)
+mesh = SubResource("QuadMesh_yjrgt")
+surface_material_override/0 = SubResource("StandardMaterial3D_porst")
+
+[node name="star_end_together" type="MeshInstance3D" parent="LevelFloor/quest_items/LO_phone2"]
+transform = Transform3D(0.000104728, 0.199934, -0.00512726, -0.00799852, 0.00512734, 0.199774, 0.19984, 0.000100447, 0.00799857, 0.00133133, 0.0108355, -0.0897636)
+mesh = SubResource("QuadMesh_yjrgt")
+surface_material_override/0 = SubResource("StandardMaterial3D_b6mbt")
 
 [node name="LO_tablet" parent="LevelFloor" instance=ExtResource("21_j8jky")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.99, -0.127311, -41.406)
@@ -3192,7 +3245,25 @@ transform = Transform3D(0.75918, 0, 0.65088, 0, 1, 0, -0.65088, 0, 0.75918, 35.2
 [node name="garden furniture" type="Node3D" parent="Dome"]
 
 [node name="LO_bench" parent="Dome/garden furniture" instance=ExtResource("21_jscy8")]
-transform = Transform3D(0.0154281, 0, -0.999881, 0, 1, 0, 0.999881, 0, 0.0154281, -16.5435, 0.567232, -12.0339)
+transform = Transform3D(0.226889, 0, -0.973921, 0, 1, 0, 0.973921, 0, 0.226889, -22.694, -1.30222, -38.8463)
+
+[node name="LO_bench3" parent="Dome/garden furniture" instance=ExtResource("21_jscy8")]
+transform = Transform3D(0.404312, 0, -0.914621, 0, 1, 0, 0.914621, 0, 0.404312, -41.0006, 0.394578, 20.9637)
+
+[node name="LO_bench8" parent="Dome/garden furniture" instance=ExtResource("21_jscy8")]
+transform = Transform3D(0.404312, 0, -0.914621, 0.0213089, 0.999729, 0.00941967, 0.914373, -0.023298, 0.404202, 33.4509, 0.757199, -2.56704)
+
+[node name="LO_bench4" parent="Dome/garden furniture" instance=ExtResource("21_jscy8")]
+transform = Transform3D(0.993491, 0, -0.113914, 0, 1, 0, 0.113914, 0, 0.993491, 3.11791, 1.0628, -2.1794)
+
+[node name="LO_bench5" parent="Dome/garden furniture" instance=ExtResource("21_jscy8")]
+transform = Transform3D(-0.409923, 0, -0.91212, 0, 1, 0, 0.91212, 0, -0.409923, 40.5609, 0.680017, 17.8734)
+
+[node name="LO_bench6" parent="Dome/garden furniture" instance=ExtResource("21_jscy8")]
+transform = Transform3D(-0.0120599, 0, -0.999927, 0, 1, 0, 0.999927, 0, -0.0120599, 40.318, 0.680017, 19.4763)
+
+[node name="LO_bench7" parent="Dome/garden furniture" instance=ExtResource("21_jscy8")]
+transform = Transform3D(0.455809, 0, -0.890078, 0, 1, 0, 0.890078, 0, 0.455809, 40.4637, 0.680017, 21.0307)
 
 [node name="LO_basket1" parent="Dome/garden furniture" instance=ExtResource("25_2wyq8")]
 transform = Transform3D(0.382135, 0, -0.924106, 0, 1, 0, 0.924106, 0, 0.382135, -6.38131, -1.18539, -43.6126)
@@ -3271,6 +3342,36 @@ light_energy = 0.8
 shadow_enabled = true
 shadow_blur = 3.0
 
+[node name="LO_outdoor_floor_lamp21" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(1, 0, 0, 0, 0.999841, 0.0178192, 0, -0.0178192, 0.999841, 5.32137, 0.807615, -6.66557)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="LO_outdoor_floor_lamp22" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(1, 0, 0, 0, 0.999981, 0.00614388, 0, -0.00614388, 0.999981, 2.12023, 1.03169, -2.24629)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="LO_outdoor_floor_lamp23" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(1, 0, 0, 0, 0.997988, -0.0633998, 0, 0.0633998, 0.997988, 4.12023, 1.11063, -2.24629)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
 [node name="LO_outdoor_floor_lamp4" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
 transform = Transform3D(1, 0, 0, 0, 0.985583, 0.169195, 0, -0.169195, 0.985583, -6.45926, 1.16485, -15.3626)
 
@@ -3315,6 +3416,26 @@ shadow_blur = 3.0
 transform = Transform3D(1, 0, 0, 0, 0.995933, 0.0900937, 0, -0.0900937, 0.995933, -28.6303, 0.988141, 13.6168)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="LO_outdoor_floor_lamp19" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(1, 0, 0, 0, 0.995933, 0.0900937, 0, -0.0900937, 0.995933, -41.2903, 0.440973, 20.0997)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="LO_outdoor_floor_lamp20" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(1, 0, 0, 0, 0.995933, 0.0900937, 0, -0.0900937, 0.995933, -35.419, 0.633483, 18.5096)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp20"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
 light_color = Color(0.94902, 0.8, 0.560784, 1)
 light_energy = 0.8
@@ -3371,6 +3492,46 @@ light_energy = 0.8
 shadow_enabled = true
 shadow_blur = 3.0
 
+[node name="LO_outdoor_floor_lamp15" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(1, 0, 0, 0, 0.999728, -0.023333, 0, 0.023333, 0.999728, 41.0092, 0.658392, 16.928)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="LO_outdoor_floor_lamp16" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(1, 0, 0, 0, 0.999728, -0.023333, 0, 0.023333, 0.999728, 39.722, 0.735296, 18.4823)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="LO_outdoor_floor_lamp17" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(1, 0, 0, 0, 0.999728, -0.023333, 0, 0.023333, 0.999728, 39.722, 0.704006, 20.4823)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="LO_outdoor_floor_lamp18" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(1, 0, 0, 0, 0.999728, -0.023333, 0, 0.023333, 0.999728, 40.8635, 0.580109, 22.061)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
 [node name="LO_outdoor_floor_lamp14" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
 transform = Transform3D(0.993615, -0.111195, -0.0190888, 0.112822, 0.97929, 0.168114, 0, -0.169195, 0.985583, -19.845, -0.227228, -25.9244)
 
@@ -3381,8 +3542,56 @@ light_energy = 0.8
 shadow_enabled = true
 shadow_blur = 3.0
 
+[node name="LO_outdoor_floor_lamp24" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(0.999769, -0.014082, -0.0161923, 0.0139725, 0.999879, -0.00688534, 0.0162874, 0.00665675, 0.999845, -23.2166, -1.26476, -39.8153)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="LO_outdoor_floor_lamp25" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(0.999321, 0.0277028, -0.0242983, -0.0273436, 0.999514, 0.0149736, 0.0247013, -0.0142997, 0.999593, -22.4524, -1.25422, -37.163)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="LO_outdoor_floor_lamp26" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(0.999902, -0.00593083, -0.0126531, 0.00739149, 0.992906, 0.118672, 0.0118595, -0.118754, 0.992853, -6.4486, -1.19135, -38.3768)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="LO_outdoor_floor_lamp27" parent="Dome/path_lighting" instance=ExtResource("37_c6pm6")]
+transform = Transform3D(0.996945, -0.0735065, -0.0264138, 0.0768215, 0.983888, 0.161438, 0.0141215, -0.162975, 0.98653, -12.1779, -1.11285, -35.8978)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Dome/path_lighting/LO_outdoor_floor_lamp27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0244467, 0.00419676)
+light_color = Color(0.94902, 0.8, 0.560784, 1)
+light_energy = 0.8
+shadow_enabled = true
+shadow_blur = 3.0
+
 [node name="LO_tree_tether" parent="Dome" instance=ExtResource("55_wa4qp")]
 transform = Transform3D(-0.256779, 0, 0.96647, 0, 1, 0, -0.96647, 0, -0.256779, 26.027, 0.655579, -4.49)
+
+[node name="LO_phone" parent="Dome/LO_tree_tether" instance=ExtResource("10_j8jky")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85915, 0.501185, 6.87045)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Dome/LO_tree_tether/LO_phone"]
+transform = Transform3D(-0.000431921, 0.199981, 0.00274955, 0.000960043, -0.00274745, 0.199979, 0.199997, 0.000445079, -0.000954014, 0.000279427, 0.00678861, -0.0702057)
+mesh = SubResource("QuadMesh_b6mbt")
+surface_material_override/0 = SubResource("StandardMaterial3D_bwtx0")
 
 [node name="LO_tether" parent="Dome" instance=ExtResource("56_0gkhn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1, -4)
