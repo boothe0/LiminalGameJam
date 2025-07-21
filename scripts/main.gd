@@ -19,6 +19,15 @@ extends Node3D
 
 @onready var workbench_label: Label3D = $LevelFloor/LO_workbench_Quest/WorkbenchLabel
 
+# Tablet pictures
+@onready var foreman_fixNPC: MeshInstance3D = $LevelFloor/quest_items/LO_tablet/foreman_fix
+@onready var tetherNPC: MeshInstance3D = $LevelFloor/quest_items/LO_tablet/tether
+@onready var mirrorstickNPC: MeshInstance3D = $LevelFloor/quest_items/LO_tablet/mirrorstick
+@onready var drillNPC: MeshInstance3D = $LevelFloor/quest_items/LO_tablet/drill
+@onready var panel_openerNPC: MeshInstance3D = $"LevelFloor/quest_items/LO_tablet/panel opener"
+
+
+
 var near_basket = false
 var near_table = false
 var near_lockers = false
@@ -54,6 +63,26 @@ func _ready():
 	# emitters
 	Emitter.date_quest_start.connect(self.lantern_monitoring)
 	Emitter.lanterns_up.connect(self.show_lanterns)
+	
+	# reloading scene pictures
+	if Globals.scene_counter >= 1:
+		
+		if Globals.tether_returned and Globals.drill_returned and Globals.mirrorstick_returned and Globals.panel_opener_returned:
+			foreman_fixNPC.visible = true
+			tetherNPC.visible = true
+			drillNPC.visible = true
+			mirrorstickNPC.visible = true
+			panel_openerNPC.visible = true
+		else:
+			if Globals.tether_returned:
+				tetherNPC.visible = true
+			if Globals.drill_returned:
+				drillNPC.visible = true
+			if Globals.mirrorstick_returned:
+				mirrorstickNPC.visible = true
+			if Globals.panel_opener_returned:
+				panel_openerNPC.visible = true
+	
 func _process(float) -> void:
 	if lemon_1_quest and Globals.lemon_quest_triggered == true:
 		lemon_1_quest.visible = true
@@ -87,7 +116,10 @@ func _process(float) -> void:
 			Emitter.emit_signal("remove_drill")
 		if "LO_mirrorstick" in Globals.item:
 			Emitter.emit_signal("remove_mirrorstick")
-	
+		if "LO_tether" in Globals.item:
+			Emitter.emit_signal("remove_tether")
+		if "LO_panel_opener" in Globals.item:
+			Emitter.emit_signal("remove_panel_opener")
 	if Input.is_action_just_pressed("interact") and near_basket and Globals.lemon_picking:
 		# so user knows to bring back 3 lemons
 		Emitter.emit_signal("display_warning")
@@ -95,7 +127,6 @@ func _process(float) -> void:
 	if Input.is_action_just_pressed("interact") and near_table and Globals.lemon_picking and Globals.picked_up_star_basket:
 		Emitter.emit_signal("remove_inv_asset_lemons")
 		Globals.lemon_picking = false
-		print("Lemon count", Globals.lemon_count)
 		if Globals.lemon_count >= 3:
 			Globals.returned_full_basket = true
 			table_label.text = "Nice job on the lemon picking! Now find those other baskets."
@@ -155,6 +186,12 @@ func _on_work_area_body_entered(body: Node3D) -> void:
 		near_quest_workbench = true
 
 	if body.name == "Player" and "LO_mirrorstick" in Globals.item:
+		workbench_label.visible = true
+		near_quest_workbench = true
+	if body.name == "Player" and "LO_tether" in Globals.item:
+		workbench_label.visible = true
+		near_quest_workbench = true
+	if body.name == "Player" and "LO_panel_opener" in Globals.item:
 		workbench_label.visible = true
 		near_quest_workbench = true
 func _on_work_area_body_exited(body: Node3D) -> void:

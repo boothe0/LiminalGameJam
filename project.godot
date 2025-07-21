@@ -23,7 +23,6 @@ FadeEffectTransition="*res://scenes/non_quest/fade_effect_transition.tscn"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="viewport"
 
 [input]
