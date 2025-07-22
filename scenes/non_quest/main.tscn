@@ -36,7 +36,6 @@
 [ext_resource type="PackedScene" uid="uid://dbo3eojahc21t" path="res://plants/LO_tree_lemon_small.glb" id="18_xw5be"]
 [ext_resource type="PackedScene" uid="uid://b067nxqc4wy2j" path="res://set_dressing_props/LO_level_door.glb" id="19_0ld40"]
 [ext_resource type="PackedScene" uid="uid://dk7rt3hlarkxe" path="res://scenes/lo_mirrorstick.tscn" id="20_c6pm6"]
-[ext_resource type="PackedScene" uid="uid://dqqdftj0fg4un" path="res://quest_props_tools/LO_panel_opener.glb" id="20_dgi5k"]
 [ext_resource type="PackedScene" uid="uid://sqjduohsf2h0" path="res://set_dressing_props/LO_airlock.glb" id="20_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://b7miiwgkmgaqq" path="res://set_dressing_props/LO_wall1.glb" id="20_yc10j"]
 [ext_resource type="PackedScene" uid="uid://c3x7kd8bj21wm" path="res://quest_props_tools/LO_tablet.glb" id="21_j8jky"]
@@ -60,6 +59,7 @@
 [ext_resource type="PackedScene" uid="uid://bixrdpwf4o0cb" path="res://quest_props_tools/LO_notes_drill.glb" id="31_mmnt6"]
 [ext_resource type="Texture2D" uid="uid://ch432luat3vlu" path="res://assets/LO_endings_tools (4).png" id="32_kpbb4"]
 [ext_resource type="Texture2D" uid="uid://bdpjhubw2hn3q" path="res://assets/LO_endings_tools (5).png" id="33_01pcv"]
+[ext_resource type="PackedScene" uid="uid://2tw3684ksswl" path="res://scenes/lo_panel_opener.tscn" id="35_bwtx0"]
 [ext_resource type="PackedScene" uid="uid://rmgvs3k5iixo" path="res://scenes/lo_lantern.tscn" id="36_7tfay"]
 [ext_resource type="PackedScene" uid="uid://c35mbkj30tmse" path="res://furniture/LO_outdoor_floor_lamp.glb" id="37_c6pm6"]
 [ext_resource type="PackedScene" uid="uid://dsjn2s146x6s8" path="res://set_dressing_props/LO_attachment.glb" id="37_fuf3a"]
@@ -70,8 +70,8 @@
 [ext_resource type="Texture2D" uid="uid://c76gt7qcfy2ke" path="res://assets/LO_endings_alone.jpg" id="51_porst"]
 [ext_resource type="Texture2D" uid="uid://dqxnm233sn38g" path="res://assets/LO_endings_together.jpg" id="52_yjrgt"]
 [ext_resource type="PackedScene" uid="uid://cdebs5aieo3vf" path="res://quest_props_tools/LO_tree_tether.glb" id="55_wa4qp"]
-[ext_resource type="PackedScene" uid="uid://b85tkeo7hgmgo" path="res://quest_props_tools/LO_tether.glb" id="56_0gkhn"]
 [ext_resource type="Texture2D" uid="uid://csx6j07aub32g" path="res://assets/LO_tether.jpg" id="67_b6mbt"]
+[ext_resource type="PackedScene" uid="uid://dh08k3c0nmy56" path="res://scenes/lo_tether.tscn" id="68_b6mbt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5myc"]
 albedo_color = Color(0.265314, 0.634456, 0.469927, 1)
@@ -1014,39 +1014,50 @@ transform = Transform3D(0.000339627, -0.999874, -0.0158956, -0.0213585, -0.01589
 [node name="LO_notes_drill" parent="LevelFloor/quest_items/LO_drill2" instance=ExtResource("31_mmnt6")]
 transform = Transform3D(0.809356, -0.09344, -0.579837, -0.587225, -0.111079, -0.801766, 0.0105091, 0.989409, -0.144773, 0.158123, 0.0830059, -0.00439119)
 
-[node name="LO_panel_opener" parent="LevelFloor/quest_items" instance=ExtResource("20_dgi5k")]
+[node name="LO_panel_opener" parent="LevelFloor/quest_items" instance=ExtResource("35_bwtx0")]
 transform = Transform3D(-0.0359213, -0.414919, 0.909149, -0.997496, -0.0405661, -0.0579256, 0.060915, -0.908954, -0.412423, -22.5931, 0.614799, -12.0343)
 
 [node name="LO_mirrorstick" parent="LevelFloor/quest_items" instance=ExtResource("20_c6pm6")]
 transform = Transform3D(0.0873679, 1.54732, 0, -1.04767, 0.129035, 0, 0, 0, 1.33807, -5.40631, 3.77357, 11.3879)
 
 [node name="LO_tablet" parent="LevelFloor/quest_items" instance=ExtResource("21_j8jky")]
-transform = Transform3D(0.110538, -0.953523, -0.280314, 0.0159506, 0.283708, -0.958778, 0.993744, 0.10151, 0.0465697, 46.4648, 2.25229, -11.0245)
+transform = Transform3D(0.165807, -1.43028, -0.420471, 0.0239259, 0.425562, -1.43817, 1.49062, 0.152265, 0.0698547, 46.4803, 2.31435, -10.9628)
 
 [node name="foreman_fix" type="MeshInstance3D" parent="LevelFloor/quest_items/LO_tablet"]
 transform = Transform3D(-1.49012e-08, -0.5, -3.72529e-08, 6.07688e-08, -2.98023e-08, 0.5, -0.5, 1.30385e-08, 5.44824e-08, -0.00718832, 0.0218201, -0.00187492)
+visible = false
 mesh = SubResource("QuadMesh_27gbm")
 surface_material_override/0 = SubResource("StandardMaterial3D_7tfay")
 
 [node name="tether" type="MeshInstance3D" parent="LevelFloor/quest_items/LO_tablet"]
 transform = Transform3D(-2.98023e-08, 0.5, 1.11759e-08, -6.54254e-08, -2.23517e-08, 0.5, 0.5, 2.98023e-08, 5.68107e-08, 0.0814714, 0.0218315, 0.0257187)
+visible = false
 mesh = SubResource("QuadMesh_27gbm")
 surface_material_override/0 = SubResource("StandardMaterial3D_yxvc5")
 
 [node name="mirrorstick" type="MeshInstance3D" parent="LevelFloor/quest_items/LO_tablet"]
 transform = Transform3D(0.5, 5.58794e-09, -1.49012e-08, 0, 4.79631e-08, 0.5, 7.45058e-09, -0.5, 4.07454e-08, 0.11472, 0.0218353, -0.0458498)
+visible = false
 mesh = SubResource("QuadMesh_27gbm")
 surface_material_override/0 = SubResource("StandardMaterial3D_27gbm")
 
 [node name="drill" type="MeshInstance3D" parent="LevelFloor/quest_items/LO_tablet"]
 transform = Transform3D(-0.119665, -0.485469, -3.72529e-08, 2.79397e-08, -4.09782e-08, 0.5, -0.485469, 0.119665, 5.44824e-08, -0.113902, 0.028759, -0.00983715)
+visible = false
 mesh = SubResource("QuadMesh_27gbm")
 surface_material_override/0 = SubResource("StandardMaterial3D_kpbb4")
 
 [node name="panel opener" type="MeshInstance3D" parent="LevelFloor/quest_items/LO_tablet"]
 transform = Transform3D(-0.497167, 0.0531494, -1.86265e-08, -3.72529e-08, -5.7742e-08, 0.5, 0.0531493, 0.497167, 4.05125e-08, -0.0153742, 0.0228195, -0.045927)
+visible = false
 mesh = SubResource("QuadMesh_27gbm")
 surface_material_override/0 = SubResource("StandardMaterial3D_01pcv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="LevelFloor/quest_items/LO_tablet"]
+transform = Transform3D(0.666667, 0, -3.72529e-09, -7.45058e-09, 0.666667, -1.16415e-08, 5.58794e-09, 3.37604e-08, 0.666667, -0.00651765, 0.056221, 0.0165281)
+light_color = Color(0.980392, 0.588235, 0.239216, 1)
+light_energy = 0.2
+omni_range = 0.352176
 
 [node name="LO_picnic" parent="LevelFloor/quest_items" instance=ExtResource("22_dgi5k")]
 transform = Transform3D(0.999982, -0.00601693, -0.000230621, 0.00602135, 0.999248, 0.0382999, 0, -0.0383006, 0.999266, -26.6519, 1.0693, 3.12425)
@@ -1067,6 +1078,7 @@ transform = Transform3D(0.0201228, -0.998054, -0.0590281, 0.0380106, -0.0582336,
 
 [node name="LO_lanternInv" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns" instance=ExtResource("23_j8jky")]
 transform = Transform3D(1, 3.26855e-09, 1.74794e-10, 6.07123e-09, 1, -4.84288e-08, -2.70986e-10, -5.21541e-08, 1, 0.697771, 1.76747, -0.903328)
+visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns/LO_lanternInv"]
 transform = Transform3D(1, -6.50811e-09, -1.45306e-10, 1.48035e-11, 1, 7.45058e-08, -5.15304e-11, 0, 1, -0.0118694, -0.000592232, 0.0173206)
@@ -1074,6 +1086,7 @@ light_color = Color(1, 0.627451, 0.0196078, 1)
 
 [node name="LO_lanternInv2" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns" instance=ExtResource("23_j8jky")]
 transform = Transform3D(1, 3.73421e-09, 2.03898e-10, 7.00541e-09, 1, -5.58794e-08, -3.0167e-10, -6.33299e-08, 1, -2.73606, 2.23259, -0.730152)
+visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns/LO_lanternInv2"]
 transform = Transform3D(1, -6.50811e-09, -1.45306e-10, 1.48035e-11, 1, 7.45058e-08, -5.15304e-11, 0, 1, -0.0118694, -0.000592232, 0.0173206)
@@ -1081,6 +1094,7 @@ light_color = Color(1, 0.627451, 0.0196078, 1)
 
 [node name="LO_lanternInv3" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns" instance=ExtResource("23_j8jky")]
 transform = Transform3D(1, 3.03938e-06, -0.000101683, -4.74779e-06, 0.999857, -0.0168937, 0.000101617, 0.0168936, 0.999857, 1.31876, 2.38324, 0.324203)
+visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns/LO_lanternInv3"]
 transform = Transform3D(1, -6.50811e-09, -1.45306e-10, 1.48035e-11, 1, 7.45058e-08, -5.15304e-11, 0, 1, -0.0118694, -0.000592232, 0.0173206)
@@ -1088,6 +1102,7 @@ light_color = Color(1, 0.627451, 0.0196078, 1)
 
 [node name="LO_lanternInv4" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns" instance=ExtResource("23_j8jky")]
 transform = Transform3D(1, 3.26855e-09, 1.89346e-10, 6.53854e-09, 1, -5.21541e-08, -2.84672e-10, -5.96046e-08, 1, 0.428555, 2.23818, 2.51328)
+visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="LevelFloor/quest_items/LO_picnic/InvisibleLanterns/LO_lanternInv4"]
 transform = Transform3D(1, -6.50811e-09, -1.45306e-10, 1.48035e-11, 1, 7.45058e-08, -5.15304e-11, 0, 1, -0.0118694, -0.000592232, 0.0173206)
@@ -3782,6 +3797,9 @@ light_energy = 0.8
 shadow_enabled = true
 shadow_blur = 3.0
 
+[node name="LO_tether" parent="Dome" instance=ExtResource("68_b6mbt")]
+transform = Transform3D(-0.98443, 1.78539e-08, 0.175779, 1.49012e-08, 1, 3.72529e-09, -0.175779, -4.24177e-09, -0.98443, 27.3943, 0.964836, -3.69404)
+
 [node name="LO_tree_tether" parent="Dome" instance=ExtResource("55_wa4qp")]
 transform = Transform3D(-0.295296, 0, 1.11144, 0, 1.15, 0, -1.11144, 0, -0.295296, 26.027, 0.655579, -4.49)
 
@@ -3792,9 +3810,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85915, 0.501185, 6.87045)
 transform = Transform3D(-0.000431921, 0.199981, 0.00274955, 0.000960043, -0.00274745, 0.199979, 0.199997, 0.000445079, -0.000954014, 0.000279427, 0.00678861, -0.0702057)
 mesh = SubResource("QuadMesh_b6mbt")
 surface_material_override/0 = SubResource("StandardMaterial3D_bwtx0")
-
-[node name="LO_tether" parent="Dome" instance=ExtResource("56_0gkhn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1, -4)
 
 [node name="LO_attachment" parent="." instance=ExtResource("37_fuf3a")]
 transform = Transform3D(0.146981, 0, 0.989139, 0, 1, 0, -0.989139, 0, 0.146981, -49.278, 2.53119, -13.9475)

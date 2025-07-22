@@ -29,7 +29,8 @@ func _ready():
 	Emitter.remove_inv_lemon_pie.connect(self.remove_asset.bind("lemon_pie"))
 	Emitter.remove_drill.connect(self.remove_asset.bind("drill"))
 	Emitter.remove_mirrorstick.connect(self.remove_asset.bind("mirrorstick"))
-
+	Emitter.remove_tether.connect(self.remove_asset.bind("tether"))
+	Emitter.remove_panel_opener.connect(self.remove_asset.bind("panel_opener"))
 func _process(delta: float) -> void:
 	if Globals.picnic_quest_triggered == false and picnic_quest_was_triggered == true:
 		pass
@@ -47,10 +48,8 @@ func adding_to_inv():
 			make_asset(drill)
 		"LO_mirrorstick":
 			make_asset(mirrorstick)
-		"panelopenerasset":
+		"LO_panel_opener":
 			make_asset(panel_opener)
-		"tetherhookasset":
-			make_asset(tether_hook)
 		"LO_basket_filled_star2":
 			Globals.picked_up_star_basket = true
 			make_asset(lemon_basket)
@@ -79,6 +78,8 @@ func adding_to_inv():
 		"LO_lantern4":
 			Globals.lantern_count += 1
 			make_asset(lantern)
+		"LO_tether":
+			make_asset(tether_hook)
 func quest_trigger():
 	var item_node = Globals.most_recent_node
 	match item_node:
@@ -133,9 +134,15 @@ func remove_asset(type_of_asset):
 			texture.queue_free()
 			area_texture_dictionary.erase(area)
 			Globals.mirrorstick_returned = true
-	#if type_of_asset == "lemon_pie" or type_of_asset == "drill" or type_of_asset == "mirrorstick":
+		if texture.name == "LO_tether" and type_of_asset == "tether":
+			texture.queue_free()
+			area_texture_dictionary.erase(area)
+			Globals.tether_returned = true
+		if texture.name == "LO_panel_opener" and type_of_asset == "panel_opener":
+			texture.queue_free()
+			area_texture_dictionary.erase(area)
+			Globals.panel_opener_returned = true
 
-	
 func date_night_quest():
 	var v_box = VBoxContainer.new()
 	var quest_title = Label.new()
@@ -261,4 +268,10 @@ func handle_label_inv(node_name):
 			label.visible = true
 		"LO_Lemon3":
 			label.text = "Lemon"
+			label.visible = true
+		"LO_tether":
+			label.text = "Tether"
+			label.visible = true
+		"LO_panel_opener":
+			label.text = "Try next to the cafe in the lockers!"
 			label.visible = true

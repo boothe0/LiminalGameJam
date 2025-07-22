@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://2tw3684ksswl"]
+
+[ext_resource type="PackedScene" uid="uid://dqqdftj0fg4un" path="res://quest_props_tools/LO_panel_opener.glb" id="1_cc76l"]
+[ext_resource type="FontFile" uid="uid://dnayjoyecpuqb" path="res://fonts/Summerti.ttf" id="2_mc05i"]
+[ext_resource type="Script" uid="uid://bg47861wufoby" path="res://scripts/item_handling.gd" id="2_tn4cw"]
+[ext_resource type="AudioStream" uid="uid://b35vchh36k08f" path="res://audio/Liminal Jam - SFX - Tools Panel Opener.ogg" id="4_4g6pn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cc76l"]
+size = Vector3(0.179405, 0.588554, 0.261353)
+
+[node name="LO_panel_opener" instance=ExtResource("1_cc76l")]
+script = ExtResource("2_tn4cw")
+audio_path = NodePath("AudioStreamPlayer")
+area_path = NodePath("Area3D")
+label_3d_2_path = NodePath("panel opener/Label3D")
+
+[node name="Label3D" type="Label3D" parent="panel opener" index="0"]
+transform = Transform3D(1.03567e-14, 3.56926e-06, -81.6552, 5.42039, -3.56926e-06, 0, -2.36933e-07, -81.6552, -3.56926e-06, -1.49981, 0, 1.00911)
+visible = false
+pixel_size = 0.002
+text = "Pickup?"
+font = ExtResource("2_mc05i")
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1.2465, 0, 0, 0, 0.824573, 0, 0, 0, 1.02782, 0.00994663, 0.0699294, 0.0225539)
+shape = SubResource("BoxShape3D_cc76l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("4_4g6pn")

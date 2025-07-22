@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://dh08k3c0nmy56"]
+
+[ext_resource type="PackedScene" uid="uid://b85tkeo7hgmgo" path="res://quest_props_tools/LO_tether.glb" id="1_v6m18"]
+[ext_resource type="Script" uid="uid://bg47861wufoby" path="res://scripts/item_handling.gd" id="2_tv26i"]
+[ext_resource type="AudioStream" uid="uid://jlkfxsilek17" path="res://audio/Liminal Jam - SFX - Tools RR2.ogg" id="3_nnh40"]
+[ext_resource type="FontFile" uid="uid://dnayjoyecpuqb" path="res://fonts/Summerti.ttf" id="4_otym1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_otym1"]
+size = Vector3(0.95692, 0.305588, 0.824463)
+
+[node name="LO_tether" instance=ExtResource("1_v6m18")]
+script = ExtResource("2_tv26i")
+audio_path = NodePath("AudioStreamPlayer")
+area_path = NodePath("Area3D")
+label_3d_2_path = NodePath("NurbsPath/Label3D")
+
+[node name="Label3D" type="Label3D" parent="NurbsPath" index="0"]
+transform = Transform3D(0.385658, 0, 0, 0, -1.68577e-08, 0.385658, 0, -0.385658, -1.68577e-08, 0.126901, 0.00771589, 0.0241595)
+visible = false
+text = "Pickup?"
+font = ExtResource("4_otym1")
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1.2465, 0, 0, 0, 0.824573, 0, 0, 0, 1.02782, 0.302805, 0.0577972, 0.0873573)
+shape = SubResource("BoxShape3D_otym1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("3_nnh40")

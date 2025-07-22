@@ -26,3 +26,5 @@ signal lanterns_up
 
 signal remove_drill
 signal remove_mirrorstick
+signal remove_tether
+signal remove_panel_opener
