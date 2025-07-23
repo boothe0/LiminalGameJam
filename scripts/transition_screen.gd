@@ -2,8 +2,7 @@ extends CanvasLayer
 @onready var color_rect: ColorRect = $ColorRect
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-# honestly changed a few variables around not entirely sure if this is most efficent will look through later
-# TODO: Refactor this script
+
 
 func _ready():
 	color_rect.visible = false

@@ -1,7 +1,6 @@
 extends StaticBody3D
 @onready var continue_message: Label3D = $ContinueMessage
 
-
 func _process(_delta: float) -> void:
 	# checking if the player is near the door
 	if Input.is_action_just_pressed("interact") and continue_message.visible == true:
@@ -10,7 +9,11 @@ func _process(_delta: float) -> void:
 			if item == "LO_mag":
 				Globals.mag_picked_up = true
 		Globals.item.clear()
-		get_tree().reload_current_scene()
+	
+		if Globals.put_lemons_away == true or Globals.dropped_off_workbench == true or Globals.dropped_off_lockers == true or Globals.mag_picked_up == true:
+			get_tree().change_scene_to_file("res://scenes/quest_endings.tscn")
+		else:
+			get_tree().reload_current_scene()
 
 func _on_detection_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
