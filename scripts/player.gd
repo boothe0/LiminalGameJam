@@ -3,9 +3,12 @@ extends CharacterBody3D
 @onready var camera: Camera3D = $Neck/Camera3D
 var speed
 const SPRINT_SPEED = 8.0
-const WALK_SPEED = 5.0
+const WALK_SPEED = 4.0
 const JUMP_VELOCITY = 4.5
+var direction = Vector3()
 @onready var camera_3d: Camera3D = $Neck/Camera3D
+@onready var audio_stream_player_3d: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 @onready var lemon_note: StaticBody3D = $"../LevelFloor/cafe bar/LemonNote"
 @onready var date_note: StaticBody3D = $"../LevelFloor/lockers/DateNote"
@@ -50,6 +53,8 @@ func _ready():
 
 
 func _physics_process(delta: float) -> void:
+	
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -70,6 +75,7 @@ func _physics_process(delta: float) -> void:
 	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if is_on_floor():
 		if direction:
+			animation_player.play("walking")
 			# base the velocity off the speed since you can sprint or walk
 			velocity.x = direction.x * speed
 			velocity.z = direction.z * speed
@@ -183,3 +189,6 @@ func handle_note_despawn():
 			picnic_note.visible = false
 			work_note.visible = false
 			lemon_note.visible = false
+func _play_footstep_audio():
+	audio_stream_player_3d.pitch_scale = randf_range(.8, 1.2)
+	audio_stream_player_3d.play()
