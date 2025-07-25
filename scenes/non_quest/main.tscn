@@ -423,7 +423,7 @@ font_size = 40
 [node name="workbench tools" type="Node3D" parent="LevelFloor"]
 
 [node name="WorkNote" parent="LevelFloor/workbench tools" instance=ExtResource("5_o6xl0")]
-transform = Transform3D(0.447222, 0.000863491, -1.98764, -0.0152936, 0.654239, -0.111933, 0.749864, 0.00945367, 1.52028, 11.0259, 4.85607, 18.9896)
+transform = Transform3D(0.447222, 0.000863491, -1.98764, -0.0152936, 0.654239, -0.111933, 0.749864, 0.00945367, 1.52028, 11.2748, 4.85607, 19.7111)
 
 [node name="LO_workbench" parent="LevelFloor/workbench tools" instance=ExtResource("12_jkv2x")]
 transform = Transform3D(-0.952635, 0, -0.304116, 0, 1, 0, 0.304116, 0, -0.952635, 15.8303, 0.519612, 44.749)
@@ -953,10 +953,10 @@ transform = Transform3D(-0.327317, 0, 0.944915, 0, 1, 0, -0.944915, 0, -0.327317
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.50781, -0.169045, -41.1984)
 
 [node name="LO_Lemon2" parent="LevelFloor/quest_items" instance=ExtResource("28_e3qwn")]
-transform = Transform3D(-0.102596, 0.955281, 0.277332, 0.994282, 0.106785, 0, -0.0296147, 0.275746, -0.960774, -10.3535, 3.63948, -27.5765)
+transform = Transform3D(-0.102596, 0.955281, 0.277332, 0.994282, 0.106785, 0, -0.0296147, 0.275746, -0.960774, -11.2379, 4.57567, -23.4966)
 
 [node name="LO_Lemon3" parent="LevelFloor/quest_items" instance=ExtResource("28_e3qwn")]
-transform = Transform3D(-0.102596, 0.955281, 0.277332, 0.994282, 0.106785, 0, -0.0296147, 0.275746, -0.960774, -10.7935, 3.63948, -27.2706)
+transform = Transform3D(-0.102596, 0.955281, 0.277332, 0.253845, 0.294715, -0.921252, -0.961788, -0.0241178, -0.27273, -8.45218, -0.0611598, -39.736)
 
 [node name="LO_candy_compartment" parent="LevelFloor/quest_items" instance=ExtResource("30_84tei")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3265, 0.49132, -12.1258)

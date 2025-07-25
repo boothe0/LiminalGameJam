@@ -65,6 +65,12 @@ layout_mode = 2
 theme = ExtResource("5_eugj7")
 text = "Headbob Toggle"
 
+[node name="HowToPlay" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_eugj7")
+text = "How To Play"
+
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="VBoxContainer/HeadBob" to="." method="_on_head_bob_pressed"]
+[connection signal="pressed" from="VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]

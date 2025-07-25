@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://02gxy6wchlfl"]
+
+[ext_resource type="Script" uid="uid://bnv18l31863as" path="res://scenes/non_quest/ending_scene.gd" id="1_eq2uy"]
+[ext_resource type="Texture2D" uid="uid://dqxnm233sn38g" path="res://assets/LO_endings_together.jpg" id="1_mstba"]
+[ext_resource type="FontFile" uid="uid://dnayjoyecpuqb" path="res://fonts/Summerti.ttf" id="2_0fc8y"]
+
+[node name="EndingScene" type="CanvasLayer"]
+script = ExtResource("1_eq2uy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_mstba")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 135.0
+offset_right = 319.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("2_0fc8y")
+theme_override_font_sizes/font_size = 34
+text = "Thank you for playing our game!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 382.0
+offset_right = 344.0
+offset_bottom = 555.0
+theme_override_fonts/font = ExtResource("2_0fc8y")
+theme_override_font_sizes/font_size = 34
+text = "Ranarh: Artist/Level Designer
+BoothGG: Programmer
+Cormalva Music: Sound Desinger
+Flat White Canvas: Artist"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 265.0
+offset_right = 192.0
+offset_bottom = 306.0
+theme_override_fonts/font = ExtResource("2_0fc8y")
+theme_override_font_sizes/font_size = 34
+text = "Developers:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 126.0
+offset_top = 575.0
+offset_right = 172.0
+offset_bottom = 618.0
+theme_override_fonts/font = ExtResource("2_0fc8y")
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
