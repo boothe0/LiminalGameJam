@@ -44,6 +44,7 @@ func _ready():
 	print(Globals.item)
 	FadeEffectTransition.transition()
 	await Emitter.on_transition_finished
+	audio_stream_player.volume_db = -20
 	if Globals.scene_counter == 0:
 		# load the according assets
 		audio_stream_player.stream = LIMINAL_JAM_NIGHT_SHIFT_MUSIC
@@ -54,6 +55,9 @@ func _ready():
 	elif Globals.scene_counter == 2:
 		audio_stream_player.stream = LIMINAL_JAM_LAST_NIGHT_SHIFT
 		audio_stream_player.play()
+	var tween = get_tree().create_tween()
+	tween.tween_property(audio_stream_player, "volume_db", 0, 2.0).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
+
 	# add another elif or else to direct to another function handling the end scene
 	
 	# reset globals for next rounds

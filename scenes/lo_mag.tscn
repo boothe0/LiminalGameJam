@@ -10,6 +10,7 @@ size = Vector3(1.3, 0.648169, 1.61589)
 [node name="LO_mag" instance=ExtResource("1_oardu")]
 transform = Transform3D(1, 0, 0, 0, 1.52884, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("2_gsuwr")
+audio_path = NodePath("AudioStreamPlayer")
 area_path = NodePath("Area3D")
 label_3d_2_path = NodePath("Componente#33_001/Label3D")
 

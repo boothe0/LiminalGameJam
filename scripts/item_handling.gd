@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 		# if there is an audio stream
 		if self.name != "LO_basket_filled2":
 			if audio:
+				
 				audio.play()
 			# might be too long of a delay 
 			await get_tree().create_timer(0.2).timeout
