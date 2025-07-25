@@ -35,3 +35,4 @@ These instructions will get you a local copy of the game on your local machine.
 - Jennifer Lange: Artist, Level Designer, Writer
 - Elizabeth Booth: Programmer
 - Cormalva Music: Audio Design
+- Flat White Canvas: Artist
