@@ -1,6 +1,6 @@
 # The Lemon Orchard
 
-Made for Liminal Game Jam 2025 that can be accessed here: https://itch.io/jam/liminal3
+Made for Liminal Game Jam 2025 that can be accessed here: [https://itch.io/jam/liminal3](https://ranarh.itch.io/the-lemon-orchard)
 
 ## Getting Started
 
