@@ -30,7 +30,7 @@ theme_override_fonts/font = ExtResource("1_2aqib")
 theme_override_font_sizes/font_size = 40
 text = "There are 3 days
 You can choose one quest to do per day.
-Pick up a note to start a quest
+Pick up a note to start a quest.
 Look for the requested items from the quest and interact with them.
 Text prompts will be scattered around to help.
 Level changes will happen so make sure to revist areas you have been!

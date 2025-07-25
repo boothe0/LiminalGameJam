@@ -2,11 +2,14 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnrkk1bh03vc6"
+uid="uid://db6pyv06mfo5c"
 path.s3tc="res://.godot/imported/LO_Tree_Try3_foliage_tex.png-4f6a0cedf93d3ac793f845a8491da495.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
+}
+generator_parameters={
+"md5": "a54c4b6625472d96759a6366ab4879d2"
 }
 
 [deps]

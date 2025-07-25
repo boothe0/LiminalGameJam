@@ -1,10 +1,4 @@
 res://scenes/non_quest/main.tscn
 res://scenes/main_menu_style.tres
 res://skybox_setup/sky.tres
-res://scenes/non_quest/player.tscn
-res://scenes/non_quest/main_menu.tscn
-res://scenes/non_quest/player_ui.tscn
 res://scenes/non_quest/how_to_play.tscn
-res://scenes/non_quest/intro.tscn
-res://scenes/non_quest/ending_scene.tscn
-res://scenes/quest_endings.tscn
